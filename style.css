@@ -106,8 +106,10 @@ a {
 
 .main-container {
 	position: relative;
-	background: url(./img/main-background-image.svg) no-repeat center center;
-	background-size: cover;
+	background-image: url(./img/main-background-image.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	background-color: var(--basic-deep-purple);
 	padding-top: 25px;
 	padding-bottom: 95px;
@@ -319,6 +321,7 @@ input[type='password'] {
 }
 
 .copyright-container {
+	border-top: 0.5px solid #03ff49;
 	padding-top: 20px;
 }
 
@@ -344,7 +347,6 @@ input[type='password'] {
 	justify-content: space-around;
 	padding-bottom: 40px;
 	padding-top: 20px;
-	border-bottom: 1px solid var(--neon-green);
 }
 
 .social-list-container {
@@ -363,6 +365,7 @@ input[type='password'] {
 }
 
 .password-button {
+	z-index: 2;
 	position: absolute;
 	right: 20px;
 	top: 10px;
@@ -441,6 +444,7 @@ input[type='password'] {
 /* JS*/
 
 #scroll-up-arrow {
+	margin-left: 85px;
 	background-color: transparent;
 	border: transparent;
 	z-index: 1;
@@ -574,21 +578,45 @@ details[open] > summary {
 	line-height: 19px;
 }
 
-/* .overlay {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(37, 39, 52, 0.8);
-} */
-
 @media screen and (min-width: 1200px) {
+	.main-container {
+		background: url('./img/main-image-big.png');
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-color: var(--basic-deep-purple);
+	}
+
+	.copyright-container {
+		display: flex;
+		justify-content: space-around;
+	}
+	.logo-container {
+		margin-right: 5px;
+	}
+	.page-footer-container {
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		width: 1170px;
+	}
+
+	.site-navigation {
+		min-width: 462px;
+		margin-left: 125px;
+		margin-right: 140px;
+	}
+
+	.user-link-container {
+		margin-left: auto;
+	}
+
 	.header-logo {
 		background-image: url('./img/header-logo.svg');
 		width: 108px;
 		height: 50px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.navigation-menu-toggler {
 		display: none;
@@ -608,6 +636,8 @@ details[open] > summary {
 
 	.user-login-form {
 		padding: 40px 200px;
+		width: 725px;
+		margin: 0 auto;
 	}
 
 	.form-container::after {
@@ -616,7 +646,7 @@ details[open] > summary {
 		background-image: url('./img/login-guy.svg');
 		background-repeat: no-repeat;
 		top: 15px;
-		left: 820px;
+		left: 250px;
 		width: 495px;
 		height: 420px;
 	}
@@ -629,7 +659,7 @@ details[open] > summary {
 		width: 247px;
 		height: 484px;
 		z-index: 1;
-		right: 920px;
+		left: -270px;
 		top: -50px;
 	}
 }
