@@ -24,46 +24,57 @@
 						data-bs-target="#side-menu"
 						aria-controls="offcanvasExample"
 					></button>
+					<div class="header-logo"></div>
 					<div class="user-link-container">
 						<a href="#" class="main-header-login">Log In</a>
 						<a href="#" class="button main-header-signup">Sign Up</a>
 					</div>
 				</div>
 			</div>
+			<div class="container-fluid header-navigation">
+				<ul class="header-navigation-list">
+					<li class="header-navigation-item"><a href="#">Main</a></li>
+					<li class="header-navigation-item"><a href="#">My World</a></li>
+					<li class="header-navigation-item"><a href="#">Clans</a></li>
+					<li class="header-navigation-item"><a href="#">Games</a></li>
+				</ul>
+			</div>
 		</header>
 		<main class="main-container">
 			<div class="container">
-				<form class="user-login-form" action="#">
-					<div class="form-container">
+				<form class="user-step-form" action="#">
+					<div class="form-container-step-1">
 						<h2 class="user-login-header">Sign Up</h2>
 						<div class="login-step-container-3"></div>
 					</div>
-					<input
-						class="password-input"
-						type="password"
-						placeholder="Password"
-						pattern="[0-9a-fA-F]{4,8}"
-						name="password"
-						required
-					/>
-					<input
-						class="confirm-password-input"
-						type="password"
-						placeholder="Confirm Password"
-						pattern="[0-9a-fA-F]{4,8}"
-						name="password"
-						required
-					/>
-					<button
-						type="button"
-						class="password-button-step-3"
-						id="js-button-password"
-					></button>
-					<button
-						type="button"
-						class="password-confirm-button-step-3"
-						id="js-button-confirm-password"
-					></button>
+					<div class="password-step-3-container">
+						<input
+							class="password-input"
+							type="password"
+							placeholder="Password"
+							pattern="[0-9a-fA-F]{4,8}"
+							name="password"
+							required
+						/>
+						<input
+							class="confirm-password-input"
+							type="password"
+							placeholder="Confirm Password"
+							pattern="[0-9a-fA-F]{4,8}"
+							name="password"
+							required
+						/>
+						<button
+							type="button"
+							class="password-button-step-3"
+							id="js-button-password"
+						></button>
+						<button
+							type="button"
+							class="password-confirm-button-step-3"
+							id="js-button-confirm-password"
+						></button>
+					</div>
 					<div class="navigation-buttons step-2">
 						<button class="back-button" type="button">
 							<a href="#">Back</a>
