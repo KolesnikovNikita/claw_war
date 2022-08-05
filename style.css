@@ -137,11 +137,6 @@ a {
 	width: 60%;
 }
 
-.user-post-container {
-	background-color: var(--basic-deep-purple);
-	border-radius: 12px;
-}
-
 .user-photo-container {
 	margin-right: 12px;
 }
@@ -240,12 +235,24 @@ a {
 	padding-bottom: 12px;
 }
 
-.user-post-container {
-	padding-top: 20px;
-	padding-bottom: 30px;
-	padding-right: 20px;
-	padding-left: 20px;
+.main-page-user-post-container {
 	margin-bottom: 15px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 12px;
+}
+
+.user-post-top-container {
+	padding-top: 20px;
+	padding-bottom: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.user-post-bottom-container {
+	padding-top: 12px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .user-text-post-container {
@@ -263,11 +270,11 @@ a {
 .user-image-post-container {
 	background-image: url('./img/main_page/main-page-ghostbusters-image.svg');
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: contain;
-	width: 343px;
+	background-position: center;
+	background-size: 100% auto;
 	height: 154px;
-	margin-bottom: 10px;
+	width: 394px;
+	background-attachment: scroll;
 }
 
 .advertising {
