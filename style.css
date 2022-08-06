@@ -125,6 +125,16 @@ a {
 
 /* Main Page */
 
+.main-page-greeting-container {
+	background-color: var(--basic-deep-purple);
+	width: 970px;
+	height: 435px;
+	border: 1px solid white;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	display: none;
+}
+
 .thumbnail-container {
 	position: relative;
 	background-color: var(--basic-deep-purple);
@@ -229,6 +239,7 @@ a {
 	border: none;
 	color: var(--neon-green);
 	background-color: transparent;
+	outline: none;
 }
 
 .user-post-container,
@@ -279,8 +290,12 @@ a {
 }
 
 .user-image-post-container {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background-image: url('./img/main_page/main-page-ghostbusters-image.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	min-width: 250px;
+	min-height: 120px;
 }
 
 .guest-post-container {
@@ -289,11 +304,14 @@ a {
 	margin-bottom: 15px;
 }
 
-.advertising {
-	position: relative;
-	background-color: var(--basic-deep-purple);
-	border-radius: 12px;
-	padding: 20px;
+.advertising::before {
+	position: absolute;
+	content: 'Mouse';
+	font-size: 32px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0.1;
 }
 
 .information-post-bar,
@@ -374,6 +392,12 @@ a {
 	letter-spacing: 0.5px;
 }
 
+.price-description {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
 .price-description-text {
 	font-weight: 400;
 	color: var(--light-grey);
@@ -390,27 +414,22 @@ a {
 }
 
 .product-name-header {
+	padding-top: 27px;
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 14px;
 	color: #fff;
 	text-transform: uppercase;
-	margin-bottom: 13px;
+	margin-bottom: 0;
 }
 
-.product-name {
-	margin-top: 30px;
-}
-
-.advertising-image-container::after {
-	content: '';
-	position: absolute;
-	width: 155px;
-	height: 122px;
+.advertising-image-container {
+	min-width: 140px;
+	min-height: 112px;
 	background-repeat: no-repeat;
 	background-image: url('./img/main_page//main-page-advertising-mouse.svg');
-	bottom: 45px;
-	right: 0;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 .product-link {
