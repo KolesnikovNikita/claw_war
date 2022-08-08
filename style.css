@@ -125,26 +125,15 @@ a {
 
 /* Main Page */
 
-.main-page-greeting-container {
-	background-color: var(--basic-deep-purple);
-	width: 970px;
-	height: 435px;
-	border: 1px solid white;
-	margin: 0 auto;
-	margin-bottom: 40px;
-	display: none;
-}
-
 .thumbnail-container {
 	position: relative;
 	background-color: var(--basic-deep-purple);
 	padding: 25px;
 	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
 	border-radius: 12px;
-}
-
-.greeting-user-container {
-	width: 60%;
+	max-width: 970px;
 }
 
 .user-photo-container,
@@ -166,7 +155,7 @@ a {
 	margin-right: auto;
 }
 
-.main-page-image-container::after {
+.main-page-image-container-mobile::after {
 	content: '';
 	position: absolute;
 	background-image: url('./img/main_page/main-page-mario-image.svg');
@@ -178,7 +167,18 @@ a {
 	height: 130px;
 }
 
-.main-page-image-container::before {
+.main-page-image-container-desktop::after {
+	content: '';
+	position: absolute;
+	background-image: url('./img/main_page//main-page-mario-big.svg');
+	right: 40px;
+	bottom: 77px;
+	background-repeat: no-repeat;
+	width: 259px;
+	height: 329px;
+}
+
+.main-page-image-container-mobile::before {
 	content: '';
 	z-index: 1;
 	position: absolute;
@@ -203,6 +203,7 @@ a {
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 28px;
+	margin-bottom: 20px;
 }
 
 .main-page-header-description {
@@ -210,6 +211,8 @@ a {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 17px;
+	opacity: 0.7;
+	margin-bottom: 30px;
 }
 
 .main-page-button {
@@ -304,7 +307,13 @@ a {
 	margin-bottom: 15px;
 }
 
+.advertising {
+	position: relative;
+}
+
 .advertising::before {
+	top: 105px;
+	left: 17px;
 	position: absolute;
 	content: 'Mouse';
 	font-size: 32px;
@@ -312,6 +321,7 @@ a {
 	text-transform: uppercase;
 	color: #fff;
 	opacity: 0.1;
+	border-radius: 5px;
 }
 
 .information-post-bar,
@@ -381,6 +391,12 @@ a {
 	line-height: 19px;
 	color: var(--light-grey);
 	text-transform: uppercase;
+}
+
+.advertising-description-container {
+	padding: 20px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 4.5px;
 }
 
 .advertising-comment {
@@ -1070,5 +1086,34 @@ details[open] > summary {
 		z-index: 1;
 		left: -70px;
 		bottom: 0;
+	}
+
+	.thumbnail-container {
+		min-height: 435px;
+		max-width: 970px;
+		margin: 0 auto;
+		padding: 80px;
+	}
+
+	.main-page-header {
+		font-weight: 600;
+		font-size: 64px;
+		line-height: 75px;
+	}
+	.main-page-header-description {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.main-page-button {
+		padding: 13px 30px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 23px;
+	}
+
+	.main-page-image-container-mobile {
+		display: none;
 	}
 }
