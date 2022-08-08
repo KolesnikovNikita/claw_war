@@ -136,6 +136,10 @@ a {
 	max-width: 970px;
 }
 
+.greeting-user-container {
+	width: 70%;
+}
+
 .user-photo-container,
 .guest-photo-container {
 	margin-right: 12px;
@@ -165,17 +169,6 @@ a {
 	background-repeat: no-repeat;
 	width: 103px;
 	height: 130px;
-}
-
-.main-page-image-container-desktop::after {
-	content: '';
-	position: absolute;
-	background-image: url('./img/main_page//main-page-mario-big.svg');
-	right: 40px;
-	bottom: 77px;
-	background-repeat: no-repeat;
-	width: 259px;
-	height: 329px;
 }
 
 .main-page-image-container-mobile::before {
@@ -1086,6 +1079,44 @@ details[open] > summary {
 		z-index: 1;
 		left: -70px;
 		bottom: 0;
+	}
+
+	.main-page-header-description {
+		width: 65%;
+	}
+
+	.main-page-spider-image-container-desktop {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-spiderman.svg');
+		right: -95px;
+		bottom: 0;
+		background-repeat: no-repeat;
+		width: 505px;
+		height: 283px;
+	}
+
+	.main-page-image-container-desktop::before {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-mario-big.svg');
+		right: 40px;
+		bottom: 77px;
+		background-repeat: no-repeat;
+		width: 259px;
+		height: 329px;
+	}
+
+	.main-page-image-container-desktop::after {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-pubg-big.svg');
+		right: 165px;
+		bottom: -23px;
+		background-repeat: no-repeat;
+		width: 299px;
+		height: 329px;
+		z-index: 1;
 	}
 
 	.thumbnail-container {
