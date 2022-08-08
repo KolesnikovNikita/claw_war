@@ -133,7 +133,8 @@ a {
 	flex-direction: row;
 	flex-grow: 1;
 	border-radius: 12px;
-	max-width: 970px;
+	max-width: 770px;
+	margin: 0 auto;
 }
 
 .greeting-user-container {
@@ -220,6 +221,8 @@ a {
 }
 
 .main-page-filter {
+	max-width: 770px;
+	margin: 0 auto;
 	padding-top: 25px;
 	padding-bottom: 45px;
 }
@@ -245,6 +248,10 @@ a {
 	margin-bottom: 15px;
 }
 
+.game-description {
+	padding-top: 10px;
+}
+
 .user-post-header,
 .guest-post-header {
 	display: flex;
@@ -254,6 +261,9 @@ a {
 
 .main-page-post-container {
 	margin-bottom: 15px;
+	max-width: 770px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .user-post-top-container,
@@ -298,23 +308,6 @@ a {
 	background-color: var(--basic-deep-purple);
 	border-radius: 12px;
 	margin-bottom: 15px;
-}
-
-.advertising {
-	position: relative;
-}
-
-.advertising::before {
-	top: 105px;
-	left: 17px;
-	position: absolute;
-	content: 'Mouse';
-	font-size: 32px;
-	font-weight: 900;
-	text-transform: uppercase;
-	color: #fff;
-	opacity: 0.1;
-	border-radius: 5px;
 }
 
 .information-post-bar,
@@ -378,6 +371,10 @@ a {
 	margin-right: auto;
 }
 
+.advertising {
+	position: relative;
+}
+
 .advertising-header {
 	font-weight: 600;
 	font-size: 16px;
@@ -390,6 +387,20 @@ a {
 	padding: 20px;
 	background-color: var(--basic-deep-purple);
 	border-radius: 4.5px;
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.advertising-description-container::before {
+	position: absolute;
+	content: 'Mouse';
+	text-transform: uppercase;
+	bottom: 70px;
+	color: #fff;
+	opacity: 10%;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 900;
 }
 
 .advertising-comment {
@@ -417,6 +428,7 @@ a {
 }
 
 .product-price {
+	line-height: 16px;
 	font-weight: 500;
 	font-size: 14px;
 	color: var(--neon-green);
@@ -1146,5 +1158,64 @@ details[open] > summary {
 
 	.main-page-image-container-mobile {
 		display: none;
+	}
+
+	.main-page-filter label {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.user-name {
+		font-size: 18px;
+		line-height: 21px;
+	}
+	.name-game {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.download-game {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.information-post-bar,
+	.guest-information-post-bar {
+		font-size: 16px;
+		line-height: 19px;
+	}
+	.advertising-header {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.advertising-comment {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.price-description-text {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.product-price {
+		line-height: 23px;
+		font-size: 20px;
+	}
+
+	.product-name-header {
+		font-size: 20px;
+		line-height: 23px;
+	}
+	.product-link {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.advertising-description-container::before {
+		font-size: 72px;
+		line-height: 84px;
+		bottom: 52px;
 	}
 }
