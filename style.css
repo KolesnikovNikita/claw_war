@@ -313,8 +313,8 @@ a {
 
 .user-post-buttons-container {
 	display: flex;
+	align-items: flex-end;
 	justify-content: space-between;
-	align-items: center;
 }
 
 .text-area-post-container,
@@ -438,11 +438,6 @@ a {
 	flex-grow: 1;
 }
 
-.user-post-buttons-container {
-	display: flex;
-	align-items: flex-end;
-}
-
 .guest-post-container {
 	background-color: var(--basic-deep-purple);
 	border-radius: 12px;
@@ -538,7 +533,8 @@ a {
 	color: var(--light-grey);
 	border: none;
 	width: 100%;
-	padding: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 40px;
 	border-radius: 12px;
 	font-weight: 400;
@@ -563,7 +559,12 @@ a {
 
 /* ------------ */
 
-/* QR Invitation container */
+/* QR Invitation Container */
+
+.invitation-person {
+	width: 54px;
+	height: 20px;
+}
 
 .qr-join-clan-container {
 	max-width: 770px;
@@ -572,10 +573,11 @@ a {
 	background-color: var(--basic-deep-purple);
 	border-radius: 10px;
 	display: flex;
+	flex-direction: row;
 	margin: 0 auto;
 }
 
-.qr-join-clan-container-bg-image {
+.qr-join-clan-container-bg-image-mobile {
 	position: absolute;
 	background-image: url('./img/main_page/invitation_container/invitation-bg-image.svg');
 	width: 194px;
@@ -587,6 +589,7 @@ a {
 
 .join-clan-invitation {
 	width: 65%;
+	flex-grow: 1;
 }
 
 .invitation-user-header {
@@ -627,10 +630,22 @@ a {
 }
 
 .qr-code-invitation-container {
+	flex-grow: 1;
 	z-index: 1;
 }
 
+.qr-code-invitation-container img {
+	margin: 0;
+	width: 117px;
+	height: 117px;
+}
+
 /*-------------------------------------*/
+
+.main-page-user-photo {
+	width: 40px;
+	height: 40px;
+}
 
 .registered {
 	margin-bottom: 20px;
@@ -703,7 +718,7 @@ a {
 }
 
 .product-name-header {
-	margin-top: 35px;
+	margin-top: 25px;
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 14px;
@@ -712,7 +727,7 @@ a {
 	margin-bottom: 0;
 }
 
-.advertising-image-container {
+.advertising-image-container-mobile {
 	min-width: 140px;
 	min-height: 112px;
 	background-repeat: no-repeat;
@@ -1481,6 +1496,7 @@ details[open] > summary {
 	.product-name-header {
 		font-size: 20px;
 		line-height: 23px;
+		margin-top: 45px;
 	}
 	.product-link {
 		font-size: 14px;
@@ -1494,5 +1510,74 @@ details[open] > summary {
 	}
 	.user-image-post-container {
 		height: 354px;
+	}
+
+	.main-page-user-photo {
+		width: 60px;
+		height: 60px;
+	}
+	.qr-join-clan-container-bg-image-mobile {
+		display: none;
+	}
+
+	.qr-join-clan-container {
+		height: 310px;
+		padding: 40px;
+	}
+
+	.qr-join-clan-container-bg-image-desktop {
+		position: absolute;
+		width: 436px;
+		height: 288px;
+		background-image: url('./img/main_page/invitation_container/invitation-bg-image-desktop.svg');
+		bottom: 0;
+		right: 130px;
+	}
+
+	.invitation-user-header {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.invitation-user-comment {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.invitation-person {
+		width: 96px;
+		height: 33px;
+	}
+
+	.invitation-join-button {
+		padding: 8px 28px;
+	}
+
+	.qr-code-invitation-container img {
+		width: 170px;
+		height: 170px;
+	}
+
+	.join-clan-invitation {
+		width: 60%;
+	}
+
+	.advertising-description-container {
+		padding: 40px;
+	}
+
+	.user-add-comment-input {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 46px;
+	}
+
+	.user-add-comment-image {
+		left: 26px;
+	}
+
+	.user-post-select {
+		margin-left: 440px;
 	}
 }
