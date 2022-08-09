@@ -11,7 +11,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="../style.css" />
-		<title>Main Page (non-register)</title>
+		<title>Main Page (registered)</title>
 	</head>
 	<body>
 		<h2 class="visually-hidden">Main Page</h2>
@@ -46,19 +46,14 @@
 				<div class="write-post-container">
 					<div class="text-post-container">
 						<div class="user-image-container">
-							<img
-								src="../img/main-page-user-photo.png"
-								alt="user photo"
-								width="40"
-								height="40"
-							/>
+							<img src="../img/main-page-user-photo.png" alt="user photo" />
 						</div>
 						<div class="text-area-user-container">
 							<textarea
 								class="text-area-style"
 								id="userPost"
 								name="postArea"
-								placeholder="    Write a post..."
+								placeholder="   Write a post..."
 							></textarea>
 						</div>
 					</div>
@@ -126,8 +121,11 @@
 								<img
 									width="14"
 									height="20"
-									src="../img/main_page/main-page-user-label.svg"
+									src="../img/main_page/main-page-user-label-filled.svg"
 								/>
+							</div>
+							<div class="user-options-button-container">
+								<button class="user-post-options"></button>
 							</div>
 						</div>
 						<div class="text-area-post-container">
@@ -150,7 +148,7 @@
 								>
 							</p>
 						</div>
-						<div class="information-post-bar">
+						<div class="information-post-bar registered">
 							<div class="message-answer-container">
 								<img
 									alt="message icon"
@@ -173,11 +171,27 @@
 									alt="heart icon"
 									width="17px"
 									height="15px"
-									src="../img/main_page/main-page-heart-icon.svg"
+									src="../img/main_page/main-page-heart-icon-filled.svg"
 								/>
 								<span class="quantity-number">3675</span>
 							</div>
 						</div>
+						<!-- Comment add element -->
+						<form>
+							<div class="user-add-comment-container">
+								<img
+									class="user-add-comment-image"
+									alt="user photo"
+									src="../img/main_page/user-post-photo.svg"
+								/>
+								<button class="user-comment-submit"></button>
+								<input
+									class="user-add-comment-input"
+									type="text"
+									placeholder="Add a comment..."
+								/>
+							</div>
+						</form>
 					</div>
 				</div>
 				<!--Guest post container-->
@@ -263,7 +277,9 @@
 							<span class="product-price">$30.00</span>
 							<h4 class="product-name-header">Mouse</h4>
 						</div>
-						<div class="advertising-image-container"></div>
+						<div class="advertising-image-container">
+							<img src="../img/main_page/main-page-advertising-mouse.svg" />
+						</div>
 					</div>
 					<div class="product-name">
 						<a class="product-link" href="#">Browse</a>

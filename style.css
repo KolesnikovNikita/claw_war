@@ -141,9 +141,11 @@ a {
 	width: 70%;
 }
 
-.user-photo-container,
-.guest-photo-container {
+.user-photo-container img,
+.guest-photo-container img {
 	margin-right: 12px;
+	width: 40px;
+	height: 40px;
 }
 
 .time-post-container,
@@ -158,6 +160,9 @@ a {
 .user-description-container,
 .guest-description-container {
 	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .main-page-image-container-mobile::after {
@@ -186,7 +191,7 @@ a {
 
 .main-page {
 	position: relative;
-	background-image: url('./img/main_page/main-page-background-image.svg');
+	background-image: url('./img/main_page/main-page-bck-dragon-fly.jpeg');
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -271,7 +276,7 @@ a {
 .user-post-header,
 .guest-post-header {
 	display: flex;
-	align-items: flex-end;
+	align-items: flex-start;
 	padding-bottom: 12px;
 }
 
@@ -333,6 +338,8 @@ a {
 	padding-left: 20px;
 	padding-right: 20px;
 	border-radius: 12px;
+	max-width: 770px;
+	margin: 0 auto;
 }
 
 .text-post-container {
@@ -358,7 +365,6 @@ a {
 }
 
 .user-file-upload {
-	border: 1px solid #ccc;
 	display: inline-block;
 	cursor: pointer;
 	border: none;
@@ -393,19 +399,39 @@ a {
 }
 
 .user-post-select {
-	padding: 5px 16px;
+	padding: 2px 16px;
+	background-color: var(--basic-deep-purple);
+	border: 1px solid var(--light-grey);
+	border-radius: 30px;
 }
 
 .type-post-select {
-	border: 1px solid var(--light-grey);
-	border-radius: 30px;
+	width: 96px;
 	background-color: transparent;
-	color: var(--light-grey);
+	border: none;
 	outline: none;
-	appearance: none;
-	background-image: url('./img/main_page/select-arrow-icon.svg');
+	color: #fff;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 500;
+	/* background-image: url('./img/main_page/select-arrow-icon.svg'); */
+}
+
+.user-options-button-container {
+	position: relative;
+}
+
+.user-post-options {
+	padding: 0;
+	position: absolute;
+	background-image: url('./img/main_page/user-post-options-button.svg');
 	background-repeat: no-repeat;
-	background-position: right;
+	top: 2px;
+	width: 4px;
+	height: 24px;
+	background-color: transparent;
+	display: block;
+	border: none;
 }
 
 .text-area-user-container {
@@ -434,11 +460,15 @@ a {
 	font-size: 16px;
 	line-height: 19px;
 	color: var(--light-grey);
-	margin-bottom: 9px;
+	margin: 0;
 }
 
-.post-label,
-.guest-post-label {
+.post-label {
+	margin-right: 25px;
+}
+
+.post-label-non-registred,
+.guest-post-label-non-registred {
 	margin-bottom: 21px;
 }
 
@@ -482,6 +512,58 @@ a {
 
 .repost-message-container {
 	margin-right: auto;
+}
+
+/* Add Comment Form */
+
+.user-add-comment-container {
+	position: relative;
+}
+
+.user-add-comment-image {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 20px;
+}
+
+.user-comment-submit {
+	display: none;
+}
+
+.user-add-comment-input {
+	background-color: rgba(226, 230, 255, 0.1);
+	color: var(--light-grey);
+	border: none;
+	width: 100%;
+	padding: 12px;
+	padding-left: 40px;
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	outline: none;
+}
+
+.user-comment-submit {
+	position: absolute;
+	background-image: url('./img/main_page/main-page-user-submit-button.svg');
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	display: block;
+	width: 17px;
+	height: 17px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	right: 21px;
+}
+
+/* ------------ */
+.registered {
+	margin-bottom: 20px;
 }
 
 .advertising {
@@ -586,6 +668,7 @@ a {
 	padding-top: 25px;
 	padding-bottom: 95px;
 	flex-grow: 1;
+	border-bottom: 1px solid var(--neon-green);
 }
 
 .step-3 {
@@ -623,8 +706,12 @@ a {
 	text-shadow: 0px 0px 14px rgba(3, 255, 73, 0.48);
 }
 
-input[type='text'],
-input[type='password'] {
+.email-input,
+.password-input,
+.user-name-input,
+.country-input,
+.city-input,
+.confirm-password-input {
 	width: 100%;
 	padding: 10px 25px;
 	background: #212430;
@@ -1164,6 +1251,12 @@ details[open] > summary {
 		margin: 0 auto;
 	}
 
+	.user-photo-container img,
+	.guest-photo-container img {
+		width: 60px;
+		height: 60px;
+	}
+
 	.user-step-form {
 		padding: 40px 200px;
 		padding-right: 135px;
@@ -1242,6 +1335,10 @@ details[open] > summary {
 		width: 299px;
 		height: 329px;
 		z-index: 1;
+	}
+
+	.main-page-image-container-mobile {
+		display: none;
 	}
 
 	.thumbnail-container {
@@ -1326,5 +1423,8 @@ details[open] > summary {
 		font-size: 72px;
 		line-height: 84px;
 		bottom: 52px;
+	}
+	.user-image-post-container {
+		height: 354px;
 	}
 }
