@@ -269,6 +269,10 @@ a {
 	margin-bottom: 15px;
 }
 
+.input-file-desktop-style {
+	display: none;
+}
+
 .game-description {
 	padding-top: 10px;
 }
@@ -403,6 +407,7 @@ a {
 	background-color: var(--basic-deep-purple);
 	border: 1px solid var(--light-grey);
 	border-radius: 30px;
+	background: #212430;
 }
 
 .type-post-select {
@@ -652,6 +657,10 @@ a {
 
 .advertising {
 	position: relative;
+}
+
+.join-clan-invitation {
+	z-index: 1;
 }
 
 .advertising-header {
@@ -1579,5 +1588,14 @@ details[open] > summary {
 	.user-post-select {
 		margin-left: auto;
 		margin-right: 16px;
+	}
+
+	.input-file-desktop-style {
+		display: block;
+		color: #fff;
+		padding-left: 13px;
+		padding-top: 1px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 }
