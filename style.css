@@ -262,6 +262,11 @@ a {
 	outline: none;
 }
 
+.main-page-select-style option {
+	color: #1b1a26;
+	font-weight: 400;
+}
+
 .user-post-container,
 .guest-post-container {
 	background-color: var(--basic-deep-purple);
@@ -420,6 +425,11 @@ a {
 	line-height: 16px;
 	font-weight: 500;
 	/* background-image: url('./img/main_page/select-arrow-icon.svg'); */
+}
+
+.type-post-select option {
+	color: #1b1a26;
+	font-weight: 400;
 }
 
 .user-options-button-container {
@@ -661,6 +671,13 @@ a {
 }
 
 .advertising {
+	display: flex;
+	padding: 20px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 4.5px;
+	max-width: 770px;
+	margin: 0 auto;
+	margin-bottom: 15px;
 	position: relative;
 }
 
@@ -676,20 +693,11 @@ a {
 	text-transform: uppercase;
 }
 
-.advertising-description-container {
-	padding: 20px;
-	background-color: var(--basic-deep-purple);
-	border-radius: 4.5px;
-	max-width: 770px;
-	margin: 0 auto;
-	margin-bottom: 15px;
-}
-
 .advertising-description-container::before {
 	position: absolute;
 	content: 'Mouse';
 	text-transform: uppercase;
-	bottom: 70px;
+	bottom: 50px;
 	color: #fff;
 	opacity: 10%;
 	font-size: 32px;
@@ -737,10 +745,12 @@ a {
 	line-height: 14px;
 	color: #fff;
 	text-transform: uppercase;
-	margin-bottom: 0;
+	margin-bottom: 10px;
 }
 
 .advertising-image-container-mobile {
+	margin: auto;
+	margin-right: 0;
 	min-width: 140px;
 	min-height: 112px;
 	background-repeat: no-repeat;
@@ -1491,6 +1501,10 @@ details[open] > summary {
 		font-size: 16px;
 		line-height: 19px;
 	}
+
+	.advertising {
+		padding: 40px;
+	}
 	.advertising-header {
 		font-size: 32px;
 		line-height: 38px;
@@ -1499,6 +1513,36 @@ details[open] > summary {
 	.advertising-comment {
 		font-size: 14px;
 		line-height: 16px;
+	}
+
+	.advertising-image-container-desktop {
+		margin: auto;
+		margin-right: 0;
+		width: 306px;
+		height: 161px;
+		background-repeat: no-repeat;
+		background-image: url('./img/main_page/mouse-desktop-non-registered.svg');
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.advertising-image-container-desktop-registered::after {
+		position: absolute;
+		content: '';
+		background-image: url('./img/main_page/mouse-desktop-registered.svg');
+		background-repeat: no-repeat;
+		bottom: 0;
+		right: 50px;
+		width: 330px;
+		height: 308px;
+	}
+
+	.advertising-description-container::before {
+		font-size: 72px;
+		line-height: 84px;
+		opacity: 10%;
+		font-weight: 900;
+		bottom: 61px;
 	}
 
 	.price-description-text {
@@ -1516,10 +1560,8 @@ details[open] > summary {
 		line-height: 16px;
 	}
 
-	.advertising-description-container::before {
-		font-size: 72px;
-		line-height: 84px;
-		bottom: 52px;
+	.advertising-image-container-mobile {
+		display: none;
 	}
 	.user-image-post-container {
 		height: 354px;
@@ -1574,10 +1616,6 @@ details[open] > summary {
 
 	.join-clan-invitation {
 		width: 355px;
-	}
-
-	.advertising-description-container {
-		padding: 40px;
 	}
 
 	.user-add-comment-input {
