@@ -11,7 +11,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="../style.css" />
-		<title>Main Page (non registered)</title>
+		<title>Main Page (registered)</title>
 	</head>
 	<body>
 		<h2 class="visually-hidden">Main Page</h2>
@@ -23,7 +23,6 @@
 						type="button"
 						data-bs-toggle="offcanvas"
 						data-bs-target="#side-menu-toggle"
-						aria-controls="offcanvasExample"
 					></button>
 					<div class="header-logo"></div>
 					<div class="user-link-container">
@@ -42,20 +41,61 @@
 			</div>
 		</header>
 		<main class="main-page container-fluid">
-			<div class="thumbnail-container">
-				<div class="greeting-user-container">
-					<h3 class="main-page-header">Nice to meet you!</h3>
-					<p class="main-page-header-description">
-						Get to know Clans World right now. Discover new games and
-						opportunities, fight for the title of the top player and build the
-						strongest clan.
-					</p>
-					<button class="main-page-button">Start Now</button>
+			<form>
+				<div class="write-post-container">
+					<div class="text-post-container">
+						<div class="user-image-container">
+							<img
+								class="main-page-user-photo"
+								src="../img/main_page/user-post-photo.svg"
+								alt="user photo"
+							/>
+						</div>
+						<div class="text-area-user-container">
+							<textarea
+								class="text-area-style"
+								id="userPost"
+								name="postArea"
+								placeholder="   Write a post..."
+							></textarea>
+						</div>
+					</div>
+					<div class="user-post-buttons-container">
+						<div class="user-post-input-container">
+							<input
+								class="input-file-style"
+								type="file"
+								accept="image/png, image/jpeg"
+								id="input-file"
+								name="file"
+							/>
+							<label class="user-file-upload" for="input-file">
+								<span class="input-file-icon-wrapper">
+									<img
+										class="input-file-image"
+										alt="choose file"
+										width="15"
+										height="17"
+										src="../img/main_page/file-icon-clip.svg"
+									/>
+									<span class="input-file-desktop-style">Attach Files</span>
+								</span>
+							</label>
+						</div>
+
+						<div class="user-post-select">
+							<select class="type-post-select">
+								<option selected>Public</option>
+								<option>Private</option>
+								<option>Else</option>
+							</select>
+						</div>
+						<div class="user-post-submit">
+							<button type="submit" class="button-post">Post</button>
+						</div>
+					</div>
 				</div>
-				<div class="main-page-image-container-mobile"></div>
-				<div class="main-page-image-container-desktop"></div>
-				<div class="main-page-spider-image-container-desktop"></div>
-			</div>
+			</form>
 			<div class="main-page-filter">
 				<label>Show: </label>
 				<select class="main-page-select-style">
@@ -70,18 +110,27 @@
 					<div class="user-post-top-container">
 						<div class="user-post-header">
 							<div class="user-photo-container">
-								<img alt="#" src="../img/main_page/user-post-photo.svg" />
+								<img
+									width="40"
+									height="40"
+									alt="#"
+									src="../img/main_page/user-post-photo.svg"
+								/>
 							</div>
 							<div class="user-description-container">
 								<div><h3 class="user-name">Zeus</h3></div>
 								<div class="time-post-container">14m ago</div>
 							</div>
-							<div class="post-label-non-registred">
+							<div class="post-label">
 								<img
+									alt="user label"
 									width="14"
 									height="20"
-									src="../img/main_page/main-page-user-label.svg"
+									src="../img/main_page/main-page-user-label-filled.svg"
 								/>
+							</div>
+							<div class="user-options-button-container">
+								<button class="user-post-options"></button>
 							</div>
 						</div>
 						<div class="text-area-post-container">
@@ -104,20 +153,20 @@
 								>
 							</p>
 						</div>
-						<div class="information-post-bar">
+						<div class="information-post-bar registered">
 							<div class="message-answer-container">
 								<img
 									alt="message icon"
-									width="17px"
-									height="17px"
+									width="17"
+									height="17"
 									src="../img/main_page/main-page-messge-icon.svg"
 								/><span class="quantity-number">353</span>
 							</div>
 							<div class="repost-message-container">
 								<img
 									alt="re-post icon"
-									width="16px"
-									height="11px"
+									width="16"
+									height="11"
 									src="../img/main_page/main-page-repost-icon.svg"
 								/>
 								<span class="quantity-number">12</span>
@@ -125,13 +174,29 @@
 							<div class="like-message-container">
 								<img
 									alt="heart icon"
-									width="17px"
-									height="15px"
-									src="../img/main_page/main-page-heart-icon.svg"
+									width="17"
+									height="15"
+									src="../img/main_page/main-page-heart-icon-filled.svg"
 								/>
-								<span class="quantity-number">3675</span>
+								<span class="quantity-number">1235</span>
 							</div>
 						</div>
+						<!-- Comment add element -->
+						<form>
+							<div class="user-add-comment-container">
+								<img
+									class="user-add-comment-image"
+									alt="user photo"
+									src="../img/main_page/user-post-photo.svg"
+								/>
+								<button class="user-comment-submit"></button>
+								<input
+									class="user-add-comment-input"
+									type="text"
+									placeholder="Add a comment..."
+								/>
+							</div>
+						</form>
 					</div>
 				</div>
 				<!--Guest post container-->
@@ -151,8 +216,9 @@
 								<div><h3 class="guest-name">Zeus</h3></div>
 								<div class="guest-time-post-container">14m ago</div>
 							</div>
-							<div class="guest-post-label-non-registred">
+							<div class="guest-post-label">
 								<img
+									alt="user-label"
 									width="14"
 									height="20"
 									src="../img/main_page/main-page-user-label.svg"
@@ -170,24 +236,20 @@
 					</div>
 					<div class="guest-image-post-container"></div>
 					<div class="guest-post-bottom-container">
-						<div class="guest-game-description">
-							<h3 class="guest-name-game"></h3>
-							<p class="guest-download-game"></p>
-						</div>
 						<div class="guest-information-post-bar">
 							<div class="message-answer-container">
 								<img
 									alt="message icon"
-									width="17px"
-									height="17px"
+									width="17"
+									height="17"
 									src="../img/main_page/main-page-messge-icon.svg"
 								/><span class="quantity-number">353</span>
 							</div>
 							<div class="repost-message-container">
 								<img
 									alt="re-post icon"
-									width="16px"
-									height="11px"
+									width="16"
+									height="11"
 									src="../img/main_page/main-page-repost-icon.svg"
 								/>
 								<span class="quantity-number">12</span>
@@ -195,13 +257,28 @@
 							<div class="like-message-container">
 								<img
 									alt="heart icon"
-									width="17px"
-									height="15px"
+									width="17"
+									height="15"
 									src="../img/main_page/main-page-heart-icon.svg"
 								/>
 								<span class="quantity-number">3675</span>
 							</div>
 						</div>
+						<form>
+							<div class="user-add-comment-container">
+								<img
+									class="user-add-comment-image"
+									alt="user photo"
+									src="../img/main_page/user-post-photo.svg"
+								/>
+								<button class="user-comment-submit"></button>
+								<input
+									class="user-add-comment-input"
+									type="text"
+									placeholder="Add a comment..."
+								/>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -217,11 +294,38 @@
 							<span class="product-price">$30.00</span>
 							<h4 class="product-name-header">Mouse</h4>
 						</div>
+						<div class="advertising-image-container-desktop"></div>
 						<div class="advertising-image-container-mobile"></div>
 					</div>
 					<div class="product-name">
 						<a class="product-link" href="#">Browse</a>
 					</div>
+				</div>
+			</div>
+			<div class="qr-join-clan-container">
+				<div class="qr-join-clan-container-bg-image-mobile"></div>
+				<div class="qr-join-clan-container-bg-image-desktop"></div>
+				<div class="join-clan-invitation">
+					<h3 class="invitation-user-header">
+						Your clan
+						<span class="invitation-user-header-span">legends</span> needs you
+					</h3>
+					<p class="invitation-user-comment">Join our ranks right now</p>
+					<div class="invitation-person-container">
+						<div class="invitation-person">
+							<img
+								alt="group person"
+								src="../img/main_page/invitation_container/invitation-group-image.svg"
+							/>
+						</div>
+					</div>
+					<a class="invitation-join-button" href="#">Join</a>
+				</div>
+				<div class="qr-code-invitation-container">
+					<img
+						alt="qr-code"
+						src="../img/main_page/main-page-invitation-qr.svg"
+					/>
 				</div>
 			</div>
 		</main>
@@ -287,13 +391,9 @@
 
 		<!-- Menu from left -->
 
-		<div
-			class="offcanvas offcanvas-start"
-			tabindex="-1"
-			id="side-menu-toggle"
-			aria-labelledby="offcanvasExampleLabel"
-		>
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="side-menu-toggle">
 			<section class="side-menu">
+				<h2 class="visually-hidden">Side Menu</h2>
 				<div class="container side-menu-container">
 					<div class="button-close-container">
 						<button
@@ -306,7 +406,9 @@
 					<div class="list-menu-container">
 						<ul class="list-menu-links">
 							<li class="list-menu-item">
-								<summary class="menu-item-style">Home</summary>
+								<details>
+									<summary class="menu-item-style">Home</summary>
+								</details>
 							</li>
 							<li class="list-menu-item">
 								<details>

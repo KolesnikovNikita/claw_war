@@ -323,7 +323,7 @@ a {
 
 .text-area-post-container,
 .guest-text-area-post-container {
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .user-image-post-container {
@@ -452,6 +452,11 @@ a {
 .information-post-bar,
 .guest-information-post-bar {
 	display: flex;
+	margin-bottom: 20px;
+}
+
+.non-registered {
+	margin-bottom: 0;
 }
 
 .user-name,
