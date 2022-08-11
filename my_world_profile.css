@@ -44,6 +44,7 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .user-info-name {
@@ -64,7 +65,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 auto;
+	margin-left: 15px;
 }
 
 .user-info {
@@ -109,6 +110,9 @@
 .user-country-flag-mobile {
 	width: 28px;
 	height: 16px;
+	margin-bottom: 3px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .user-setting-menu {
@@ -121,18 +125,39 @@
 	background-color: var(--basic-deep-purple);
 	margin-bottom: 15px;
 	padding: 20px 25px;
+	height: 185px;
+	border-radius: 12px;
 }
 
 .user-profile-link-list {
+	white-space: nowrap;
 	display: flex;
 	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-x: auto;
 }
 
 .user-profile-link-item {
+	padding: 8px 10px;
+	background-color: rgba(226, 230, 255, 0.1);
+	border-radius: 50px;
+}
+
+.user-profile-link-item a {
 	color: var(--light-grey);
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
+	opacity: 50%;
+}
+
+.user-profile-link-item a:active {
+	color: var(--neon-green);
+}
+
+.user-profile-link-item:not(:last-child) {
+	margin-right: 10px;
 }
 
 .setting-container-header {
@@ -141,13 +166,18 @@
 	color: var(--light-grey);
 	font-size: 16px;
 	line-height: 19px;
+	margin: 0;
 }
 
 .user-setting-button {
+	padding: 0;
 	background-color: transparent;
 	color: rgba(226, 230, 255, 0.5);
 	border: none;
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 21px;
+	margin: auto;
+	margin-top: 65px;
+	display: block;
 }
