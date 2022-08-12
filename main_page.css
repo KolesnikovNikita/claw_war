@@ -1270,7 +1270,7 @@ details[open] > summary {
 	line-height: 19px;
 }
 
-/* Media quarries */
+/* ========================================   Media quarries   =================================== */
 
 @media screen and (min-width: 1200px) {
 	.social-contacts {
@@ -1645,10 +1645,5 @@ details[open] > summary {
 		padding-top: 1px;
 		font-size: 14px;
 		line-height: 16px;
-	}
-
-	.user-profile {
-		padding-top: 25px;
-		padding-bottom: 25px;
 	}
 }

@@ -10,6 +10,8 @@
 	--sub-navigation-top-border-color: #0bd863;
 	--background-main-color: #252734;
 	--background-color-input: #2e3241;
+	--change-password-button-color: #e78d5b;
+	--cancel-button-color: rgba(226, 230, 255, 0.5);
 }
 
 /* ===============================================  User Profile  =========================================== */
@@ -61,6 +63,11 @@
 	font-weight: 300;
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 12px;
+}
+
+.user-profile {
+	padding-top: 35px;
+	padding-bottom: 35px;
 }
 
 .user-profile-setting-links {
@@ -178,9 +185,10 @@
 	margin: 0;
 	position: absolute;
 	font-weight: 600;
-	font-size: 18px;
-	line-height: 21px;
+	font-size: 16px;
+	line-height: 19px;
 	color: var(--light-grey);
+	text-transform: uppercase;
 }
 
 .user-redream-container {
@@ -219,7 +227,7 @@
 	margin-right: 10px;
 }
 
-.setting-container-header {
+.user-profile-header {
 	top: 20px;
 	left: 25px;
 	position: absolute;
@@ -231,7 +239,7 @@
 	margin: 0;
 }
 
-.setting-container-header::before {
+.user-profile-header::before {
 	position: absolute;
 	content: '';
 	display: inline-block;
@@ -299,6 +307,56 @@
 	padding: 12px 15px;
 	margin-bottom: 15px;
 	background-color: var(--background-color-input);
+}
+
+.profile-form .profile-email {
+	color: var(--neon-green);
+}
+
+.profile-form select option {
+	background-color: var(--background-color-input);
+}
+
+.submit-button-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-form-big-button {
+	padding: 12px 25px;
+	border-radius: 30px;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.change-password {
+	margin-top: 5px;
+	margin-bottom: 35px;
+	background-color: var(--change-password-button-color);
+}
+
+.cancel-button {
+	background-color: var(--cancel-button-color);
+}
+
+.save-button {
+	background-color: var(--light-green);
+}
+
+.form-select-gender {
+	padding-left: 40px;
+	appearance: none;
+	background-image: url('./img/user_profile/select-gender-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 94% 55%;
+	background-size: 0.9em auto, 100%;
+}
+
+.form-select-language {
+	appearance: none;
 }
 
 /* ======================================================   Media Queries   =========================================== */

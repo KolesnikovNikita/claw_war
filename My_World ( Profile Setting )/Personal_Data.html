@@ -17,8 +17,8 @@
 	<body>
 		<h2 class="visually-hidden">Personal Data</h2>
 		<header class="page-header">
-			<div class="container user-profile-data">
-				<div class="page-header-container">
+			<div class="container">
+				<div class="page-header-container user-profile">
 					<button
 						class="navigation-menu-toggler"
 						type="button"
@@ -60,7 +60,7 @@
 			</div>
 			<div class="user-redream-container">
 				<div class="user-redream-data">
-					<h3 class="user-redream-header">Redream personal data</h3>
+					<h3 class="user-profile-header">Redream personal data</h3>
 					<form class='profile-form' method='post'>
 						<div class="wrapper-column">
 						<label for='user-name'>Username</label>
@@ -76,7 +76,7 @@
 						</div>
 						<div class="wrapper-column">
 						<label for="email">Email</label>
-						<input type='email' id='email' name='userEmail' class="user-redream-input">
+						<input type='email' id='email' name='userEmail' class="user-redream-input profile-email">
 						</div>
 						<div class="wrapper-column">
 						<label for="b-date">Birth Date</label>
@@ -86,16 +86,16 @@
 						<label for="phone">Phone Number</label>
 						<input type='number' id='phone' name='phone-number' class="user-redream-input">
 						</div>
-						<div class="wrapper-column">
+						<div class="wrapper-column select-gender">
 						<label for="gender">Gender</label>
-						<select name="sex" id="gender">
+						<select class='form-select-gender' name="sex" id="gender">
 							<option value="male">Male</option>
 							<option value="female">Female</option>
 						</select>
 						</div>
 						<div class="wrapper-column">
 						<label for="mLanguage">Main Language</label>
-						<select name="language" id="mLanguage">
+						<select class='form-select-language' name="language" id="mLanguage">
 							<option value="deutsche">Deutsche</option>
 							<option value="english">English</option>
 						</select></div>
@@ -115,10 +115,10 @@
 						<label for="zip">Zip</label>
 						<input type='number' id='zip' name='zip' class="user-redream-input">
 						</div>
-						<button class="change-password-button">Change Password</button>
+						<button class="profile-form-big-button change-password">Change Password</button>
 						<div class="submit-button-container">
-							<button class="form-cancel-button">Cancel</button>
-							<button class="form-save-button">Save</button>
+							<button class="profile-form-big-button cancel-button">Cancel</button>
+							<button type='submit' class="profile-form-big-button save-button">Save</button>
 						</div>
 					</form>
 				</div>
