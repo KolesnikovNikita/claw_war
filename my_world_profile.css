@@ -7,6 +7,7 @@
 	--light-blue: #19afff;
 	--back-button-color: #e5e5e5;
 	--sign-out-button-color: #fd4949;
+	--sub-navigation-top-border-color: #0bd863;
 }
 
 .main-page-profile-settings {
@@ -21,6 +22,15 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 	left: 50%;
+}
+
+.header-sub-navigation-container {
+	display: none;
+}
+
+.header-sub-navigation-list {
+	padding: 0;
+	margin: 0;
 }
 
 .main-menu-profile-setting {
@@ -220,4 +230,36 @@
 	width: 16px;
 	background-image: url('./img/user_profile/plus-for-add-button.svg');
 	background-position: 0 50%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1200px) {
+	.header-sub-navigation-container {
+		opacity: 50%;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid var(--sub-navigation-top-border-color);
+	}
+
+	.header-sub-navigation-list {
+		display: flex;
+		margin: 0 auto;
+		list-style: none;
+	}
+
+	.sub-navigation-item {
+		color: var(--light-grey);
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.header-sub-navigation-list li:not(:last-child) {
+		margin-right: 40px;
+	}
 }
