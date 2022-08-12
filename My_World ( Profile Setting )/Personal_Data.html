@@ -269,6 +269,33 @@
 		</div>
 
 		<!-- End of Menu -->
+
+		<!------------------------------------------ Change Password Modal ------------------------------->
+
+		<section class="change-password-modal">
+			<form class='change-password-form' action="#">
+			<div class="change-password-container">
+				<h3 class="">Change Password</h3>
+				<input type="password" pattern="[0-9a-fA-F]{4,8}" placeholder='Password' class="profile-password-input">
+				<input type="password" pattern="[0-9a-fA-F]{4,8}" placeholder='Confirm Password' class="profile-confirm-password-input">
+				<button
+							type="button"
+							class="password-button-step-3"
+							id="js-button-password"
+						></button>
+						<button
+							type="button"
+							class="password-confirm-button-step-3"
+							id="js-button-confirm-password"
+						></button>
+				<div class="change-password-button-container">
+					<button class="profile-form-middle-button cancel-button">Cancel</button>
+					<button class="profile-form-middle-button save-button">Save</button>
+				</div>
+			</div>
+			</form>
+		</section>
+
 		<script src="../index.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -27,3 +27,29 @@ confirmBtnPassword.onclick = function () {
 		confirmInputPass.setAttribute('type', 'password');
 	}
 };
+
+// =======================================================
+
+let btnPassword = document.getElementById('js-button-password'),
+	inputPassword = document.querySelector('.profile-password-input');
+
+btnPassword.onclick = function () {
+	if (inputPassword.getAttribute('type') === 'password') {
+		inputPassword.setAttribute('type', 'text');
+	} else {
+		inputPassword.setAttribute('type', 'password');
+	}
+};
+
+let confirmBtnPassword = document.getElementById('js-button-confirm-password'),
+	confirmInputPassword = document.querySelector(
+		'.profile-confirm-password-input'
+	);
+
+confirmBtnPassword.onclick = function () {
+	if (confirmInputPassword.getAttribute('type') === 'password') {
+		confirmInputPassword.setAttribute('type', 'text');
+	} else {
+		confirmInputPassword.setAttribute('type', 'password');
+	}
+};

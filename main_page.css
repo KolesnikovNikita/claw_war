@@ -804,7 +804,6 @@ a {
 }
 
 .user-step-form {
-	position: relative;
 	padding: 25px 20px;
 	background: rgba(196, 196, 196, 0.15);
 	backdrop-filter: blur(10.8329px);
