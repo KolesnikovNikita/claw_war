@@ -8,11 +8,11 @@
 	--back-button-color: #e5e5e5;
 	--sign-out-button-color: #fd4949;
 	--sub-navigation-top-border-color: #0bd863;
+	--background-main-color: #252734;
+	--background-color-input: #2e3241;
 }
 
-.main-page-profile-settings {
-	background-color: #1d1e28;
-}
+/* ===============================================  User Profile  =========================================== */
 
 .header-logo-profile-mobile {
 	position: absolute;
@@ -163,6 +163,40 @@
 	overflow-x: auto;
 }
 
+/* ===================================================  Personal Data   ========================================= */
+
+.user-redream-data {
+	background-color: var(--background-main-color);
+	position: relative;
+}
+
+.main-page-profile-settings {
+	background-color: var(--background-main-color);
+}
+
+.user-redream-header {
+	margin: 0;
+	position: absolute;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+}
+
+.user-redream-container {
+	padding: 25px 15px;
+}
+
+.user-redream-data {
+	background-color: var(--basic-deep-purple);
+	padding: 20px 25px;
+	border-radius: 12px;
+}
+
+.setting-link-container {
+	margin-top: 25px;
+}
+
 .user-profile-link-item {
 	padding: 8px 10px;
 	background-color: rgba(226, 230, 255, 0.1);
@@ -232,7 +266,42 @@
 	background-position: 0 50%;
 }
 
-/* Media Queries */
+.profile-form {
+	margin-top: 35px;
+}
+
+.profile-form input,
+.profile-form label,
+.profile-form select {
+	display: block;
+	width: 100%;
+	border-radius: 35px;
+	border: none;
+	outline: none;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--light-grey);
+}
+
+.profile-form label {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	color: var(--light-grey);
+	opacity: 50%;
+	padding-bottom: 7px;
+	padding-left: 17px;
+}
+
+.profile-form input,
+.profile-form select {
+	padding: 12px 15px;
+	margin-bottom: 15px;
+	background-color: var(--background-color-input);
+}
+
+/* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 1200px) {
 	.header-sub-navigation-container {

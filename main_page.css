@@ -19,6 +19,7 @@ html {
 	--dark-green: #63c14c;
 	--light-blue: #19afff;
 	--back-button-color: #e5e5e5;
+	--background-main-color: #252734;
 }
 
 body {
@@ -199,7 +200,7 @@ a {
 	padding-bottom: 45px;
 	padding-right: 15px;
 	padding-left: 15px;
-	background-color: #252734;
+	background-color: var(--background-main-color);
 }
 
 .main-page-background-image::before {
