@@ -332,6 +332,28 @@
 	color: var(--light-grey);
 }
 
+.change-password-button {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	width: 24px;
+	height: 24px;
+	background-image: url('./img/password-eye.svg');
+	bottom: 146px;
+	right: 40px;
+}
+
+.change-password-confirm-button {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	width: 24px;
+	height: 24px;
+	background-image: url('./img/password-eye.svg');
+	bottom: 88px;
+	right: 40px;
+}
+
 .profile-form-middle-button {
 	padding: 10px 40px;
 	border-radius: 30px;
@@ -373,6 +395,10 @@
 	width: 345px;
 	margin: 0 auto;
 	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+	border: 1px solid var(--dark-green);
+	box-shadow: 0px 0px 16px 4px rgb(3 255 73 / 26%),
+		-5px 0px 14px rgb(0 0 0 / 25%);
 }
 
 .change-password-container {
@@ -380,9 +406,37 @@
 	padding: 20px 15px;
 }
 
-.change-password-modal {
-	margin-top: 25px;
-	margin-bottom: 25px;
+.change-password-header {
+	top: 20px;
+	left: 25px;
+	position: absolute;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--light-grey);
+	font-size: 16px;
+	line-height: 19px;
+	margin: 0;
+}
+
+.change-password-button-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.change-password-header::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background-color: var(--neon-green);
+	margin-left: -25px;
+	margin-top: 8px;
+}
+
+.input-password-container {
+	margin-top: 60px;
 }
 
 .profile-password-input,
@@ -396,6 +450,135 @@
 	line-height: 22px;
 	background-color: var(--background-color-input);
 	outline: none;
+}
+
+.profile-password-input {
+	margin-bottom: 15px;
+}
+
+.profile-confirm-password-input {
+	margin-bottom: 20px;
+}
+
+.profile-form,
+.communication .user-redream-input-communication {
+	color: var(--neon-green);
+}
+
+.profile-form,
+.communication label {
+	color: var(--light-grey);
+	opacity: 1;
+}
+
+.communication label {
+	padding-left: 25px;
+}
+
+.instagram-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Instagram_white.svg');
+	left: 25px;
+	top: 57px;
+	width: 16px;
+	height: 16px;
+}
+
+.facebook-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Facebook.svg');
+	left: 25px;
+	top: 143px;
+	width: 16px;
+	height: 16px;
+}
+
+.steam-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Steam_white.svg');
+	left: 25px;
+	top: 228px;
+	width: 16px;
+	height: 16px;
+}
+
+.twitter-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Twitter_white.svg');
+	left: 25px;
+	top: 313px;
+	width: 16px;
+	height: 16px;
+}
+
+.qq-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/QQ_white.svg');
+	left: 25px;
+	top: 399px;
+	width: 16px;
+	height: 16px;
+}
+
+.skype-icon::before {
+	position: absolute;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Skype_white.svg');
+	left: 25px;
+	top: 483px;
+	width: 16px;
+	height: 16px;
+}
+.vk-icon::before {
+	position: absolute;
+	background-repeat: no-repeat;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/VK_white.svg');
+	left: 25px;
+	top: 568px;
+	width: 16px;
+	height: 16px;
+}
+
+.twitch-icon::before {
+	position: absolute;
+	background-repeat: no-repeat;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Twitch.svg');
+	left: 25px;
+	top: 653px;
+	width: 16px;
+	height: 16px;
+}
+
+.telegram-icon::before {
+	position: absolute;
+	background-repeat: no-repeat;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Telegram_white.svg');
+	left: 25px;
+	top: 739px;
+	width: 16px;
+	height: 16px;
+}
+
+.weChat-icon::before {
+	position: absolute;
+	background-repeat: no-repeat;
+	content: '';
+	background-image: url('./img/user_profile/user-form-communication/Wechat.svg');
+	left: 25px;
+	top: 822px;
+	width: 16px;
+	height: 16px;
+}
+.communication-form-button {
+	margin-top: 25px;
 }
 
 /* ======================================================   Media Queries   =========================================== */
