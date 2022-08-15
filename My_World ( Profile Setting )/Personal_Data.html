@@ -284,18 +284,20 @@
 			<div class="change-password-container">
 				<h3 class="change-password-header">Change Password</h3>
 				<div class="input-password-container">
-				<input type="password" pattern="[0-9a-fA-F]{4,8}" placeholder='Password' class="profile-password-input">
-				<input type="password" pattern="[0-9a-fA-F]{4,8}" placeholder='Confirm Password' class="profile-confirm-password-input">
+				<input type="password" pattern="[0-9a-fA-F]{4,8}" id='change-password-input' placeholder='Password' class="profile-password-input" name='passwordInput'>
+				<input type="password" pattern="[0-9a-fA-F]{4,8}" id='confirm-change-password-input' placeholder='Confirm Password' class="profile-confirm-password-input" name='confirmPasswordInput'>
 				</div>
 				<button
+				      data-component="PasswordInputEye"
 							type="button"
 							class="change-password-button"
-							id="js-button-password"
+							data-password-input-id='change-password-input'
 						></button>
 						<button
+						  data-component="PasswordInputEye"
 							type="button"
 							class="change-password-confirm-button"
-							id="js-button-confirm-password"
+							data-password-input-id="confirm-change-password-input"
 						></button>
 				<div class="change-password-button-container">
 					<button data-bs-dismiss="modal"	type='button' class="profile-form-middle-button cancel-button">Cancel</button>

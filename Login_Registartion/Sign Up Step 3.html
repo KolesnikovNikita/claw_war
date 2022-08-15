@@ -49,30 +49,34 @@
 					</div>
 					<div class="password-step-3-container">
 						<input
+							id="sign-up-password"
 							class="password-input"
 							type="password"
 							placeholder="Password"
 							pattern="[0-9a-fA-F]{4,8}"
-							name="password"
+							name="signUpPassword"
 							required
 						/>
 						<input
+							id="confirm-sign-up-password"
 							class="confirm-password-input"
 							type="password"
 							placeholder="Confirm Password"
 							pattern="[0-9a-fA-F]{4,8}"
-							name="password"
+							name="signUpPasswordConfirm"
 							required
 						/>
 						<button
+							data-password-input-id="input-password-id"
 							type="button"
+							data-component="PasswordInputEye"
 							class="password-button-step-3"
-							id="js-button-password"
 						></button>
 						<button
+							data-password-input-id="confirm-input-password-id"
+							data-component="PasswordInputEye"
 							type="button"
 							class="password-confirm-button-step-3"
-							id="js-button-confirm-password"
 						></button>
 					</div>
 					<div class="navigation-buttons step-2">
