@@ -447,6 +447,8 @@
 	line-height: 22px;
 	background-color: var(--background-color-input);
 	outline: none;
+	color: #e5e5e5;
+	opacity: 0.5;
 }
 
 .profile-password-input {
