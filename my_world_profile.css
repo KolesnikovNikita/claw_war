@@ -339,6 +339,8 @@
 	border-radius: 20px;
 	border: none;
 	background-color: rgba(226, 230, 255, 0.5);
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .change-password-button {
@@ -505,6 +507,7 @@
 
 .select-device-header {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .select-device-input {
@@ -518,24 +521,18 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 16px;
-	margin-right: 10px;
+	margin-right: 8px;
 }
 
 .select-device {
 	background-color: var(--light-green);
 }
 
-.profile-form-small-button a {
-	color: #fff;
-}
-
-.profile-form-small-button {
-	margin-right: 10px;
-	margin-bottom: 10px;
-}
-
 .device-option-container {
 	margin-top: 20px;
+	display: flex;
+
+	flex-wrap: wrap;
 }
 .search-device-container {
 	margin-top: 30px;
@@ -601,8 +598,9 @@
 }
 
 .search-tag-container {
+	display: flex;
+	flex-wrap: wrap;
 	position: relative;
-	margin-bottom: 15px;
 }
 
 .search-tag {
@@ -620,6 +618,7 @@
 }
 
 .add-selected-device {
+	margin-top: 15px;
 	display: flex;
 }
 

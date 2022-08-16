@@ -62,70 +62,135 @@
 			<div class="user-redream-container">
 				<div class="user-redream-data">
 					<h3 class="user-profile-header">Redream personal data</h3>
-					<form class='profile-form' method='post'>
+					<form class="profile-form" method="post">
 						<div class="wrapper-column">
-						<label for='user-name'>Username</label>
-						<input type="text" id='user-name' name='name' class="user-redream-input">
+							<label for="user-name">Username</label>
+							<input
+								type="text"
+								id="user-name"
+								name="name"
+								class="user-redream-input"
+							/>
 						</div>
 						<div class="wrapper-column">
-						<label for='first-name'>First Name</label>
-						<input type="text" id='first-name' name='firstName' class="user-redream-input">
+							<label for="first-name">First Name</label>
+							<input
+								type="text"
+								id="first-name"
+								name="firstName"
+								class="user-redream-input"
+							/>
 						</div>
 						<div class="wrapper-column">
-						<label for='user-name'>Last Name</label>
-						<input type="text" id='last-name' name='lastName' class="user-redream-input">
+							<label for="user-name">Last Name</label>
+							<input
+								type="text"
+								id="last-name"
+								name="lastName"
+								class="user-redream-input"
+							/>
 						</div>
 						<div class="wrapper-column">
-						<label for="email">Email</label>
-						<input type='email' id='email' name='userEmail' class="user-redream-input profile-email">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								name="userEmail"
+								class="user-redream-input profile-email"
+							/>
 						</div>
 						<div class="wrapper-column">
-						<label for="b-date">Birth Date</label>
-						<input type='date' id='b-date' name='birth-date' class="user-redream-input">
+							<label for="b-date">Birth Date</label>
+							<input
+								type="date"
+								id="b-date"
+								name="birth-date"
+								class="user-redream-input"
+							/>
 						</div>
 						<div class="wrapper-column">
-						<label for="phone">Phone Number</label>
-						<input type='number' id='phone' name='phone-number' class="user-redream-input">
+							<label for="phone">Phone Number</label>
+							<input
+								type="number"
+								id="phone"
+								name="phone-number"
+								class="user-redream-input"
+							/>
 						</div>
 						<div class="wrapper-column select-gender">
-						<label for="gender">Gender</label>
-						<select class='form-select-gender' name="sex" id="gender">
-							<option value="male">Male</option>
-							<option value="female">Female</option>
-						</select>
+							<label for="gender">Gender</label>
+							<select class="form-select-gender" name="sex" id="gender">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
 						</div>
 						<div class="wrapper-column">
-						<label for="mLanguage">Main Language</label>
-						<select class='form-select-language' name="language" id="mLanguage">
-							<option value="deutsche">Deutsche</option>
-							<option value="english">English</option>
-						</select></div>
-						<div class="wrapper-column">
-						<label for='country'>Country</label>
-						<input type="text" id='country' name='country' class="user-redream-input">
-					</div>
-						<div class="wrapper-column">
-						<label for="city">City</label>
-						<input type='text' id='city' name='city' class="user-redream-input">
-					</div>
-					<div class="wrapper-column">
-						<label for="address">Address</label>
-						<input type='text' id='address' name='address' class="user-redream-input">
+							<label for="mLanguage">Main Language</label>
+							<select
+								class="form-select-language"
+								name="language"
+								id="mLanguage"
+							>
+								<option value="deutsche">Deutsche</option>
+								<option value="english">English</option>
+							</select>
 						</div>
 						<div class="wrapper-column">
-						<label for="zip">Zip</label>
-						<input type='number' id='zip' name='zip' class="user-redream-input">
+							<label for="country">Country</label>
+							<input
+								type="text"
+								id="country"
+								name="country"
+								class="user-redream-input"
+							/>
+						</div>
+						<div class="wrapper-column">
+							<label for="city">City</label>
+							<input
+								type="text"
+								id="city"
+								name="city"
+								class="user-redream-input"
+							/>
+						</div>
+						<div class="wrapper-column">
+							<label for="address">Address</label>
+							<input
+								type="text"
+								id="address"
+								name="address"
+								class="user-redream-input"
+							/>
+						</div>
+						<div class="wrapper-column">
+							<label for="zip">Zip</label>
+							<input
+								type="number"
+								id="zip"
+								name="zip"
+								class="user-redream-input"
+							/>
 						</div>
 
 						<!-- BUTTON PASSWORD-CHANGE -->
 
-						<button type='button' data-bs-toggle="modal" data-bs-target="#change-password-modal" class="profile-form-big-button change-password">Change Password</button>
+						<button
+							type="button"
+							data-bs-toggle="modal"
+							data-bs-target="#change-password-modal"
+							class="profile-form-big-button change-password"
+						>
+							Change Password
+						</button>
 						<div class="submit-button-container">
-							<button class="profile-form-big-button cancel-button">Cancel</button>
-							<button type='submit' class="profile-form-big-button save-button">Save</button>
+							<button class="profile-form-big-button cancel-button">
+								Cancel
+							</button>
+							<button type="submit" class="profile-form-big-button save-button">
+								Save
+							</button>
 						</div>
 					</form>
-				</div>
 				</div>
 			</div>
 		</main>
@@ -274,40 +339,62 @@
 
 		<!-- End of Menu -->
 
-		<!------------------------------------------ Change Password Modal ------------------------------->
-		
-		<div class='modal' id="change-password-modal">
+		<!-- Change Password Modal -->
+
+		<div class="modal" id="change-password-modal">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content bg-transparent">
-		<section class="change-password-modal">
-			<form class='change-password-form' action="#">
-			<div class="change-password-container">
-				<h3 class="change-password-header">Change Password</h3>
-				<div class="input-password-container">
-				<input type="password" pattern="[0-9a-fA-F]{4,8}" id='change-password-input' placeholder='Password' class="profile-password-input" name='passwordInput'>
-				<input type="password" pattern="[0-9a-fA-F]{4,8}" id='confirm-change-password-input' placeholder='Confirm Password' class="profile-confirm-password-input" name='confirmPasswordInput'>
-				</div>
-				<button
-				      data-component="PasswordInputEye"
-							type="button"
-							class="change-password-button"
-							data-password-input-id='change-password-input'
-						></button>
-						<button
-						  data-component="PasswordInputEye"
-							type="button"
-							class="change-password-confirm-button"
-							data-password-input-id="confirm-change-password-input"
-						></button>
-				<div class="change-password-button-container">
-					<button data-bs-dismiss="modal"	type='button' class="profile-form-middle-button cancel-button">Cancel</button>
-					<button class="profile-form-middle-button save-button">Save</button>
+					<section class="change-password-modal">
+						<form class="change-password-form" action="#">
+							<div class="change-password-container">
+								<h3 class="change-password-header">Change Password</h3>
+								<div class="input-password-container">
+									<input
+										type="password"
+										pattern="[0-9a-fA-F]{4,8}"
+										id="change-password-input"
+										placeholder="Password"
+										class="profile-password-input"
+										name="passwordInput"
+									/>
+									<input
+										type="password"
+										pattern="[0-9a-fA-F]{4,8}"
+										id="confirm-change-password-input"
+										placeholder="Confirm Password"
+										class="profile-confirm-password-input"
+										name="confirmPasswordInput"
+									/>
+								</div>
+								<button
+									data-component="PasswordInputEye"
+									type="button"
+									class="change-password-button"
+									data-password-input-id="change-password-input"
+								></button>
+								<button
+									data-component="PasswordInputEye"
+									type="button"
+									class="change-password-confirm-button"
+									data-password-input-id="confirm-change-password-input"
+								></button>
+								<div class="change-password-button-container">
+									<button
+										data-bs-dismiss="modal"
+										type="button"
+										class="profile-form-middle-button cancel-button"
+									>
+										Cancel
+									</button>
+									<button class="profile-form-middle-button save-button">
+										Save
+									</button>
+								</div>
+							</div>
+						</form>
+					</section>
 				</div>
 			</div>
-			</form>
-		</section>
-		</div>
-		</div>
 		</div>
 
 		<script src="../index.js"></script>

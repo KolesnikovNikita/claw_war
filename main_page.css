@@ -972,6 +972,7 @@ a {
 	background-color: var(--basic-deep-purple);
 	padding-top: 20px;
 	padding-bottom: 30px;
+	flex-grow: 1;
 }
 
 .logo-container {
