@@ -15,8 +15,6 @@ function initPasswordShow() {
 			const passwordInputId = eyeButton.dataset.passwordInputId;
 
 			const passwordInput = document.getElementById(passwordInputId);
-			console.log(passwordInputId);
-			console.log(passwordInput);
 
 			if (passwordInput.getAttribute('type') === 'password') {
 				passwordInput.setAttribute('type', 'text');

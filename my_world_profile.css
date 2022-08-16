@@ -12,6 +12,9 @@
 	--background-color-input: #2e3241;
 	--change-password-button-color: #e78d5b;
 	--cancel-button-color: rgba(226, 230, 255, 0.5);
+	--background-input-color: #212430;
+	--background-color-device-select: #272633;
+	--background-color-search-select: #161c23;
 }
 
 /* ===============================================  User Profile  =========================================== */
@@ -172,11 +175,6 @@
 
 /* ===================================================  Personal Data   ========================================= */
 
-.user-redream-data {
-	background-color: var(--background-main-color);
-	position: relative;
-}
-
 .main-page-profile-settings {
 	background-color: var(--background-main-color);
 }
@@ -196,8 +194,9 @@
 }
 
 .user-redream-data {
+	position: relative;
 	background-color: var(--basic-deep-purple);
-	padding: 20px 25px;
+	padding: 20px 15px;
 	border-radius: 12px;
 }
 
@@ -329,6 +328,17 @@
 	font-size: 14px;
 	line-height: 16px;
 	color: var(--light-grey);
+}
+
+.profile-form-small-button {
+	padding: 10px 20px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	border-radius: 20px;
+	border: none;
+	background-color: rgba(226, 230, 255, 0.5);
 }
 
 .change-password-button {
@@ -480,6 +490,154 @@
 
 .communication-form-button {
 	margin-top: 25px;
+}
+
+/*===============================  Gear  ==================================*/
+
+.gear-description-header {
+	margin-bottom: 15px;
+	margin-top: 60px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+}
+
+.select-device-header {
+	display: flex;
+}
+
+.select-device-input {
+	width: 236px;
+	padding: 10px 25px;
+	border-radius: 35px;
+	border: 1px solid #e5e5e5;
+	background-color: var(--background-input-color);
+	outline: none;
+	color: var(--light-grey);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	margin-right: 10px;
+}
+
+.select-device {
+	background-color: var(--light-green);
+}
+
+.profile-form-small-button a {
+	color: #fff;
+}
+
+.profile-form-small-button {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.device-option-container {
+	margin-top: 20px;
+}
+.search-device-container {
+	margin-top: 30px;
+	background-color: var(--background-color-device-select);
+	padding: 12px 10px;
+	border-radius: 15px;
+}
+
+.search-device-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.search-device-input {
+	width: 50%;
+	margin-left: auto;
+	background-color: var(--background-color-search-select);
+	border: 1px solid var(--light-grey);
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 22px;
+	outline: none;
+	font-weight: 400;
+	font-size: 12px;
+	opacity: 0.5;
+	line-height: 14px;
+	color: var(--light-grey);
+}
+
+.search-device-input::before {
+	position: absolute;
+	content: '';
+	background-position: 50% 50%;
+	background-image: url('./img/user_profile/user-form-communication/search-icon.svg');
+	background-repeat: no-repeat;
+	left: 0;
+}
+
+.selected-device-name {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 22px;
+	color: var(--light-grey);
+}
+
+.select-device-field {
+	padding: 15px 20px;
+	border: 1px solid var(--light-grey);
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.select-device-field p {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0.22px;
+	color: var(--light-grey);
+	margin-bottom: 0;
+}
+
+.select-device-field p:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.search-tag-container {
+	margin-bottom: 15px;
+}
+
+.search-tag-container span {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 14px;
+	padding-right: 28px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	background-color: var(--light-green);
+	border-radius: 20px;
+	margin-right: 10px;
+}
+
+.add-selected-device {
+	display: flex;
+}
+
+.add-selected-device span {
+	padding: 10px 20px;
+	background-color: var(--background-input-color);
+	border: 1px solid rgba(229, 229, 229, 0.5);
+	border-radius: 35px;
+	width: 208px;
+	margin-right: auto;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0.22px;
+	color: var(--light-grey);
 }
 
 /* ======================================================   Media Queries   =========================================== */
