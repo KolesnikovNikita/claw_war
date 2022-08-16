@@ -10,7 +10,7 @@
 	--sub-navigation-top-border-color: #0bd863;
 	--background-main-color: #252734;
 	--background-color-input: #2e3241;
-	--change-password-button-color: #e78d5b;
+	--orange-color: #e78d5b;
 	--cancel-button-color: rgba(226, 230, 255, 0.5);
 	--background-input-color: #212430;
 	--background-color-device-select: #272633;
@@ -376,7 +376,7 @@
 .change-password {
 	margin-top: 5px;
 	margin-bottom: 35px;
-	background-color: var(--change-password-button-color);
+	background-color: var(--orange-color);
 }
 
 .cancel-button {
@@ -545,6 +545,7 @@
 }
 
 .search-device-header {
+	position: relative;
 	display: flex;
 	align-items: center;
 	margin-bottom: 20px;
@@ -568,15 +569,6 @@
 	color: var(--light-grey);
 }
 
-.search-device-input::before {
-	position: absolute;
-	content: '';
-	background-position: 50% 50%;
-	background-image: url('./img/user_profile/user-form-communication/search-icon.svg');
-	background-repeat: no-repeat;
-	left: 0;
-}
-
 .selected-device-name {
 	font-weight: 500;
 	font-size: 20px;
@@ -589,6 +581,10 @@
 	border: 1px solid var(--light-grey);
 	border-radius: 15px;
 	margin-bottom: 15px;
+}
+
+.selected-device {
+	background-color: var(--orange-color);
 }
 
 .select-device-field p {
@@ -605,14 +601,15 @@
 }
 
 .search-tag-container {
+	position: relative;
 	margin-bottom: 15px;
 }
 
-.search-tag-container span {
+.search-tag {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	padding-left: 14px;
-	padding-right: 28px;
+	padding-right: 50px;
 	color: #fff;
 	font-weight: 500;
 	font-size: 14px;
@@ -638,6 +635,33 @@
 	line-height: 22px;
 	letter-spacing: 0.22px;
 	color: var(--light-grey);
+}
+
+.search-icon {
+	position: absolute;
+	bottom: 10px;
+	right: 22px;
+	width: 16px;
+	height: 16px;
+}
+
+.delete-tag-button {
+	position: relative;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+
+.delete-tag-button::after {
+	position: absolute;
+	content: '';
+	display: block;
+	background-image: url('./img/user_profile/user-form-communication/cross-tag.svg');
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	left: 10px;
+	bottom: -5px;
 }
 
 /* ======================================================   Media Queries   =========================================== */
