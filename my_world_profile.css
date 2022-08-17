@@ -384,6 +384,7 @@
 
 .cancel-button {
 	background-color: var(--cancel-button-color);
+	color: #e5e5e5;
 }
 
 .save-button {
@@ -493,6 +494,110 @@
 
 .communication-form-button {
 	margin-top: 25px;
+}
+
+/* ========= Add Game Modal =========== */
+.add-game-header {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--light-grey);
+}
+.add-game-container {
+	padding: 10px;
+}
+
+.add-game-form {
+	background-color: var(--basic-deep-purple);
+	padding-top: 20px;
+	padding-bottom: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 10px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+	border: 1px solid var(--dark-green);
+	box-shadow: 0px 0px 16px 4px rgb(3 255 73 / 26%),
+		-5px 0px 14px rgb(0 0 0 / 25%);
+}
+
+.add-game select,
+.add-game input[type='text'] {
+	padding: 15px;
+	display: block;
+	display: block;
+	width: 100%;
+	border-radius: 35px;
+	border: none;
+	outline: none;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: var(--light-grey);
+	background-color: var(--background-color-input);
+	appearance: none;
+	margin-bottom: 15px;
+}
+
+.add-game label {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	color: var(--light-grey);
+	padding-left: 15px;
+}
+
+.add-game select {
+	background-image: url('./img/user_profile/select-gender-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 94% 55%;
+	background-size: 0.9em auto, 100%;
+}
+
+.game-image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 208px;
+	background-color: var(--background-color-input);
+	margin-bottom: 15px;
+	border-radius: 12px;
+}
+
+.bottom-button-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.load-game-image-container {
+	margin-bottom: 30px;
+}
+
+.load-game-image-container label {
+	padding: 0;
+}
+
+.load-picture-container {
+	padding: 12px;
+	background-color: #4986fd;
+	display: flex;
+	justify-content: center;
+	border-radius: 30px;
+}
+
+.input-game-image {
+	display: none;
+}
+
+.load-image-text {
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	padding-left: 10px;
 }
 
 /*===============================  Gear  ==================================*/
@@ -688,6 +793,9 @@
 	outline: none;
 	color: var(--light-grey);
 	margin-right: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .green-button {
@@ -738,7 +846,7 @@
 	margin-bottom: 5px;
 }
 
-.type {
+.sub-genre {
 	margin-bottom: 10px;
 }
 
@@ -780,6 +888,18 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.preferences-no-result-header {
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: capitalize;
+	color: var(--light-grey);
+	opacity: 0.5;
+	margin-top: 55px;
+	margin-bottom: 25px;
 }
 
 /* ======================================================   Media Queries   =========================================== */
