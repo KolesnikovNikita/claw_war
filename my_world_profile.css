@@ -15,6 +15,7 @@
 	--background-input-color: #212430;
 	--background-color-device-select: #272633;
 	--background-color-search-select: #161c23;
+	--deep-blue-color: #3583bb;
 }
 
 /* ===============================================  User Profile  =========================================== */
@@ -321,7 +322,7 @@
 }
 
 .profile-form-big-button {
-	padding: 12px 25px;
+	padding: 12px 24px;
 	border-radius: 30px;
 	border: none;
 	font-weight: 500;
@@ -580,8 +581,17 @@
 	margin-bottom: 15px;
 }
 
+.profile-form-small-button:active {
+	background-color: var(--orange-color);
+	color: #fff;
+}
+
 .selected-device {
 	background-color: var(--orange-color);
+}
+
+.profile-form-small-button:visited {
+	color: #fff;
 }
 
 .select-device-field p {
@@ -661,6 +671,115 @@
 	height: 16px;
 	left: 10px;
 	bottom: -5px;
+}
+
+/*  == Preferences All Games ==  */
+
+.search-game-header {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+.search-game-input {
+	background-color: var(--background-input-color);
+	padding: 10px 20px;
+	border: 1px solid var(--back-button-color);
+	border-radius: 35px;
+	outline: none;
+	color: var(--light-grey);
+	margin-right: 8px;
+}
+
+.green-button {
+	background: var(--light-green);
+}
+
+.profile-large-button {
+	width: 100%;
+	background-color: var(--deep-blue-color);
+	border: none;
+	padding: 12px 66px;
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--light-grey);
+	border-radius: 30px;
+}
+
+.game-image {
+	width: 100%;
+}
+
+.profile-image-overlay {
+	position: absolute;
+	bottom: 70px;
+	left: 15px;
+	padding: 20px;
+	border-radius: 14px;
+	width: 175px;
+	backdrop-filter: blur(32px);
+}
+
+.game-name {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	margin-bottom: 10px;
+}
+
+.game-description {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.genre {
+	margin-bottom: 5px;
+}
+
+.type {
+	margin-bottom: 10px;
+}
+
+.add-button-container {
+	position: relative;
+}
+
+.user-game-button::after {
+	position: absolute;
+	content: '';
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	display: block;
+	background-image: url('./img/user_profile/add-game-plus.svg');
+	bottom: 5px;
+	left: 84px;
+}
+
+.user-game-button {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	padding-right: 65px;
+	border: none;
+	border-radius: 20px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	background-color: transparent;
+	backdrop-filter: blur(4px);
+}
+
+.profile-games-container {
+	position: relative;
+}
+
+.load-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ======================================================   Media Queries   =========================================== */
