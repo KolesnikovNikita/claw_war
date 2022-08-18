@@ -76,9 +76,9 @@
 								Search
 							</button>
 						</div>
-						<button data-bs-toggle="modal" data-bs-target="#add-game-modal" type="button" class="profile-large-button">
+						<a data-bs-toggle="modal" href="#add-game-modal" role='button' type="button" class="profile-large-button">
 							Add New Game to Database
-						</button>
+						</a>
 								<div class="profile-games-container">
 									<div class="profile-game-container">
 										<img class='game-image' width='311' height='214' src="../img/user_profile/image_1.svg" alt="game image">
@@ -269,7 +269,7 @@
 
 		<!-------------------- Add New Game Modal ------------------------->
 
-		<div class="modal" id='add-game-modal'>
+		<div class="modal" id='add-game-modal' aria-hidden="true" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content bg-transparent">
 		<section class="add-game-container">
@@ -299,7 +299,7 @@
 					</div>
 					<div class="load-game-image-container">
 						<input type="file" id='load-picture' class='input-game-image'>
-						<label for="load-picture">
+						<label class='file-load-wrapper' for="load-picture">
 						<span class="load-picture-container"><img class="input__file-icon" src="../img/user_profile/upload-picture-image.svg" alt="Choose File" width="15" height='12'>
 						<span class='load-image-text'>Upload Picture</span>
 						</span>
@@ -307,13 +307,27 @@
 					</div>
 					<div class="bottom-button-container">
 						<button data-bs-dismiss="modal" class="profile-form-middle-button cancel-button">Close</button>
-						<button type='submit' class="profile-form-middle-button save-button">Add Game</button>
+						<button data-bs-target='#confirmModal' data-bs-toggle="modal" data-bs-dismiss="modal" class="profile-form-middle-button save-button">Add Game</button>
 					</div>
 				</form>
 			</div>
 		</section>
 		</div>
 		</div>
+		</div>
+
+		<div class="modal" id="confirmModal" aria-hidden="true" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<section class="confirm-add-game-container">
+						<h3 class="add-game-header confirm-header">Do you want to <br	/> add this game to  <br	/> the database?</h3>
+						<div class="bottom-button-container">
+						<button data-bs-dismiss="modal" data-bs-target='add-game-modal' class="profile-form-middle-button cancel-button">No</button>
+						<button type='submit' data-bs-dismiss="modal" class="profile-form-middle-button save-button">Yes</button>
+					</div>
+					</section>
+				</div>
+			</div>
 		</div>
 
 		<!-- End of Modal -->
