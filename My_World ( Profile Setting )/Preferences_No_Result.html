@@ -77,9 +77,9 @@
 							</button>
 						</div>
 						<h3 class="preferences-no-result-header">The Game Wasn't Found</h3>
-						<button data-bs-toggle="modal" data-bs-target="#add-game-modal" type="button" class="profile-large-button">
+						<a data-bs-toggle="modal" href="#add-game-modal" role='button' type="button" class="profile-large-button">
 							Add New Game to Database
-						</button>							
+						</a>						
 						</div>
 					</div>
 				</div>
@@ -232,7 +232,7 @@
 
 		<!-------------------- Add New Game Modal ------------------------->
 
-		<div class="modal" id='add-game-modal'>
+		<div class="modal" id='add-game-modal' aria-hidden="true" tabindex="-1">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content bg-transparent">
 		<section class="add-game-container">
@@ -270,13 +270,27 @@
 					</div>
 					<div class="bottom-button-container">
 						<button data-bs-dismiss="modal" class="profile-form-middle-button cancel-button">Close</button>
-						<button type='submit' class="profile-form-middle-button save-button">Add Game</button>
+						<button data-bs-target='#confirmModal' data-bs-toggle="modal" data-bs-dismiss="modal" class="profile-form-middle-button save-button">Add Game</button>
 					</div>
 				</form>
 			</div>
 		</section>
 		</div>
 		</div>
+		</div>
+
+		<div class="modal" id="confirmModal" aria-hidden="true" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<section class="confirm-add-game-container">
+						<h3 class="add-game-header confirm-header">Do you want to <br	/> add this game to  <br	/> the database?</h3>
+						<div class="bottom-button-container">
+						<button data-bs-dismiss="modal" data-bs-target='add-game-modal' class="profile-form-middle-button cancel-button">No</button>
+						<button type='submit' data-bs-dismiss="modal" class="profile-form-middle-button save-button">Yes</button>
+					</div>
+					</section>
+				</div>
+			</div>
 		</div>
 
 		<!-- End of Modal -->
