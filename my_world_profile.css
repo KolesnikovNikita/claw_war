@@ -194,6 +194,8 @@
 
 .user-redream-container {
 	padding: 25px 15px;
+	max-width: 940px;
+	margin: 0 auto;
 }
 
 .user-redream-data {
