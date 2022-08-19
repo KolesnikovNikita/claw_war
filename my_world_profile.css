@@ -686,6 +686,7 @@
 	font-size: 20px;
 	line-height: 22px;
 	color: var(--light-grey);
+	letter-spacing: 0.22px;
 }
 
 .select-device-field {
@@ -721,7 +722,7 @@
 	margin-bottom: 15px;
 }
 
-.search-tag-container {
+.search-tag-container-mobile {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
@@ -963,6 +964,10 @@
 	display: none;
 }
 
+.search-tag-container-desktop {
+	display: none;
+}
+
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 1200px) {
@@ -1123,7 +1128,7 @@
 	.user-redream-data {
 		position: relative;
 		margin: 0 auto;
-		padding: 35px 40px;
+		padding: 40px;
 		max-width: 940px;
 	}
 
@@ -1136,5 +1141,54 @@
 
 	.submit-button-container {
 		margin-top: 20px;
+	}
+
+	.gear-description-header {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.selected-device-name {
+		font-size: 24px;
+		line-height: 22px;
+	}
+
+	.search-device-input {
+		width: 240px;
+	}
+
+	.search-tag-container-mobile {
+		display: none;
+	}
+	.desktop-device-container {
+		display: flex;
+	}
+
+	.search-tag-container-desktop {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.search-tag-container-desktop span {
+		margin: 0;
+		margin-bottom: 5px;
+	}
+
+	.search-device-container {
+		margin-top: 0;
+		width: 590px;
+		margin-right: 15px;
+	}
+
+	.device-option-container {
+		margin-bottom: 40px;
+	}
+
+	.add-selected-device span {
+		width: 422px;
+	}
+
+	.select-device-input {
+		width: 352px;
 	}
 }
