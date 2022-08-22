@@ -21,6 +21,7 @@ html {
 	--sub-navigation-top-border-color: #0bd863;
 	--background-main-color: #252734;
 	--background-color-input: #2e3241;
+	--background-desktop-main-color: #1d1e28;
 	--orange-color: #e78d5b;
 	--cancel-button-color: rgba(226, 230, 255, 0.5);
 	--background-input-color: #212430;
@@ -71,7 +72,6 @@ html {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 25px;
-	margin-bottom: 25px;
 }
 
 .user-info-name {
@@ -90,6 +90,9 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: var(--background-main-color);
 }
 
 .user-info-count {
@@ -161,6 +164,7 @@ html {
 	padding-bottom: 65px;
 	margin: 0 auto;
 	max-width: 940px;
+	background-color: var(--background-main-color);
 }
 
 .user-setting-container {
@@ -190,7 +194,7 @@ html {
 /* ===================================================  Personal Data   ========================================= */
 
 .main-page-profile-settings {
-	background-color: var(--background-main-color);
+	background-color: var(--basic-deep-purple);
 	position: relative;
 }
 
@@ -216,10 +220,6 @@ html {
 	padding: 20px 15px;
 	border-radius: 12px;
 	max-width: 940px;
-}
-
-.setting-link-container {
-	margin-top: 25px;
 }
 
 .user-profile-link-item {
@@ -823,6 +823,7 @@ html {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
+	min-width: 210px;
 }
 
 .green-button {
@@ -842,8 +843,7 @@ html {
 }
 
 .game-image {
-	width: 311px;
-	height: 214px;
+	width: 100%;
 }
 
 .profile-image-overlay {
@@ -982,7 +982,7 @@ html {
 	display: none;
 }
 
-.side-container-profile-menu-desktop {
+.side-layout-menu-desktop {
 	display: none;
 }
 
@@ -992,6 +992,16 @@ html {
 
 .paginator-container {
 	display: none;
+}
+
+.close-cross-button {
+	display: none;
+}
+
+.dashboard-layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 /* ======================================================   Media Queries   =========================================== */
@@ -1105,7 +1115,7 @@ html {
 
 	.container-input {
 		display: inline;
-		margin-left: 360px;
+		margin-left: 345px;
 		padding: 10px 15px;
 		font-weight: 400;
 		font-size: 12px;
@@ -1244,11 +1254,6 @@ html {
 		margin-right: 0;
 	}
 
-	.user-setting-links-desktop {
-		padding: 40px 70px;
-		background-color: var(--basic-deep-purple);
-	}
-
 	.link-active {
 		background-color: var(--light-green);
 	}
@@ -1257,7 +1262,7 @@ html {
 		margin-bottom: 55px;
 	}
 
-	.side-container-profile-menu-desktop img {
+	.side-layout-menu-desktop img {
 		margin: 0 auto;
 	}
 
@@ -1294,34 +1299,31 @@ html {
 	.user-setting-menu {
 		padding-left: 0;
 		padding-right: 0;
+		background-color: var(--background-desktop-main-color);
 	}
 
 	.user-setting-links-desktop {
-		display: none;
-		position: absolute;
-		right: 0px;
-		bottom: 0;
+		padding: 40px 70px;
+		order: 1;
+		display: block;
 		z-index: 2;
 	}
 
-	.side-container-profile-menu-desktop {
-		position: absolute;
-		left: 0px;
-		bottom: 0;
-		display: none;
+	.side-layout-menu-desktop {
+		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		padding: 45px 57px;
-		background-color: var(--basic-deep-purple);
 		width: 215px;
-		height: 1790px;
 	}
 
-	.main-page-wrapper {
-		width: 1000px;
-		padding: 40px 30px;
+	.dashboard-layout-content {
 		margin: 0 auto;
+		background-color: var(--background-desktop-main-color);
+		width: 600px;
+		padding: 40px 30px;
+		flex-grow: 1;
 	}
 
 	.profile-large-button {
@@ -1330,16 +1332,6 @@ html {
 
 	.profile-games-container {
 		display: flex;
-	}
-
-	.game-image {
-		width: 200px;
-		height: 168px;
-	}
-
-	.profile-image-overlay {
-		width: 113px;
-		height: 135px;
 	}
 
 	.game-name {
@@ -1358,8 +1350,10 @@ html {
 	}
 
 	.profile-image-overlay {
-		bottom: 16px;
+		bottom: 10px;
 		padding: 20px 12px;
+		width: 113px;
+		min-height: 135px;
 	}
 
 	.profile-game-container {
@@ -1454,5 +1448,113 @@ html {
 	}
 	.load-button-container {
 		margin-bottom: 32px;
+	}
+
+	.preferences {
+		display: block;
+		padding: 12px 25px;
+		margin: 0 auto;
+		max-width: 235px;
+	}
+
+	.desktop-form-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.desktop-form-container select,
+	.desktop-form-container input {
+		width: 360px;
+	}
+
+	.game-image-container {
+		width: 240px;
+	}
+
+	.add-game-form {
+		min-width: 770px;
+		padding-top: 32px;
+		padding-left: 56px;
+		padding-right: 56px;
+		padding-bottom: 30px;
+	}
+
+	.add-game-header {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.load-picture-container {
+		width: 150px;
+	}
+
+	.load-game-image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.cancel-button,
+	.save-button {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 8px 24px;
+		display: block;
+	}
+	.confirm-add-game-container {
+		width: 650px;
+		position: relative;
+	}
+
+	.confirm-add-game-container::before {
+		content: '';
+		position: absolute;
+		background-image: url('./img/user_profile/modal-guy.svg');
+		width: 364px;
+		height: 310px;
+		background-repeat: no-repeat;
+		bottom: 0;
+		left: -115px;
+	}
+
+	.confirm-add-game-container::after {
+		content: '';
+		position: absolute;
+		background-image: url('./img/user_profile/modal-girl.svg');
+		width: 290px;
+		height: 359px;
+		background-repeat: no-repeat;
+		bottom: 0;
+		right: -17px;
+	}
+
+	.desktop-confirm-game-container {
+		width: 220px;
+		margin: 0 auto;
+	}
+
+	.close-cross-button {
+		display: block;
+		position: absolute;
+		background-image: url('./img/user_profile/close-modal-cross.svg');
+		background-color: transparent;
+		border: none;
+		top: 10px;
+		right: 10px;
+		padding: 0;
+		margin: 0;
+		height: 26px;
+		width: 26px;
+		z-index: 3;
+	}
+
+	.dashboard-layout {
+		flex-direction: row;
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	.user-profile-setting-links {
+		background-color: transparent;
 	}
 }

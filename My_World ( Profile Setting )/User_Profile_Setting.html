@@ -50,62 +50,8 @@
 			</div>
 		</header>
 		<main class="main-page-profile-settings">
-			<div class="main-page-wrapper">
-				<div class="profile-setting-bg-image">
-					<button class="add-button"></button>
-				</div>
-
-				<div class="main-menu-profile-setting">
-					<div class="user-profile-information">
-						<div class="user-info friends">
-							<span class="user-info-count">0</span
-							><span class="user-info-name">Friends</span>
-						</div>
-						<div class="user-info clan">
-							<span class="user-info-count">0</span
-							><span class="user-info-name">Clans</span>
-						</div>
-						<div class="user-buttons-options">
-							<span class="add-button-style">ReDream</span>
-							<button class="sign-out-button">Sign Out</button>
-						</div>
-						<div class="user-info games">
-							<span class="user-info-count">0</span
-							><span class="user-info-name">Games</span>
-						</div>
-						<div class="user-info country">
-							<img
-								class="user-country-flag-mobile"
-								src="../img/user_profile/user-setting-flag.svg"
-								alt="flag country"
-							/>
-							<span class="user-info-name">Germany</span>
-						</div>
-					</div>
-				</div>
-				<div class="user-setting-links-desktop">
-					<div class="user-profile-setting-links">
-						<ul class="user-profile-link-list">
-							<li class="user-profile-link-item">
-								<a href="#">Personal User Data</a>
-							</li>
-							<li class="user-profile-link-item">
-								<a href="#">Communication</a>
-							</li>
-							<li class="user-profile-link-item link-active">
-								<a href="#">User Profile</a>
-							</li>
-							<li class="user-profile-link-item"><a href="#">Gear</a></li>
-							<li class="user-profile-link-item">
-								<a href="#">Preferences</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<!------------- Left-Side-Menu ---------------->
-
-				<div class="side-container-profile-menu-desktop">
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop">
 					<div class="column-wrapper">
 						<img
 							src="../img/user_profile/side-news-bell.svg"
@@ -144,73 +90,129 @@
 						</button>
 					</div>
 				</div>
+				<div class="user-setting-links-desktop">
+					<div class="user-profile-setting-links">
+						<ul class="user-profile-link-list">
+							<li class="user-profile-link-item">
+								<a href="#">Personal User Data</a>
+							</li>
+							<li class="user-profile-link-item">
+								<a href="#">Communication</a>
+							</li>
+							<li class="user-profile-link-item link-active">
+								<a href="#">User Profile</a>
+							</li>
+							<li class="user-profile-link-item"><a href="#">Gear</a></li>
+							<li class="user-profile-link-item">
+								<a href="#">Preferences</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="dashboard-layout-content">
+					<div class="profile-setting-bg-image">
+						<button class="add-button"></button>
+					</div>
+					<div class="main-menu-profile-setting">
+						<div class="user-profile-information">
+							<div class="user-info friends">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Friends</span>
+							</div>
+							<div class="user-info clan">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Clans</span>
+							</div>
+							<div class="user-buttons-options">
+								<span class="add-button-style">ReDream</span>
+								<button class="sign-out-button">Sign Out</button>
+							</div>
+							<div class="user-info games">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Games</span>
+							</div>
+							<div class="user-info country">
+								<img
+									class="user-country-flag-mobile"
+									src="../img/user_profile/user-setting-flag.svg"
+									alt="flag country"
+								/>
+								<span class="user-info-name">Germany</span>
+							</div>
+						</div>
+					</div>
 
-				<!------------ End Left - Side Menu ------------->
+					<!------------- Left-Side-Menu ---------------->
 
-				<div class="user-setting-menu">
-					<div class="user-setting-container gaming">
-						<h3 class="user-profile-header">ReDream is gaming</h3>
-						<div class="user-setting-button-container">
-							<button class="user-setting-button">Add Game</button>
+					<!------------ End Left - Side Menu ------------->
+
+					<div class="user-setting-menu">
+						<div class="user-setting-container gaming">
+							<h3 class="user-profile-header">ReDream is gaming</h3>
+							<div class="user-setting-button-container">
+								<button class="user-setting-button">Add Game</button>
+							</div>
+							<button type="button" class="container-button">Add Game</button>
 						</div>
-						<button type="button" class="container-button">Add Game</button>
-					</div>
-					<div class="user-setting-container gaming">
-						<h3 class="user-profile-header">ReDream screenshots</h3>
-						<div class="user-setting-button-container">
-							<button class="user-setting-button">Add Screenshot</button>
+						<div class="user-setting-container gaming">
+							<h3 class="user-profile-header">ReDream screenshots</h3>
+							<div class="user-setting-button-container">
+								<button class="user-setting-button">Add Screenshot</button>
+							</div>
+							<input
+								placeholder="Search here..."
+								type="text"
+								class="container-input"
+							/>
+							<img
+								class="user-setting-search-icon"
+								src="../img/user_profile/search-icon.svg"
+								width="14"
+								height="14"
+								alt="search"
+							/>
+							<button type="button" class="container-button">Add Photos</button>
 						</div>
-						<input
-							placeholder="Search here..."
-							type="text"
-							class="container-input"
-						/>
-						<img
-							class="user-setting-search-icon"
-							src="../img/user_profile/search-icon.svg"
-							width="14"
-							height="14"
-							alt="search"
-						/>
-						<button type="button" class="container-button">Add Photos</button>
-					</div>
-					<div class="user-setting-container gaming">
-						<h3 class="user-profile-header">ReDream album</h3>
-						<div class="user-setting-button-container">
-							<button class="user-setting-button">Add Photo</button>
+						<div class="user-setting-container gaming">
+							<h3 class="user-profile-header">ReDream album</h3>
+							<div class="user-setting-button-container">
+								<button class="user-setting-button">Add Photo</button>
+							</div>
+							<input
+								placeholder="Search here..."
+								type="text"
+								class="container-input"
+							/>
+							<img
+								class="user-setting-search-icon"
+								src="../img/user_profile/search-icon.svg"
+								width="14"
+								height="14"
+								alt="search"
+							/>
+							<button type="button" class="container-button">Add Photos</button>
 						</div>
-						<input
-							placeholder="Search here..."
-							type="text"
-							class="container-input"
-						/>
-						<img
-							class="user-setting-search-icon"
-							src="../img/user_profile/search-icon.svg"
-							width="14"
-							height="14"
-							alt="search"
-						/>
-						<button type="button" class="container-button">Add Photos</button>
-					</div>
-					<div class="user-setting-container gaming">
-						<h3 class="user-profile-header">ReDream friends</h3>
-						<div class="user-setting-button-container">
-							<button class="user-setting-button">Add friend</button>
+						<div class="user-setting-container gaming">
+							<h3 class="user-profile-header">ReDream friends</h3>
+							<div class="user-setting-button-container">
+								<button class="user-setting-button">Add friend</button>
+							</div>
+							<input
+								placeholder="Search here..."
+								type="text"
+								class="container-input"
+							/>
+							<img
+								class="user-setting-search-icon"
+								src="../img/user_profile/search-icon.svg"
+								width="14"
+								height="14"
+								alt="search"
+							/>
+							<button type="button" class="container-button">
+								Add Friends
+							</button>
 						</div>
-						<input
-							placeholder="Search here..."
-							type="text"
-							class="container-input"
-						/>
-						<img
-							class="user-setting-search-icon"
-							src="../img/user_profile/search-icon.svg"
-							width="14"
-							height="14"
-							alt="search"
-						/>
-						<button type="button" class="container-button">Add Friends</button>
 					</div>
 				</div>
 			</div>
