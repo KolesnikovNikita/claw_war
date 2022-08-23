@@ -369,7 +369,7 @@ html {
 	width: 24px;
 	height: 24px;
 	background-image: url('./img/password-eye.svg');
-	bottom: 146px;
+	bottom: 136px;
 	right: 40px;
 }
 
@@ -380,7 +380,7 @@ html {
 	width: 24px;
 	height: 24px;
 	background-image: url('./img/password-eye.svg');
-	bottom: 88px;
+	bottom: 80px;
 	right: 40px;
 }
 
@@ -1551,7 +1551,7 @@ html {
 	}
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
 	.side-layout-menu-desktop {
 		display: flex;
 		flex-direction: column;
@@ -1561,3 +1561,10 @@ html {
 		width: 215px;
 	}
 }
+
+/* @media screen and (max-width: 1200px) {
+	.profile-form input,
+	.profile-form select {
+		width: 315px;
+	}
+} */
