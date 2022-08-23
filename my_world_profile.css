@@ -1307,23 +1307,15 @@ html {
 		order: 1;
 		display: block;
 		z-index: 2;
-	}
-
-	.side-layout-menu-desktop {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		padding: 45px 57px;
-		width: 215px;
+		width: 385px;
 	}
 
 	.dashboard-layout-content {
 		margin: 0 auto;
 		background-color: var(--background-desktop-main-color);
-		width: 600px;
 		padding: 40px 30px;
 		flex-grow: 1;
+		width: 600px;
 	}
 
 	.profile-large-button {
@@ -1550,11 +1542,22 @@ html {
 
 	.dashboard-layout {
 		flex-direction: row;
-		max-width: 1600px;
 		margin: 0 auto;
+		max-width: 1600px;
 	}
 
 	.user-profile-setting-links {
 		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.side-layout-menu-desktop {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 45px;
+		width: 215px;
 	}
 }
