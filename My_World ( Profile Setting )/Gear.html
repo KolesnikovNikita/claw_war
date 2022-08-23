@@ -51,104 +51,167 @@
 			</div>
 		</header>
 		<main class="main-page-profile-settings">
-			<div class="user-setting-links-desktop">
-				<div class="user-profile-setting-links">
-					<ul class="user-profile-link-list">
-						<li class="user-profile-link-item">
-							<a href="#">Personal User Data</a>
-						</li>
-						<li class="user-profile-link-item">
-							<a href="#">Communication</a>
-						</li>
-						<li class="user-profile-link-item link-active">
-							<a href="#">User Profile</a>
-						</li>
-						<li class="user-profile-link-item"><a href="#">Gear</a></li>
-						<li class="user-profile-link-item">
-							<a href="#">Preferences</a>
-						</li>
-					</ul>
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/side-news-bell.svg"
+							alt="news bell"
+							width="25"
+							height="28"
+						/>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/add-friend-icon.svg"
+							alt="add friend icon"
+						/>
+						<button class="add-friend-button" type="button">
+							<span class="side-container-menu-text">+ Add Friend</span>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								width="47"
+								height="47"
+								alt="add clans"
+							/>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
 				</div>
-			</div>
-			<div class="user-redream-container">
-				<div class="user-redream-data">
-					<h3 class="user-profile-header">Redream Gears</h3>
-					<h4 class="gear-description-header">Select a platform/device</h4>
-					<form action="#">
-						<div class="select-device-header">
-							<input placeholder="PC" type="text" class="select-device-input" />
-							<button class="profile-form-big-button select-device">OK</button>
-						</div>
-						<div class="device-option-container">
-							<a class="profile-form-small-button" href="#">Mainboard</a>
-							<a class="profile-form-small-button selected-device" href="#"
-								>Graphic Card</a
-							>
-							<a class="profile-form-small-button" href="#">Mouse</a>
-							<a class="profile-form-small-button" href="#">Keyboard</a>
-							<a class="profile-form-small-button" href="#">Chair</a>
-							<a class="profile-form-small-button" href="#">Sound Card</a>
-							<a class="profile-form-small-button" href="#">Monitor</a>
-							<a class="profile-form-small-button" href="#">Headset</a>
-							<a class="profile-form-small-button" href="#">Others</a>
-						</div>
-
-						<div class="desktop-device-container">
-							<div class="search-device-container">
-								<div class="search-device-header">
-									<span class="selected-device-name">Graphic Card</span
-									><input
-										placeholder="Search..."
+				<div class="user-setting-links-desktop">
+					<div class="user-profile-setting-links">
+						<ul class="user-profile-link-list">
+							<li class="user-profile-link-item">
+								<a href="#">Personal User Data</a>
+							</li>
+							<li class="user-profile-link-item">
+								<a href="#">Communication</a>
+							</li>
+							<li class="user-profile-link-item">
+								<a href="#">User Profile</a>
+							</li>
+							<li class="user-profile-link-item link-active">
+								<a href="#">Gear</a>
+							</li>
+							<li class="user-profile-link-item">
+								<a href="#">Preferences</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="dashboard-layout-content">
+					<div class="user-redream-container">
+						<div class="user-redream-data">
+							<h3 class="user-profile-header">Redream Gears</h3>
+							<h4 class="gear-description-header">Select a platform/device</h4>
+							<form action="#">
+								<div class="select-device-header">
+									<input
+										placeholder="PC"
 										type="text"
-										class="search-device-input"
+										class="select-device-input"
 									/>
-									<img
-										class="search-icon"
-										src="../img/user_profile/user-form-communication/search-icon.svg"
-										alt="search icon"
-									/>
-								</div>
-								<div class="select-device-field">
-									<p>Nvidia 123</p>
-									<p>Nvidia 456</p>
-									<p>Nvidia 789</p>
-								</div>
-								<div class="search-tag-container-mobile">
-									<span class="search-tag"
-										>Nvidia 123<button class="delete-tag-button" type="button">
-											<span class="visually-hidden">Delete</span>
-										</button></span
-									>
-									<span class="search-tag"
-										>Nvidia 123<button class="delete-tag-button" type="button">
-											<span class="visually-hidden">Delete</span>
-										</button></span
-									>
-								</div>
-								<div class="add-selected-device">
-									<span>Nvidia 2324</span>
-									<button
-										type="submit"
-										class="profile-form-big-button select-device"
-									>
-										Add
+									<button class="profile-form-big-button select-device">
+										OK
 									</button>
 								</div>
-							</div>
-							<div class="search-tag-container-desktop">
-								<span class="search-tag"
-									>Nvidia 123<button class="delete-tag-button" type="button">
-										<span class="visually-hidden">Delete</span>
-									</button></span
-								>
-								<span class="search-tag"
-									>Nvidia 123<button class="delete-tag-button" type="button">
-										<span class="visually-hidden">Delete</span>
-									</button></span
-								>
-							</div>
+								<div class="device-option-container">
+									<a class="profile-form-small-button" href="#">Mainboard</a>
+									<a class="profile-form-small-button selected-device" href="#"
+										>Graphic Card</a
+									>
+									<a class="profile-form-small-button" href="#">Mouse</a>
+									<a class="profile-form-small-button" href="#">Keyboard</a>
+									<a class="profile-form-small-button" href="#">Chair</a>
+									<a class="profile-form-small-button" href="#">Sound Card</a>
+									<a class="profile-form-small-button" href="#">Monitor</a>
+									<a class="profile-form-small-button" href="#">Headset</a>
+									<a class="profile-form-small-button" href="#">Others</a>
+								</div>
+
+								<div class="desktop-device-container">
+									<div class="search-device-container">
+										<div class="search-device-header">
+											<span class="selected-device-name">Graphic Card</span
+											><input
+												placeholder="Search..."
+												type="text"
+												class="search-device-input"
+											/>
+											<img
+												class="search-icon"
+												src="../img/user_profile/user-form-communication/search-icon.svg"
+												alt="search icon"
+											/>
+										</div>
+										<div class="select-device-field">
+											<p>Nvidia 123</p>
+											<p>Nvidia 456</p>
+											<p>Nvidia 789</p>
+										</div>
+										<div class="search-tag-container-mobile">
+											<span class="search-tag"
+												>Nvidia 123<button
+													class="delete-tag-button"
+													type="button"
+												>
+													<span class="visually-hidden">Delete</span>
+												</button></span
+											>
+											<span class="search-tag"
+												>Nvidia 123<button
+													class="delete-tag-button"
+													type="button"
+												>
+													<span class="visually-hidden">Delete</span>
+												</button></span
+											>
+										</div>
+										<div class="add-selected-device">
+											<span>Nvidia 2324</span>
+											<button
+												type="submit"
+												class="profile-form-big-button select-device"
+											>
+												Add
+											</button>
+										</div>
+									</div>
+									<div class="search-tag-container-desktop">
+										<span class="search-tag"
+											>Nvidia 123<button
+												class="delete-tag-button"
+												type="button"
+											>
+												<span class="visually-hidden">Delete</span>
+											</button></span
+										>
+										<span class="search-tag"
+											>Nvidia 123<button
+												class="delete-tag-button"
+												type="button"
+											>
+												<span class="visually-hidden">Delete</span>
+											</button></span
+										>
+									</div>
+								</div>
+							</form>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</main>

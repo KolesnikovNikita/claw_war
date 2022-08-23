@@ -210,8 +210,9 @@ html {
 
 .user-redream-container {
 	padding: 25px 15px;
-	max-width: 940px;
-	margin: 0 auto;
+	padding-top: 0;
+	background-color: var(--background-main-color);
+	position: relative;
 }
 
 .user-redream-data {
@@ -219,7 +220,6 @@ html {
 	background-color: var(--basic-deep-purple);
 	padding: 20px 15px;
 	border-radius: 12px;
-	max-width: 940px;
 }
 
 .user-profile-link-item {
@@ -369,7 +369,7 @@ html {
 	width: 24px;
 	height: 24px;
 	background-image: url('./img/password-eye.svg');
-	bottom: 136px;
+	bottom: 145px;
 	right: 40px;
 }
 
@@ -380,7 +380,7 @@ html {
 	width: 24px;
 	height: 24px;
 	background-image: url('./img/password-eye.svg');
-	bottom: 80px;
+	bottom: 88px;
 	right: 40px;
 }
 
@@ -433,6 +433,7 @@ html {
 .change-password-container {
 	position: relative;
 	padding: 20px 15px;
+	height: 260px;
 }
 
 .change-password-header {
@@ -1001,7 +1002,6 @@ html {
 .dashboard-layout {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 }
 
 /* ======================================================   Media Queries   =========================================== */
@@ -1150,6 +1150,7 @@ html {
 	.user-profile-desktop-container {
 		display: flex;
 		justify-content: space-around;
+		gap: 0.7rem;
 	}
 
 	.profile-form input,
@@ -1168,7 +1169,6 @@ html {
 		position: relative;
 		margin: 0 auto;
 		padding: 40px;
-		max-width: 940px;
 	}
 
 	.change-password {
@@ -1419,7 +1419,6 @@ html {
 		background-image: url('./img/user_profile/pagination-left-arrow.svg');
 		background-repeat: no-repeat;
 		background-position: center;
-		padding: 10px 20px;
 		width: 40px;
 		height: 40px;
 		border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1431,7 +1430,6 @@ html {
 		background-image: url('./img/user_profile/pagination-right-arrow.svg');
 		background-repeat: no-repeat;
 		background-position: center;
-		padding: 10px 20px;
 		width: 40px;
 		height: 40px;
 		border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1549,6 +1547,10 @@ html {
 	.user-profile-setting-links {
 		background-color: transparent;
 	}
+
+	.user-redream-container {
+		background-color: transparent;
+	}
 }
 
 @media screen and (min-width: 1600px) {
@@ -1561,10 +1563,3 @@ html {
 		width: 215px;
 	}
 }
-
-/* @media screen and (max-width: 1200px) {
-	.profile-form input,
-	.profile-form select {
-		width: 315px;
-	}
-} */

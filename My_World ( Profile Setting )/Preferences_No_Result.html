@@ -51,76 +51,253 @@
 			</div>
 		</header>
 		<main class="main-page-profile-settings">
-			<div class="user-setting-links-desktop">
-				<div class="user-profile-setting-links">
-					<ul class="user-profile-link-list">
-						<li class="user-profile-link-item">
-							<a href="#">Personal User Data</a>
-						</li>
-						<li class="user-profile-link-item">
-							<a href="#">Communication</a>
-						</li>
-						<li class="user-profile-link-item link-active">
-							<a href="#">User Profile</a>
-						</li>
-						<li class="user-profile-link-item"><a href="#">Gear</a></li>
-						<li class="user-profile-link-item">
-							<a href="#">Preferences</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="user-redream-container">
-				<div class="user-redream-data">
-					<h3 class="user-profile-header">Redream Game Preferences</h3>
-					<div class="choose-game-container">
-						<div class="search-game-header">
-							<input
-								placeholder="Search game here..."
-								type="text"
-								class="search-game-input"
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/side-news-bell.svg"
+							alt="news bell"
+							width="25"
+							height="28"
+						/>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/add-friend-icon.svg"
+							alt="add friend icon"
+						/>
+						<button class="add-friend-button" type="button">
+							<span class="side-container-menu-text">+ Add Friend</span>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								width="47"
+								height="47"
+								alt="add clans"
 							/>
-							<button
-								type="button"
-								class="profile-form-big-button green-button"
-							>
-								Search
-							</button>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="user-setting-links-desktop">
+					<div class="user-profile-setting-links">
+						<ul class="user-profile-link-list">
+							<li class="user-profile-link-item">
+								<a href="#">Personal User Data</a>
+							</li>
+							<li class="user-profile-link-item">
+								<a href="#">Communication</a>
+							</li>
+							<li class="user-profile-link-item link-active">
+								<a href="#">User Profile</a>
+							</li>
+							<li class="user-profile-link-item"><a href="#">Gear</a></li>
+							<li class="user-profile-link-item">
+								<a href="#">Preferences</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="dashboard-layout-content">
+					<div class="user-redream-container">
+						<div class="user-redream-data">
+							<h3 class="user-profile-header">Redream Game Preferences</h3>
+							<div class="choose-game-container">
+								<div class="search-game-header">
+									<input
+										placeholder="Search game here..."
+										type="text"
+										class="search-game-input"
+									/>
+									<button
+										type="button"
+										class="profile-form-big-button green-button"
+									>
+										Search
+									</button>
+								</div>
+								<div class="alphabet-search">
+									<ul class="alphabet-search-list">
+										<li class="alphabet-search-item"><a href="">a</a></li>
+										<li class="alphabet-search-item"><a href="">b</a></li>
+										<li class="alphabet-search-item"><a href="">c</a></li>
+										<li class="alphabet-search-item"><a href="">d</a></li>
+										<li class="alphabet-search-item"><a href="">e</a></li>
+										<li class="alphabet-search-item"><a href="">f</a></li>
+										<li class="alphabet-search-item"><a href="">g</a></li>
+										<li class="alphabet-search-item"><a href="">h</a></li>
+										<li class="alphabet-search-item"><a href="">i</a></li>
+										<li class="alphabet-search-item"><a href="">j</a></li>
+										<li class="alphabet-search-item"><a href="">k</a></li>
+										<li class="alphabet-search-item"><a href="">l</a></li>
+										<li class="alphabet-search-item"><a href="">m</a></li>
+										<li class="alphabet-search-item"><a href="">n</a></li>
+										<li class="alphabet-search-item"><a href="">o</a></li>
+										<li class="alphabet-search-item"><a href="">p</a></li>
+										<li class="alphabet-search-item"><a href="">q</a></li>
+										<li class="alphabet-search-item"><a href="">r</a></li>
+										<li class="alphabet-search-item"><a href="">s</a></li>
+										<li class="alphabet-search-item"><a href="">t</a></li>
+										<li class="alphabet-search-item"><a href="">u</a></li>
+										<li class="alphabet-search-item"><a href="">v</a></li>
+										<li class="alphabet-search-item"><a href="">w</a></li>
+										<li class="alphabet-search-item"><a href="">x</a></li>
+										<li class="alphabet-search-item"><a href="">y</a></li>
+										<li class="alphabet-search-item"><a href="">z</a></li>
+									</ul>
+								</div>
+								<h3 class="preferences-no-result-header">
+									The Game Wasn't Found
+								</h3>
+								<a
+									data-bs-toggle="modal"
+									href="#add-game-modal"
+									class="profile-large-button preferences"
+								>
+									Add New Game to Database
+								</a>
+							</div>
 						</div>
-						<div class="alphabet-search">
-							<ul class='alphabet-search-list' >
-								<li class='alphabet-search-item'><a href=''>a</a></li>
-								<li class='alphabet-search-item'><a href=''>b</a></li>
-								<li class='alphabet-search-item'><a href=''>c</a></li>
-								<li class='alphabet-search-item'><a href=''>d</a></li>
-								<li class='alphabet-search-item'><a href=''>e</a></li>
-								<li class='alphabet-search-item'><a href=''>f</a></li>
-								<li class='alphabet-search-item'><a href=''>g</a></li>
-								<li class='alphabet-search-item'><a href=''>h</a></li>
-								<li class='alphabet-search-item'><a href=''>i</a></li>
-								<li class='alphabet-search-item'><a href=''>j</a></li>
-								<li class='alphabet-search-item'><a href=''>k</a></li>
-								<li class='alphabet-search-item'><a href=''>l</a></li>
-								<li class='alphabet-search-item'><a href=''>m</a></li>
-								<li class='alphabet-search-item'><a href=''>n</a></li>
-								<li class='alphabet-search-item'><a href=''>o</a></li>
-								<li class='alphabet-search-item'><a href=''>p</a></li>
-								<li class='alphabet-search-item'><a href=''>q</a></li>
-								<li class='alphabet-search-item'><a href=''>r</a></li>
-								<li class='alphabet-search-item'><a href=''>s</a></li>
-								<li class='alphabet-search-item'><a href=''>t</a></li>
-								<li class='alphabet-search-item'><a href=''>u</a></li>
-								<li class='alphabet-search-item'><a href=''>v</a></li>
-								<li class='alphabet-search-item'><a href=''>w</a></li>
-								<li class='alphabet-search-item'><a href=''>x</a></li>
-								<li class='alphabet-search-item'><a href=''>y</a></li>
-								<li class='alphabet-search-item'><a href=''>z</a></li>
-							</ul>
+					</div>
+				</div>
+				<div class="modal" id="add-game-modal" aria-hidden="true" tabindex="-1">
+					<di v class="modal-dialog modal-dialog-centered">
+						<div class="modal-content bg-transparent">
+							<section class="add-game-container">
+								<div class="add-game-form">
+									<form class="add-game" action="#">
+										<h3 class="add-game-header">Add Game</h3>
+										<div class="desktop-form-container">
+											<div>
+												<div class="wrapper-column">
+													<label for="game-genre">Genre</label>
+													<select name="gameGenre" id="game-genre">
+														<option disabled selected>
+															Add or change genre
+														</option>
+														<option value="shooter">Shooter</option>
+													</select>
+												</div>
+												<div class="wrapper-column">
+													<label for="game-sub-genre">Subgenre</label>
+													<select name="sub-genre" id="game-sub-genre">
+														<option disabled selected>
+															Add or change subgenre
+														</option>
+														<option value="shooter">
+															First-Person Shooter
+														</option>
+													</select>
+												</div>
+												<div class="wrapper-column">
+													<label for="game-name">Game Name</label>
+													<input
+														type="text"
+														id="game-name"
+														class="add-game-name"
+													/>
+												</div>
+											</div>
+											<div class="upload-picture-container">
+												<div class="game-image-container">
+													<img
+														src="../img/user_profile/logo-world.svg"
+														width="170"
+														height="78"
+														alt="logo"
+													/>
+												</div>
+												<div class="load-game-image-container">
+													<input
+														type="file"
+														id="load-picture"
+														class="input-game-image"
+													/>
+													<label class="file-load-wrapper" for="load-picture">
+														<span class="load-picture-container"
+															><img
+																class="input__file-icon"
+																src="../img/user_profile/upload-picture-image.svg"
+																alt="Choose File"
+																width="15"
+																height="12"
+															/>
+															<span class="load-image-text"
+																>Upload Picture</span
+															>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="bottom-button-container">
+											<button
+												data-bs-dismiss="modal"
+												class="profile-form-middle-button cancel-button"
+											>
+												Close
+											</button>
+											<button
+												data-bs-target="#confirmModal"
+												data-bs-toggle="modal"
+												data-bs-dismiss="modal"
+												class="profile-form-middle-button save-button"
+											>
+												Add Game
+											</button>
+										</div>
+									</form>
+								</div>
+							</section>
 						</div>
-						<h3 class="preferences-no-result-header">The Game Wasn't Found</h3>
-						<a data-bs-toggle="modal" href="#add-game-modal" role='button' type="button" class="profile-large-button preferences">
-							Add New Game to Database
-						</a>						
+					</di>
+				</div>
+
+				<div class="modal" id="confirmModal" aria-hidden="true" tabindex="-1">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content bg-transparent">
+							<section class="confirm-add-game-container">
+								<div class="desktop-confirm-game-container">
+									<h3 class="add-game-header confirm-header">
+										Do you want to <br />
+										add this game to <br />
+										the database?
+									</h3>
+									<div class="bottom-button-container">
+										<button
+											data-bs-dismiss="modal"
+											data-bs-target="add-game-modal"
+											class="profile-form-middle-button cancel-button"
+										>
+											No
+										</button>
+										<button
+											type="submit"
+											data-bs-dismiss="modal"
+											class="profile-form-middle-button save-button"
+										>
+											Yes
+										</button>
+									</div>
+									<button
+										data-bs-dismiss="modal"
+										data-bs-target="add-game-modal"
+										class="close-cross-button"
+									></button>
+								</div>
+							</section>
 						</div>
 					</div>
 				</div>
@@ -270,75 +447,6 @@
 		</div>
 
 		<!-- End of Menu -->
-
-		<!-------------------- Add New Game Modal ------------------------->
-
-		<div class="modal" id='add-game-modal' aria-hidden="true" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content bg-transparent">
-		<section class="add-game-container">
-			<div class="add-game-form">
-				<form class='add-game' action='#'>
-					<h3 class="add-game-header">Add Game</h3>
-					<div class="desktop-form-container">
-						<div><div class="wrapper-column">
-					<label for="game-genre">Genre</label>
-					<select name="" id="game-genre" >
-						<option disabled selected>Add or change genre</option>
-						<option value="shooter">Shooter</option>
-					</select>
-					</div>
-					<div class="wrapper-column">
-					<label for="game-sub-genre">Subgenre</label>
-					<select name="sub-genre" id="game-sub-genre" >
-						<option disabled selected>Add or change subgenre</option>
-						<option value="shooter">First-Person Shooter</option>
-					</select>
-					</div>
-					<div class="wrapper-column">
-					<label for="game-name">Game Name</label>
-					<input type="text" id='game-name' class="add-game-name">
-					</div></div>
-					<div class='upload-picture-container'><div class="game-image-container">
-						<img src="../img/user_profile/logo-world.svg" width='170' height='78' alt="logo">
-					</div>
-					<div class="load-game-image-container">
-						<input type="file" id='load-picture' class='input-game-image'>
-						<label class='file-load-wrapper' for="load-picture">
-						<span class="load-picture-container"><img class="input__file-icon" src="../img/user_profile/upload-picture-image.svg" alt="Choose File" width="15" height='12'>
-						<span class='load-image-text'>Upload Picture</span>
-						</span>
-					</label>
-					</div>
-				</div>
-					</div>
-					<div class="bottom-button-container">
-						<button data-bs-dismiss="modal" class="profile-form-middle-button cancel-button">Close</button>
-						<button data-bs-target='#confirmModal' data-bs-toggle="modal" data-bs-dismiss="modal" class="profile-form-middle-button save-button">Add Game</button>
-					</div>
-				</form>
-			</div>
-		</section>
-		</div>
-		</div>
-		</div>
-
-		<div class="modal" id="confirmModal" aria-hidden="true" tabindex="-1">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content bg-transparent">
-					<section class="confirm-add-game-container">
-						<div class="desktop-confirm-game-container">
-						<h3 class="add-game-header confirm-header">Do you want to <br	/> add this game to  <br	/> the database?</h3>
-						<div class="bottom-button-container">
-						<button data-bs-dismiss="modal" data-bs-target='add-game-modal' class="profile-form-middle-button cancel-button">No</button>
-						<button type='submit' data-bs-dismiss="modal" class="profile-form-middle-button save-button">Yes</button>
-						</div>
-						<button data-bs-dismiss="modal" data-bs-target='add-game-modal' class="close-cross-button"></button>
-					</div>
-					</section>
-				</div>
-			</div>
-		</div>
 
 		<!-- End of Modal -->
 
