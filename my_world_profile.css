@@ -1371,6 +1371,7 @@ html {
 
 	.alphabet-search {
 		display: block;
+		margin-top: 16px;
 	}
 
 	.alphabet-search-list {

@@ -1,0 +1,223 @@
+:root {
+	--basic-deep-purple: #1b1a26;
+	--light-grey: #e2e6ff;
+	--light-green: #4fbb35;
+	--neon-green: #03ff49;
+	--dark-green: #63c14c;
+	--light-blue: #19afff;
+	--back-button-color: #e5e5e5;
+	--background-main-color: #252734;
+	--tomato-color: #ef5555;
+}
+
+.player-profile-bg-image {
+	position: relative;
+	background-image: url('./img/player_profile/player-profile-image.svg');
+	background-position: 0 0;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 124px;
+	background-color: #21222e;
+}
+
+.player-profile-image-container {
+	top: 90%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	position: absolute;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	background-image: url('./img/player_profile/player-image.svg');
+	display: block;
+}
+
+.player-profile-information {
+	justify-content: space-between;
+	display: flex;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 25px;
+}
+
+.user-profile-socials-container {
+	width: 195px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.user-profile-socials-container button:not(:last-child) {
+	margin-right: 20px;
+}
+
+.user-profile-socials {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.user-profile-button-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 217px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.user-profile-button-container button,
+.user-profile-button-container select {
+	padding: 10px 25px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	border: none;
+	border-radius: 30px;
+	outline: none;
+}
+
+.user-profile-add-button {
+	background-color: var(--light-green);
+	margin-bottom: 15px;
+}
+
+.user-profile-select-player {
+	background-color: var(--light-blue);
+	max-width: 162px;
+	margin: 0 auto;
+}
+
+.user-profile-menu {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+	max-width: 940px;
+	background-color: var(--background-main-color);
+}
+
+.user-profile-container {
+	background-color: var(--basic-deep-purple);
+	padding-top: 60px;
+	padding-bottom: 20px;
+	position: relative;
+	padding-left: 16px;
+}
+
+.user-profile-game-container {
+	flex-shrink: 0;
+	margin-right: 10px;
+	position: relative;
+}
+
+.user-profile-games {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.user-image-overlay {
+	position: absolute;
+	bottom: 1px;
+	left: 15px;
+	padding: 18px;
+	border-radius: 14px;
+	width: 175px;
+	backdrop-filter: blur(32px);
+	height: 150px;
+}
+
+.profile-count {
+	position: absolute;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	opacity: 0.5;
+}
+
+.games {
+	top: 22px;
+	left: 205px;
+}
+
+.screenshots {
+	top: 22px;
+	right: 115px;
+}
+
+.profile-page-button {
+	position: absolute;
+	top: 20px;
+	right: 16px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--neon-green);
+	border: none;
+	background-color: transparent;
+}
+
+.user-game-button.play::after {
+	position: absolute;
+	content: '';
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	display: block;
+	background-image: url('./img/player_profile/play-game.svg');
+	bottom: 5px;
+	left: 84px;
+}
+
+.user-profile-screenshots {
+	margin-top: 16px;
+	background-color: var(--basic-deep-purple);
+	padding-top: 60px;
+	padding-bottom: 20px;
+	position: relative;
+	padding-left: 16px;
+}
+
+.profile-delete-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+	background-color: var(--tomato-color);
+	border-radius: 30px;
+	padding: 8px 24px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.user-profile-game-container.screenshot:hover img {
+	opacity: 0.7;
+	border-radius: 10px;
+}
+
+.active-links {
+	display: none;
+}
+
+.user-profile-game-container.screenshot .profile-game-screenshot:hover {
+	border: 1px solid var(--neon-green);
+}
+
+.user-profile-game-container.screenshot:hover .active-links {
+	display: block;
+}
+
+.profile-cross-close-button {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
