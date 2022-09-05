@@ -90,7 +90,7 @@
 
 .user-profile-menu {
 	padding-top: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 5px;
 	margin: 0 auto;
 	max-width: 940px;
 	background-color: var(--background-main-color);
@@ -145,6 +145,11 @@
 .screenshots {
 	top: 22px;
 	right: 115px;
+}
+
+.album {
+	top: 22px;
+	left: 180px;
 }
 
 .profile-page-button {
@@ -220,4 +225,105 @@
 	border: none;
 	background-color: transparent;
 	padding: 0;
+}
+
+.user-profile-slider {
+	background-color: var(--basic-deep-purple);
+	padding-top: 60px;
+	padding-bottom: 20px;
+	position: relative;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-top: 16px;
+	margin-bottom: 5px;
+}
+
+/* Swiper */
+
+.swiper {
+	width: 100%;
+	padding-bottom: 40px;
+	background-color: var(--basic-deep-purple);
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 213px;
+	height: 123px;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.5));
+}
+
+.slider-album {
+	background-color: var(--basic-deep-purple);
+}
+
+.swiper-pagination-bullet {
+	background-color: var(--neon-green);
+	width: 16px;
+	height: 4px;
+	border-radius: 10px;
+}
+
+/* Swiper - 2 */
+
+.swiper-slide-awards img {
+	display: block;
+	width: 100%;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+}
+
+.swiper-awards {
+	width: 100%;
+	padding-bottom: 40px;
+	background-color: var(--basic-deep-purple);
+}
+
+/* Swiper-2 */
+
+.user-award-slider {
+	background-color: var(--basic-deep-purple);
+	padding: 20px 40px;
+}
+
+.awards-header {
+	margin: 0;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.side-profile-clans-info {
+	margin-bottom: 5px;
+	padding: 30px 55px;
+}
+
+.clans-info-header {
+	margin: 0;
+	text-align: center;
+	color: var(--light-grey);
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+.green-style {
+	color: var(--neon-green);
+}
+
+.chart-place-container {
+	padding-top: 25px;
+	padding-left: 15px;
+	padding-bottom: 25px;
 }

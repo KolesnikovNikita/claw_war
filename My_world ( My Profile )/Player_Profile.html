@@ -10,6 +10,10 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="../main_page.css" />
 		<link rel="stylesheet" href="../my_world_profile.css" />
 		<link rel="stylesheet" href="../my_profile.css" />
@@ -260,6 +264,60 @@
 								</div>
 							</div>
 						</div>
+						<div class="user-profile-slider">
+							<h3 class="user-profile-header">Redream Album</h3>
+							<span class="profile-count album">25</span>
+							<button class="profile-page-button">All</button>
+							<section class="slider-album">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</section>
+						</div>
+						<div class="user-award-slider">
+							<h3 class="awards-header">Awards</h3>
+							<section class="slider-album"></section>
+						</div>
+					</div>
+				</div>
+				<div class="side-profile-clans-info">
+					<h3 class="clans-info-header">
+						<span class="green-style">Top </span>Clans
+					</h3>
+					<div class="top-clans-container">
+						<div class="chart-place-container first-place"></div>
+						<div class="chart-place-container second-place"></div>
+						<div class="chart-place-container third-place"></div>
 					</div>
 				</div>
 			</div>
@@ -414,5 +472,7 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../swiper.js"></script>
 	</body>
 </html>
