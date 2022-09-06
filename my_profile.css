@@ -305,8 +305,7 @@
 }
 
 .side-profile-clans-info {
-	margin-bottom: 5px;
-	padding: 30px 55px;
+	background-color: var(--background-main-color);
 }
 
 .clans-info-header {
@@ -322,8 +321,185 @@
 	color: var(--neon-green);
 }
 
+.top-clans-container {
+	max-width: 220px;
+	margin: 0 auto;
+}
+
 .chart-place-container {
 	padding-top: 25px;
 	padding-left: 15px;
+	padding-right: 16px;
 	padding-bottom: 25px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.chart-place-container.first-place::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -42px;
+	width: 82px;
+	height: 150px;
+	background-image: url('./img/player_profile/first-place-prize.svg');
+}
+
+.chart-place-container.second-place::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -30px;
+	width: 58px;
+	height: 107px;
+	background-image: url('./img/player_profile/second-place-prize.svg');
+}
+
+.chart-place-container.third-place::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -27px;
+	width: 53px;
+	height: 97px;
+	background-image: url('./img/player_profile/third-place-prize.svg');
+}
+
+.side-profile-container {
+	padding: 30px 55px;
+	background-color: var(--basic-deep-purple);
+	margin-bottom: 5px;
+}
+
+.chart-place-container.first-place {
+	background: linear-gradient(
+		99.75deg,
+		rgba(111, 74, 198, 0.2) 30.87%,
+		rgba(167, 133, 245, 0.2) 84.74%
+	);
+	backdrop-filter: blur(22px);
+	border-radius: 5px 30px;
+	height: 108px;
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+.chart-place-container.second-place {
+	background: linear-gradient(
+		128.39deg,
+		rgba(9, 193, 138, 0.2) 3.68%,
+		rgba(123, 255, 168, 0.2) 98.36%
+	);
+	backdrop-filter: blur(22px);
+	border-radius: 5px 30px;
+	height: 108px;
+	margin-bottom: 20px;
+}
+
+.chart-place-container.third-place {
+	background: linear-gradient(
+		131.22deg,
+		rgba(9, 94, 193, 0.2) 2.14%,
+		rgba(123, 239, 255, 0.2) 100%
+	);
+	backdrop-filter: blur(22px);
+	border-radius: 5px 30px;
+	height: 108px;
+	margin-bottom: 20px;
+}
+
+.clans-status {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+	display: block;
+	margin-right: 20px;
+	margin-bottom: 0;
+}
+
+.gear-header {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	text-align: center;
+}
+
+.redream-gears-container {
+	background-color: var(--basic-deep-purple);
+	padding: 30px 16px 25px;
+	margin-bottom: 5px;
+}
+
+.gear-image-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.gear-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gear-button {
+	border: none;
+	padding: 8px 15px;
+	background-color: var(--light-green);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	border-radius: 30px;
+}
+
+.redream-latest-activity-container {
+	background-color: var(--basic-deep-purple);
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+.latest-activity-header {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	text-align: center;
+}
+
+.latest-activity-content {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--background-main-color);
+	border-radius: 10px;
+}
+
+.latest-activity-description {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 8px;
+}
+
+.latest-activity-event {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+	margin-bottom: 30px;
+}
+
+.time-activity {
+	margin: 0;
+	font-weight: 400;
+	font-size: 9px;
+	line-height: 11px;
+	color: rgba(255, 255, 255, 0.7);
 }
