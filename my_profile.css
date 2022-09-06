@@ -10,7 +10,18 @@
 	--tomato-color: #ef5555;
 }
 
-.player-profile-bg-image {
+.player-profile-bg-image,
+.clan-profile-bg-image {
+	position: relative;
+	background-image: url('./img/player_profile/player-profile-image.svg');
+	background-position: 0 0;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 124px;
+	background-color: #21222e;
+}
+
+.clan-profile-bg-image {
 	position: relative;
 	background-image: url('./img/player_profile/player-profile-image.svg');
 	background-position: 0 0;
@@ -30,6 +41,57 @@
 	height: 60px;
 	background-image: url('./img/player_profile/player-image.svg');
 	display: block;
+}
+
+.clan-slogan-container {
+	background-color: var(--basic-deep-purple);
+	border: 1px solid var(--neon-green);
+	padding: 8px 16px;
+	border-radius: 8px;
+	margin-bottom: 16px;
+}
+
+.clan-slogan-header {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.title-top {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	opacity: 0.5;
+	color: var(--light-grey);
+}
+
+.info-name {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+}
+
+.clan-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.clan-info.language .title-top {
+	padding-bottom: 8px;
+}
+
+.clan-information-container {
+	max-width: 205px;
+	margin: 0 auto;
+	align-content: center;
+}
+
+.clan-info-sub-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
 }
 
 .player-profile-information {
@@ -114,12 +176,11 @@
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
-	overflow-y: auto;
 }
 
 .user-image-overlay {
 	position: absolute;
-	bottom: 1px;
+	bottom: 18px;
 	left: 15px;
 	padding: 18px;
 	border-radius: 14px;
@@ -472,6 +533,14 @@
 	text-align: center;
 }
 
+.latest-activity-image-container {
+	width: 135px;
+}
+
+.latest-activity-image {
+	width: 143px;
+	height: 150px;
+}
 .latest-activity-content {
 	padding: 15px;
 	display: flex;
@@ -488,6 +557,11 @@
 	margin-bottom: 8px;
 }
 
+.latest-activity-description-container {
+	width: 135px;
+	padding-top: 25px;
+}
+
 .latest-activity-event {
 	font-weight: 500;
 	font-size: 18px;
@@ -502,4 +576,21 @@
 	font-size: 9px;
 	line-height: 11px;
 	color: rgba(255, 255, 255, 0.7);
+}
+
+/* Clan Page */
+
+.clan-name-container {
+	background-color: #252734;
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+
+.clan-name-header {
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: var(--light-grey);
 }
