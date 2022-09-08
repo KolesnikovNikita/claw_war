@@ -930,6 +930,7 @@
 }
 
 .player-ranking-container {
+	margin-top: 25px;
 	padding: 25px 15px;
 	padding-top: 0;
 	background-color: var(--background-main-color);
@@ -944,11 +945,27 @@
 }
 
 .ranking-list-header {
+	top: 20px;
+	left: 25px;
+	position: absolute;
+	margin: 0;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 19px;
 	text-transform: uppercase;
 	color: var(--light-grey);
+}
+
+.ranking-list-header::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background-color: var(--neon-green);
+	margin-left: -25px;
+	margin-top: 8px;
 }
 
 /* Ranking Tabs */
@@ -958,6 +975,7 @@
 	max-width: 32 0px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 65px;
 }
 
 .ranking-tabs > input[type='radio'] {
@@ -970,12 +988,18 @@
 	padding: 12px 8px;
 	font-size: 16px;
 	background-color: var(--background-main-color);
+	margin-bottom: 20px;
+	border-radius: 12px;
 }
 
-#tab-btn-1:checked ~ #content-1,
-#tab-btn-2:checked ~ #content-2,
-#tab-btn-3:checked ~ #content-3 {
+#worldList:checked ~ #worldList,
+#continentalList:checked ~ #continentalList,
+#nationalList:checked ~ #nationalList {
 	display: block;
+}
+
+.label-first-child {
+	margin-left: 45px;
 }
 
 .ranking-tabs > label {
@@ -1008,9 +1032,9 @@
 .ranking-item-container {
 	display: flex;
 	align-items: center;
-	padding: 12px 15px 10px 12px;
 	background-color: transparent;
 	border-radius: 12px;
+	padding-left: 12px;
 }
 
 .left-side-rank-container {
@@ -1027,6 +1051,7 @@
 
 .ranking-item-container.top-place {
 	background-color: var(--basic-deep-purple);
+	padding: 12px 15px 10px 12px;
 }
 
 .world-ranking-list {
@@ -1051,8 +1076,12 @@
 	margin-right: 15px;
 }
 
-.rank-player-photo {
+.rank-player-photo.top {
 	margin-right: 8px;
+}
+
+.rank-player-photo {
+	margin-right: 15px;
 }
 
 .player-avatar {
@@ -1190,4 +1219,16 @@
 		#f2cead 92.45%,
 		#cf8a52 101.78%
 	);
+}
+
+.last-on-page {
+	color: var(--neon-green);
+}
+
+.ranking-place .last-on-page {
+	color: var(--neon-green);
+}
+
+.load-more-players-container {
+	text-align: center;
 }

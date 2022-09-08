@@ -65,17 +65,17 @@
 									<input
 										type="radio"
 										name="tab-btn"
-										id="tab-btn-1"
+										id="worldList"
 										value=""
 										checked
 									/>
-									<label for="tab-btn-1">World</label>
-									<input type="radio" name="tab-btn" id="tab-btn-2" value="" />
-									<label for="tab-btn-2">Continental</label>
-									<input type="radio" name="tab-btn" id="tab-btn-3" value="" />
-									<label for="tab-btn-3">National</label>
+									<label class="label-first-child" for="worldList">World</label>
+									<input type="radio" name="tab-btn" id="continentalList" />
+									<label for="continentalList">Continental</label>
+									<input type="radio" name="tab-btn" id="nationalList" />
+									<label for="nationalList">National</label>
 
-									<div id="content-1">
+									<div id="worldList">
 										<ul class="world-ranking-list">
 											<li class="world-ranking-list-item">
 												<div class="golden-prize-container">
@@ -84,7 +84,7 @@
 															<div class="ranking-place first-place">
 																<span>1</span>
 															</div>
-															<div class="rank-player-photo">
+															<div class="rank-player-photo top">
 																<img
 																	src="../img/player_profile/ranking-player.1.svg"
 																	width="40"
@@ -100,7 +100,6 @@
 																	alt="avatar"
 																/>
 															</div>
-
 															<div class="player-name">
 																<span class="player-name-style">Zeus</span>
 															</div>
@@ -124,38 +123,42 @@
 											<li class="world-ranking-list-item">
 												<div class="silver-prize-container">
 													<div class="ranking-item-container top-place">
-														<div class="ranking-place second-place">
-															<span>2</span>
+														<div class="left-side-rank-container">
+															<div class="ranking-place second-place">
+																<span>2</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">StirgeX</span>
+															</div>
 														</div>
-														<div class="rank-player-photo">
-															<img
-																src="../img/player_profile/ranking-player.2.svg"
-																width="40"
-																height="40"
-																alt="photo"
-															/>
-														</div>
-														<div class="player-avatar">
-															<img
-																src="../img/player_profile/ranking-player-avatar.svg"
-																width="40"
-																height="40"
-																alt="avatar"
-															/>
-														</div>
-														<div class="player-name">
-															<span class="player-name-style">StirgeX</span>
-														</div>
-														<div class="player-prize-container">
-															<img
-																src="../img/player_profile/silver-prize.svg"
-																width="20"
-																height="20"
-																alt="gold"
-															/>
-														</div>
-														<div class="player-score-container">
-															<span class="score-style">123456</span>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/silver-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -163,62 +166,677 @@
 											<li class="world-ranking-list-item">
 												<div class="bronze-prize-container">
 													<div class="ranking-item-container top-place">
-														<div class="ranking-place third-place">
-															<span>3</span>
+														<div class="left-side-rank-container">
+															<div class="ranking-place third-place">
+																<span>3</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">Max007</span>
+															</div>
 														</div>
-														<div class="rank-player-photo">
-															<img
-																src="../img/player_profile/ranking-player.2.svg"
-																width="40"
-																height="40"
-																alt="photo"
-															/>
-														</div>
-														<div class="player-avatar">
-															<img
-																src="../img/player_profile/ranking-player-avatar.svg"
-																width="40"
-																height="40"
-																alt="avatar"
-															/>
-														</div>
-														<div class="player-name">
-															<span class="player-name-style">Max007</span>
-														</div>
-														<div class="player-prize-container">
-															<img
-																src="../img/player_profile/bronze-prize.svg"
-																width="20"
-																height="20"
-																alt="gold"
-															/>
-														</div>
-														<div class="player-score-container">
-															<span class="score-style">123456</span>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/bronze-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
 														</div>
 													</div>
 												</div>
 											</li>
 											<li class="world-ranking-list-item">
 												<div class="ranking-item-container">
-													<div class="ranking-place"><span>4</span></div>
-													<div class="rank-player-photo">
-														<img
-															src="../img/player_profile/ranking-player.4.svg"
-															width="40"
-															height="40"
-															alt="photo"
-														/>
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>4</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
 													</div>
-													<div class="player-name">
-														<span class="player-name-style">Vercingetore</span>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
 													</div>
-													<div class="player-score-container">1234</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>5</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>6</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>7</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place">
+															<span class="last-on-page">8</span>
+														</div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style last-on-page"
+																>Zeus</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container last-on-page">
+															1234
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div id="continentalList">
+										<ul class="world-ranking-list">
+											<li class="world-ranking-list-item">
+												<div class="golden-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place first-place">
+																<span>1</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.1.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">Zeus</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/gold-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="silver-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place second-place">
+																<span>2</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">StirgeX</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/silver-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="bronze-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place third-place">
+																<span>3</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">Max007</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/bronze-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>4</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>5</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>6</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>7</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place">
+															<span class="last-on-page">8</span>
+														</div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style last-on-page"
+																>Zeus</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container last-on-page">
+															1234
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div id="nationalList">
+										<ul class="world-ranking-list">
+											<li class="world-ranking-list-item">
+												<div class="golden-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place first-place">
+																<span>1</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.1.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">Zeus</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/gold-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="silver-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place second-place">
+																<span>2</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">StirgeX</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/silver-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="bronze-prize-container">
+													<div class="ranking-item-container top-place">
+														<div class="left-side-rank-container">
+															<div class="ranking-place third-place">
+																<span>3</span>
+															</div>
+															<div class="rank-player-photo top">
+																<img
+																	src="../img/player_profile/ranking-player.2.svg"
+																	width="40"
+																	height="40"
+																	alt="photo"
+																/>
+															</div>
+															<div class="player-avatar">
+																<img
+																	src="../img/player_profile/ranking-player-avatar.svg"
+																	width="40"
+																	height="40"
+																	alt="avatar"
+																/>
+															</div>
+															<div class="player-name">
+																<span class="player-name-style">Max007</span>
+															</div>
+														</div>
+														<div class="right-side-rank-container">
+															<div class="player-prize-container">
+																<img
+																	src="../img/player_profile/bronze-prize.svg"
+																	width="20"
+																	height="20"
+																	alt="gold"
+																/>
+															</div>
+															<div class="player-score-container">
+																<span class="score-style">123456</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>4</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>5</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>6</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place"><span>7</span></div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style"
+																>Vercingetore</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container">1234</div>
+													</div>
+												</div>
+											</li>
+											<li class="world-ranking-list-item">
+												<div class="ranking-item-container">
+													<div class="left-side-rank-container">
+														<div class="ranking-place">
+															<span class="last-on-page">8</span>
+														</div>
+														<div class="rank-player-photo">
+															<img
+																src="../img/player_profile/ranking-player.4.svg"
+																width="40"
+																height="40"
+																alt="photo"
+															/>
+														</div>
+														<div class="player-name">
+															<span class="player-name-style last-on-page"
+																>Zeus</span
+															>
+														</div>
+													</div>
+													<div class="right-side-rank-container">
+														<div class="player-score-container last-on-page">
+															1234
+														</div>
+													</div>
 												</div>
 											</li>
 										</ul>
 									</div>
 								</div>
+							</div>
+							<div class="load-more-players-container">
+								<button class="profile-form-big-button green-button">
+									Load More
+								</button>
 							</div>
 						</div>
 					</div>
