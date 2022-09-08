@@ -19,6 +19,20 @@
 	background-repeat: no-repeat;
 	height: 124px;
 	background-color: #21222e;
+	border-bottom: 1px solid var(--neon-green);
+}
+
+.clan-game-option-button {
+	position: absolute;
+	padding: 0;
+	background-image: url('./img/player_profile/game-option-button.svg');
+	width: 5px;
+	height: 16px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	top: 12px;
+	right: 12px;
+	border: none;
 }
 
 .clan-profile-bg-image {
@@ -83,8 +97,10 @@
 }
 
 .clan-information-container {
+	transform: scale(1);
 	max-width: 205px;
 	margin: 0 auto;
+	margin-top: -16px;
 	align-content: center;
 }
 
@@ -128,6 +144,8 @@
 }
 
 .user-profile-button-container button,
+.clan-invite-select,
+.clan-leader-board,
 .user-profile-button-container select {
 	padding: 10px 25px;
 	font-weight: 500;
@@ -139,12 +157,14 @@
 	outline: none;
 }
 
-.user-profile-add-button {
+.user-profile-add-button,
+.clan-leader-board {
 	background-color: var(--light-green);
 	margin-bottom: 15px;
 }
 
-.user-profile-select-player {
+.user-profile-select-player,
+.clan-invite-select {
 	background-color: var(--light-blue);
 	max-width: 162px;
 	margin: 0 auto;
@@ -178,7 +198,8 @@
 	overflow-x: auto;
 }
 
-.user-image-overlay {
+.user-image-overlay,
+.clan-image-overlay {
 	position: absolute;
 	bottom: 18px;
 	left: 15px;
@@ -189,7 +210,8 @@
 	height: 150px;
 }
 
-.profile-count {
+.profile-count,
+.clan-count {
 	position: absolute;
 	font-weight: 700;
 	font-size: 12px;
@@ -200,7 +222,7 @@
 
 .games {
 	top: 22px;
-	left: 205px;
+	left: 152px;
 }
 
 .screenshots {
@@ -213,7 +235,9 @@
 	left: 180px;
 }
 
-.profile-page-button {
+.profile-page-button,
+.clan-games-button,
+.clan-gallery-button {
 	position: absolute;
 	top: 20px;
 	right: 16px;
@@ -578,8 +602,6 @@
 	color: rgba(255, 255, 255, 0.7);
 }
 
-/* Clan Page */
-
 .clan-name-container {
 	background-color: #252734;
 	padding-top: 25px;
@@ -587,10 +609,585 @@
 }
 
 .clan-name-header {
+	margin: 0;
 	text-align: center;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;
 	text-transform: uppercase;
 	color: var(--light-grey);
+}
+
+.clan-flag-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.clan-profile-menu {
+	padding-bottom: 5px;
+	margin: 0 auto;
+	max-width: 940px;
+	background-color: var(--background-main-color);
+}
+
+.clan-persons-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+	background-color: var(--background-main-color);
+}
+
+.clan-persons-list {
+	white-space: nowrap;
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-x: auto;
+}
+
+.clan-persons-list li:not(:last-child) {
+	margin-right: 16px;
+}
+
+.person-info-container {
+	display: flex;
+	padding: 12px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+}
+
+.person-name {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+}
+
+.person-link-item {
+	flex-shrink: 0;
+}
+
+.person-clan-image {
+	width: 50px;
+	height: 60px;
+}
+
+.person-status {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	opacity: 0.5;
+}
+
+.person-image-container {
+	margin-right: 12px;
+}
+
+.clan-active-games {
+	position: relative;
+	background-color: var(--basic-deep-purple);
+	padding-top: 60px;
+	padding-bottom: 20px;
+	position: relative;
+	padding-left: 16px;
+	margin-bottom: 16px;
+}
+
+.clan-games-header,
+.clan-gallery-header {
+	top: 20px;
+	left: 25px;
+	position: absolute;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--light-grey);
+	font-size: 16px;
+	line-height: 19px;
+	margin: 0;
+}
+
+.clan-games-header::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background-color: var(--neon-green);
+	margin-left: -25px;
+	margin-top: 8px;
+}
+
+.clan-profile-games,
+.clan-profile-gallery {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+}
+
+.clan-game-container,
+.clan-gallery-container {
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 12px;
+}
+
+.gallery {
+	top: 22px;
+	left: 155px;
+}
+
+.clan-gallery {
+	position: relative;
+	background-color: var(--basic-deep-purple);
+	padding-top: 60px;
+	padding-bottom: 20px;
+	position: relative;
+	padding-left: 16px;
+	margin-bottom: 16px;
+}
+
+.strong-players-container {
+	padding: 40px 25px 40px 40px;
+	background-color: var(--basic-deep-purple);
+	background-image: url('./img/player_profile/players-bg-image.svg');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
+}
+
+.develop-clan-header {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: uppercase;
+	color: var(--light-grey);
+	margin-bottom: 25px;
+}
+
+.player-card {
+	position: relative;
+}
+
+.player-photo {
+	border: 3px solid #25252d;
+	border-radius: 30px;
+}
+
+.strong-players-top-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.strong-players-bottom-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.refresh-button-container {
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	width: 27px;
+	height: 27px;
+	cursor: pointer;
+	background-image: url('./img/player_profile/clan-refresh-buton.svg');
+}
+
+.card-bottom-side {
+	background-color: var(--background-main-color);
+	height: 71px;
+	width: 123px;
+	border-radius: 0 0 10px 10px;
+}
+
+.player-photo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clan-logo-container {
+	padding: 40px 70px 50px;
+	background-color: var(--basic-deep-purple);
+	margin-bottom: 5px;
+}
+
+.clan-logo-style {
+	margin: 0 auto;
+	background-size: cover;
+}
+
+.clan-language-container {
+	padding: 30px 80px 30px 70px;
+	background-color: var(--basic-deep-purple);
+	margin-bottom: 5px;
+}
+
+.clan-language-header {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	margin-bottom: 20px;
+}
+
+.languages-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.languages-container .language-flag-container:not(:last-child) {
+	margin-right: 18px;
+}
+
+.clans-communication-container {
+	padding: 30px 110px 35px 68px;
+	background-color: var(--basic-deep-purple);
+	margin-bottom: 5px;
+}
+
+.clans-communication-header {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	margin-bottom: 25px;
+}
+
+.clan-social-container {
+	display: flex;
+}
+
+.clan-social-container .clan-social-image:not(:last-child) {
+	margin-right: 35px;
+}
+
+.player-communication-container {
+	margin-bottom: 55px;
+}
+
+.message-container {
+	padding: 30px 35px;
+	background-color: var(--basic-deep-purple);
+}
+
+.player-name {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--light-grey);
+	margin-bottom: 5px;
+}
+
+.message-text {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: rgba(226, 230, 255, 0.5);
+}
+
+.message-style {
+	color: #fff;
+	font-weight: 600;
+}
+
+.message-inner-container {
+	background-color: var(--background-main-color);
+	padding: 16px;
+	border-radius: 15px;
+}
+
+.message-top-container {
+	display: flex;
+}
+
+.players-icons-container {
+	width: 100px;
+	margin-right: 16px;
+}
+
+.message-buttons-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.clan-information-buttons-container {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.main-page-player-ranking {
+	position: relative;
+	background-color: var(--background-main-color);
+}
+
+.player-ranking-container {
+	padding: 25px 15px;
+	padding-top: 0;
+	background-color: var(--background-main-color);
+	position: relative;
+}
+
+.player-ranking-list {
+	position: relative;
+	background-color: var(--basic-deep-purple);
+	padding: 20px 12px;
+	border-radius: 12px;
+}
+
+.ranking-list-header {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+
+/* Ranking Tabs */
+
+.ranking-tabs {
+	font-size: 0;
+	max-width: 32 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ranking-tabs > input[type='radio'] {
+	display: none;
+}
+
+.ranking-tabs > div {
+	display: none;
+	border: none;
+	padding: 12px 8px;
+	font-size: 16px;
+	background-color: var(--background-main-color);
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3 {
+	display: block;
+}
+
+.ranking-tabs > label {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	padding: 5px 15px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	opacity: 0.5;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	cursor: pointer;
+	position: relative;
+	top: 1px;
+}
+
+.ranking-tabs > input[type='radio']:checked + label {
+	background-color: #272633;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	color: var(--neon-green);
+	opacity: 1;
+}
+
+/* ============= */
+
+.ranking-item-container {
+	display: flex;
+	align-items: center;
+	padding: 12px 15px 10px 12px;
+	background-color: transparent;
+	border-radius: 12px;
+}
+
+.left-side-rank-container {
+	display: flex;
+	min-width: 175px;
+	margin-right: auto;
+	align-items: center;
+}
+
+.right-side-rank-container {
+	display: flex;
+	align-items: center;
+}
+
+.ranking-item-container.top-place {
+	background-color: var(--basic-deep-purple);
+}
+
+.world-ranking-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.world-ranking-list-item {
+	margin-bottom: 12px;
+}
+
+.ranking-place span {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	opacity: 0.7;
+}
+
+.ranking-place {
+	margin-right: 15px;
+}
+
+.rank-player-photo {
+	margin-right: 8px;
+}
+
+.player-avatar {
+	margin-right: 12px;
+}
+
+.player-prize-container {
+	margin-right: 10px;
+}
+
+.ranking-place.first-place span {
+	background: linear-gradient(
+		106.44deg,
+		#b18718 15.23%,
+		#d2a935 24.23%,
+		#f2d77c 34.71%,
+		#d2a935 44.76%,
+		#b78d1d 54.81%,
+		#d2a935 64.42%,
+		#e9ca67 74.9%,
+		#d2a935 85.39%,
+		#b88e1e 95%,
+		#d6af3e 99.1%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	opacity: 0.7;
+}
+
+.ranking-place.second-place span {
+	background: linear-gradient(
+		110.73deg,
+		#56524f -4.03%,
+		#787470 7.04%,
+		#95918e 16.71%,
+		#c7c7c7 25.85%,
+		#bbbbbb 35.53%,
+		#a3a3a3 46.81%,
+		#999999 58.64%,
+		#b2b2b2 69.39%,
+		#dddddd 80.13%,
+		#c4c4c4 91.42%,
+		#9a9a9a 99.16%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	opacity: 0.7;
+}
+
+.ranking-place.third-place span {
+	background: linear-gradient(
+		111.01deg,
+		#845625 4.43%,
+		#a6671e 15.38%,
+		#d38e57 27.04%,
+		#f3d1b1 38.7%,
+		#d38e57 50.37%,
+		#a4661e 61.52%,
+		#875724 73.18%,
+		#cf8a52 82.31%,
+		#f2cead 92.45%,
+		#cf8a52 101.78%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	opacity: 0.7;
+}
+
+.player-name-style {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.player-score-container {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+}
+
+.silver-prize-container {
+	background: linear-gradient(
+		110.73deg,
+		#56524f -4.03%,
+		#787470 7.04%,
+		#95918e 16.71%,
+		#c7c7c7 25.85%,
+		#bbbbbb 35.53%,
+		#a3a3a3 46.81%,
+		#999999 58.64%,
+		#b2b2b2 69.39%,
+		#dddddd 80.13%,
+		#c4c4c4 91.42%,
+		#9a9a9a 99.16%
+	);
+	padding: 1px;
+	border-radius: 12px;
+}
+
+.golden-prize-container {
+	padding: 1px;
+	border-radius: 12px;
+	background: linear-gradient(
+		106.44deg,
+		#b18718 15.23%,
+		#d2a935 24.23%,
+		#f2d77c 34.71%,
+		#d2a935 44.76%,
+		#b78d1d 54.81%,
+		#d2a935 64.42%,
+		#e9ca67 74.9%,
+		#d2a935 85.39%,
+		#b88e1e 95%,
+		#d6af3e 99.1%
+	);
+}
+
+.bronze-prize-container {
+	padding: 1px;
+	border-radius: 12px;
+	background: linear-gradient(
+		111.01deg,
+		#845625 4.43%,
+		#a6671e 15.38%,
+		#d38e57 27.04%,
+		#f3d1b1 38.7%,
+		#d38e57 50.37%,
+		#a4661e 61.52%,
+		#875724 73.18%,
+		#cf8a52 82.31%,
+		#f2cead 92.45%,
+		#cf8a52 101.78%
+	);
 }
