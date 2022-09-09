@@ -63,19 +63,34 @@
 							<div class="ranking-tabs-container">
 								<div class="ranking-tabs">
 									<input
+										class="rank-input"
 										type="radio"
 										name="tab-btn"
 										id="worldList"
 										value=""
 										checked
 									/>
-									<label class="label-first-child" for="worldList">World</label>
-									<input type="radio" name="tab-btn" id="continentalList" />
-									<label for="continentalList">Continental</label>
-									<input type="radio" name="tab-btn" id="nationalList" />
-									<label for="nationalList">National</label>
+									<label class="rank-label label-first-child" for="worldList"
+										>World</label
+									>
+									<input
+										class="rank-input"
+										type="radio"
+										name="tab-btn"
+										id="continentalList"
+									/>
+									<label class="rank-label" for="continentalList"
+										>Continental</label
+									>
+									<input
+										class="rank-input"
+										type="radio"
+										name="tab-btn"
+										id="nationalList"
+									/>
+									<label class="rank-label" for="nationalList">National</label>
 
-									<div id="worldList">
+									<div class="rank-content" id="worldList">
 										<ul class="world-ranking-list">
 											<li class="world-ranking-list-item">
 												<div class="golden-prize-container">
@@ -327,7 +342,7 @@
 											</li>
 										</ul>
 									</div>
-									<div id="continentalList">
+									<div class="rank-content" id="continentalList">
 										<ul class="world-ranking-list">
 											<li class="world-ranking-list-item">
 												<div class="golden-prize-container">
@@ -579,7 +594,7 @@
 											</li>
 										</ul>
 									</div>
-									<div id="nationalList">
+									<div class="rank-content" id="nationalList">
 										<ul class="world-ranking-list">
 											<li class="world-ranking-list-item">
 												<div class="golden-prize-container">
