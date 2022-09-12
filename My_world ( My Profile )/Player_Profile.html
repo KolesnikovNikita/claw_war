@@ -56,7 +56,7 @@
 		</header>
 		<main class="main-page-profile-settings">
 			<div class="dashboard-layout">
-				<div class="dashboard-layout-content">
+				<div class="dashboard-layout-content my-profile-page">
 					<div class="player-profile-bg-image">
 						<div class="player-profile-image-container"></div>
 					</div>
@@ -70,7 +70,7 @@
 								<span class="user-info-count">0</span
 								><span class="user-info-name">Clans</span>
 							</div>
-							<span class="add-button-style">ReDream</span>
+							<span class="add-button-style my-prifile-header">ReDream</span>
 							<div class="user-info games">
 								<span class="user-info-count">0</span
 								><span class="user-info-name">Games</span>
@@ -119,17 +119,21 @@
 							</button>
 						</div>
 						<div class="user-profile-button-container">
-							<button class="user-profile-add-button">
-								Add game to the Database
-							</button>
-							<select
-								name="user-name"
-								id="userName"
-								class="user-profile-select-player"
-							>
-								<option value="john" class="user-profile-option">John</option>
-								<option value="john" class="user-profile-option">Sam</option>
-							</select>
+							<div>
+								<button class="user-profile-add-button">
+									Add game to the Database
+								</button>
+							</div>
+							<div>
+								<select
+									name="user-name"
+									id="userName"
+									class="user-profile-select-player"
+								>
+									<option value="john" class="user-profile-option">John</option>
+									<option value="john" class="user-profile-option">Sam</option>
+								</select>
+							</div>
 						</div>
 					</div>
 					<div class="user-profile-menu">
@@ -200,6 +204,22 @@
 						<div class="user-profile-screenshots">
 							<h3 class="user-profile-header">Redream Screenshots</h3>
 							<span class="profile-count screenshots">25</span>
+							<div class="search-screenshot-main">
+								<div class="search-screenshot-container">
+									<input
+										placeholder="Search here..."
+										type="text"
+										class="screenshot-search-input"
+									/>
+									<img
+										class="search-screenshot-icon"
+										src="../img/user_profile/search-icon.svg"
+										width="14"
+										height="14"
+										alt="search"
+									/>
+								</div>
+							</div>
 							<button class="profile-page-button">All</button>
 							<div class="user-profile-games">
 								<div class="user-profile-game-container screenshot">
@@ -267,35 +287,51 @@
 						<div class="user-profile-slider">
 							<h3 class="user-profile-header">Redream Album</h3>
 							<span class="profile-count album">25</span>
+							<div class="search-album-main">
+								<div class="search-screenshot-container">
+									<input
+										placeholder="Search here..."
+										type="text"
+										class="album-search-input"
+									/>
+									<img
+										class="search-screenshot-icon"
+										src="../img/user_profile/search-icon.svg"
+										width="14"
+										height="14"
+										alt="search"
+									/>
+								</div>
+							</div>
 							<button class="profile-page-button">All</button>
 							<section class="slider-album">
 								<div class="swiper mySwiper">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<img
-												height="125"
-												width="215"
+												height="243"
+												width="423"
 												src="../img/player_profile/swiper-image.svg"
 											/>
 										</div>
 										<div class="swiper-slide">
 											<img
-												height="125"
-												width="215"
+												height="243"
+												width="423"
 												src="../img/player_profile/swiper-image.svg"
 											/>
 										</div>
 										<div class="swiper-slide">
 											<img
-												height="125"
-												width="215"
+												height="243"
+												width="423"
 												src="../img/player_profile/swiper-image.svg"
 											/>
 										</div>
 										<div class="swiper-slide">
 											<img
-												height="125"
-												width="215"
+												height="243"
+												width="423"
 												src="../img/player_profile/swiper-image.svg"
 											/>
 										</div>
@@ -345,6 +381,42 @@
 					</div>
 				</div>
 				<div class="side-profile-clans-info">
+					<div class="side-user-profile-socials-container">
+						<div class="profile-socials-container">
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/steam-image.svg"
+									width="30"
+									height="30"
+									alt="steam"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/instagram-image.svg"
+									width="30"
+									height="30"
+									alt="instagram"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/discord-image.svg"
+									width="30"
+									height="30"
+									alt="discord"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/add-socials.svg"
+									width="30"
+									height="30"
+									alt="add button"
+								/>
+							</button>
+						</div>
+					</div>
 					<div class="side-profile-container">
 						<h3 class="clans-info-header">
 							<span class="green-style">Top </span>Clans
@@ -432,6 +504,17 @@
 								<p class="latest-activity-event">Battlefield</p>
 								<p class="time-activity">2 hours ago</p>
 							</div>
+						</div>
+					</div>
+					<div class="chat-button-container">
+						<div class="chat-button-desktop">
+							<a href="#"
+								><img
+									height="43"
+									alt="enter chat"
+									width="130"
+									src="../img/chat-button.svg"
+							/></a>
 						</div>
 					</div>
 				</div>

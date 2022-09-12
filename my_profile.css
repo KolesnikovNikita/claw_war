@@ -55,6 +55,7 @@
 	height: 60px;
 	background-image: url('./img/player_profile/player-image.svg');
 	display: block;
+	background-repeat: no-repeat;
 }
 
 .clan-slogan-container {
@@ -141,6 +142,7 @@
 	max-width: 217px;
 	margin: 0 auto;
 	margin-bottom: 20px;
+	align-items: center;
 }
 
 .user-profile-button-container button,
@@ -222,12 +224,12 @@
 
 .games {
 	top: 22px;
-	left: 152px;
+	left: 206px;
 }
 
 .screenshots {
 	top: 22px;
-	right: 115px;
+	left: 242px;
 }
 
 .album {
@@ -745,7 +747,6 @@
 	background-color: var(--basic-deep-purple);
 	padding-top: 60px;
 	padding-bottom: 20px;
-	position: relative;
 	padding-left: 16px;
 	margin-bottom: 16px;
 }
@@ -1455,4 +1456,189 @@
 	font-size: 14px;
 	line-height: 16px;
 	margin-bottom: 0;
+}
+
+.side-user-profile-socials-container {
+	display: none;
+}
+
+.chat-button-container {
+	display: none;
+}
+
+.search-screenshot-container {
+	display: none;
+}
+
+.search-screenshot-main {
+	position: absolute;
+	bottom: 240px;
+	left: 350px;
+}
+
+.search-album-main {
+	position: absolute;
+	bottom: 325px;
+	left: 350px;
+}
+
+.screenshot-search-input {
+	background-color: transparent;
+	border: 0.3px solid #e2e6ff;
+	border-radius: 25px;
+	padding: 8px 15px;
+	min-width: 220px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	opacity: 0.5;
+	outline: none;
+}
+
+.album-search-input {
+	border: 0.3px solid #03ff49;
+	background-color: transparent;
+	border-radius: 25px;
+	padding: 8px 15px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	min-width: 220px;
+}
+
+.search-screenshot-icon {
+	position: absolute;
+	bottom: 8px;
+	left: 190px;
+}
+
+@media screen and (min-width: 1200px) {
+	.side-profile-clans-info {
+		width: 385px;
+	}
+
+	.user-profile-menu {
+		background-color: transparent;
+	}
+
+	.user-profile-socials-container {
+		display: none;
+	}
+
+	.player-profile-setting {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.user-profile-button-container {
+		flex-direction: row;
+		margin: 30px 0 0 0;
+		min-width: 360px;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-right: 12px;
+	}
+
+	.player-profile-information {
+		padding-top: 32px;
+	}
+
+	.player-profile-image-container {
+		width: 150px;
+		height: 150px;
+		top: 82%;
+		background-image: url('./img/player_profile/big-image-pf.svg');
+		background-size: contain;
+	}
+
+	.my-prifile-header {
+		bottom: 45px;
+		right: 51%;
+	}
+
+	.profile-page-button {
+		padding: 8px 25px;
+		background-color: var(--light-green);
+		color: var(--light-grey);
+		border-radius: 30px;
+	}
+
+	.side-user-profile-socials-container {
+		display: flex;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		margin-bottom: 5px;
+		background-color: var(--basic-deep-purple);
+	}
+
+	.profile-socials-container {
+		margin-left: auto;
+		padding: 0 50px;
+	}
+
+	.user-profile-socials + .user-profile-socials {
+		margin-left: 20px;
+	}
+
+	.games {
+		top: 38px;
+		left: 240px;
+	}
+	.screenshots {
+		top: 38px;
+		left: 280px;
+	}
+
+	.album {
+		top: 38px;
+		left: 210px;
+	}
+
+	.redream-latest-activity-container {
+		margin-bottom: 0;
+	}
+
+	.chat-button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--basic-deep-purple);
+		height: 268px;
+	}
+
+	.user-award-slider {
+		display: none;
+	}
+
+	.player-profile-bg-image {
+		height: 220px;
+	}
+
+	.my-profile-page {
+		padding: 15px 30px 70px;
+	}
+
+	.swiper-slide {
+		width: 425px;
+		height: 245px;
+	}
+
+	.swiper {
+		margin-top: 25px;
+	}
+	.user-profile-games {
+		margin-top: 30px;
+	}
+	.user-profile-container,
+	.user-profile-screenshots {
+		padding-bottom: 30px;
+	}
+
+	.search-screenshot-container {
+		display: block;
+		position: relative;
+	}
 }
