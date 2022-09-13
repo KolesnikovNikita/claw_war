@@ -1332,12 +1332,6 @@ html {
 		display: flex;
 	}
 
-	.game-name {
-		font-size: 14px;
-		line-height: 16px;
-		margin-bottom: 15px;
-	}
-
 	.profile-image-overlay p {
 		font-size: 9px;
 	}

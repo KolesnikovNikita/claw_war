@@ -1506,12 +1506,58 @@
 	line-height: 14px;
 	color: var(--light-grey);
 	min-width: 220px;
+	outline: none;
 }
 
 .search-screenshot-icon {
 	position: absolute;
 	bottom: 8px;
 	left: 190px;
+}
+
+.side-container-news-counter {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
+.side-container-news-clans {
+	position: absolute;
+	bottom: 40px;
+	left: 60px;
+}
+
+.side-container-news-games {
+	position: absolute;
+	bottom: 40px;
+	left: 65px;
+}
+
+.side-container-news-container {
+	position: relative;
+}
+
+.users-online-style {
+	display: block;
+	text-align: center;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	margin-top: 7px;
+}
+
+.column-wrapper div + div {
+	margin-top: 12px;
+}
+
+.column-wrapper div {
+	position: relative;
+}
+
+.column-wrapper span {
+	display: block;
+	margin-bottom: 25px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1536,7 +1582,7 @@
 	.user-profile-button-container {
 		flex-direction: row;
 		margin: 30px 0 0 0;
-		min-width: 360px;
+		min-width: 377px;
 		justify-content: space-between;
 		align-items: flex-start;
 		padding-right: 12px;
@@ -1554,8 +1600,8 @@
 		background-size: contain;
 	}
 
-	.my-prifile-header {
-		bottom: 45px;
+	.my-profile-header {
+		bottom: 51px;
 		right: 51%;
 	}
 
