@@ -852,7 +852,7 @@
 }
 
 .clans-communication-container {
-	padding: 30px 110px 35px 68px;
+	padding: 30px 82px 35px 68px;
 	background-color: var(--basic-deep-purple);
 	margin-bottom: 5px;
 }
@@ -874,12 +874,14 @@
 }
 
 .player-communication-container {
-	margin-bottom: 55px;
+	flex-grow: 1;
+	background-color: var(--basic-deep-purple);
 }
 
 .message-container {
 	padding: 30px 35px;
 	background-color: var(--basic-deep-purple);
+	margin-bottom: 50px;
 }
 
 .player-name {
@@ -929,15 +931,13 @@
 }
 
 .main-page-player-ranking {
-	position: relative;
-	background-color: var(--background-main-color);
+	background-color: var(--basic-deep-purple);
 }
 
 .player-ranking-container {
-	margin-top: 25px;
 	padding: 25px 15px;
 	padding-top: 0;
-	background-color: var(--background-main-color);
+	margin-top: 25px;
 	position: relative;
 }
 
@@ -987,7 +987,6 @@
 	display: none;
 	border: none;
 	padding: 12px 8px;
-
 	background-color: var(--background-main-color);
 	margin-bottom: 20px;
 	border-radius: 12px;
@@ -1077,6 +1076,7 @@
 
 .world-ranking-list-item {
 	margin-bottom: 12px;
+	position: relative;
 }
 
 .ranking-place span {
@@ -1564,14 +1564,24 @@
 	margin-bottom: 25px;
 }
 
-.desktop-select-container {
+.desktop-select-container,
+.player-ranking-pagination,
+.desktop-prize-container {
 	display: none;
+}
+
+.desktop-player-rankig-page {
+	display: none;
+}
+.player-ranking-page {
+	background-color: #262835;
 }
 
 @media screen and (min-width: 1200px) {
 	.side-profile-clans-info {
 		width: 385px;
-		height: 100vh;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.user-profile-menu {
@@ -1777,7 +1787,8 @@
 	}
 
 	.clan-games-header,
-	.clan-gallery-header {
+	.clan-gallery-header,
+	.ranking-list-header {
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 28px;
@@ -1785,9 +1796,19 @@
 	}
 
 	.clan-games-header::before,
+	.ranking-list-header::before,
 	.clan-gallery-header::before {
 		width: 31px;
 		margin-left: -40px;
+	}
+
+	.ranking-tabs .rank-label,
+	.leader-board-tabs .leader-rank {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 23px;
+		padding: 15px 45px;
 	}
 
 	.profile-count,
@@ -1828,5 +1849,95 @@
 
 	.clan-gallery-button {
 		right: 34px;
+	}
+
+	.label-first-child {
+		margin-left: 160px;
+	}
+
+	.player-ranking-list {
+		padding-top: 45px;
+		padding-bottom: 40px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.ranking-tabs {
+		padding-top: 0;
+	}
+
+	.ranking-list-header {
+		top: 54px;
+	}
+
+	.ranking-tabs .rank-content {
+		padding: 40px 25px;
+		margin-bottom: 35px;
+	}
+
+	.ranking-item-container,
+	.golden-prize-container,
+	.silver-prize-container,
+	.bronze-prize-container {
+		border-radius: 40px;
+	}
+
+	.world-ranking-list-item .left-side-rank-container img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.player-name-style {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.player-avatar,
+	.rank-player-photo {
+		margin-right: 25px;
+	}
+
+	.ranking-item-container.top-place,
+	.ranking-item-container {
+		padding-left: 35px;
+		padding-right: 45px;
+	}
+
+	.ranking-place span {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.player-score-container {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.ranking-place {
+		margin-right: 32px;
+	}
+
+	.score-style {
+		margin-right: 170px;
+	}
+
+	.world-ranking-list-item {
+		margin-bottom: 20px;
+	}
+
+	.profile-form-big-button {
+		display: none;
+	}
+
+	.player-ranking-pagination,
+	.desktop-prize-container {
+		display: flex;
+	}
+
+	.desktop-player-rankig-page {
+		display: flex;
 	}
 }

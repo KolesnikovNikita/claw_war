@@ -1571,5 +1571,6 @@ html {
 		align-items: center;
 		padding: 45px;
 		width: 215px;
+		background-color: var(--basic-deep-purple);
 	}
 }

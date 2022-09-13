@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="../main_page.css" />
 		<link rel="stylesheet" href="../my_world_profile.css" />
 		<link rel="stylesheet" href="../my_profile.css" />
-		<title>Clan Page</title>
+		<title>Player Ranking</title>
 	</head>
 	<body>
 		<h2 class="visually-hidden">User Profile Setting</h2>
@@ -56,7 +56,93 @@
 		</header>
 		<main class="main-page-player-ranking">
 			<div class="dashboard-layout">
-				<div class="dashboard-layout-content">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<div class="side-container-news-container">
+							<img
+								src="../img/user_profile/side-news-bell.svg"
+								alt="news bell"
+								width="25"
+								height="28"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-counter"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/player_profile/side-container-players-images.svg"
+							width="71"
+							height="21"
+							alt="add friend icon"
+						/>
+						<span class="users-online-style">32 online</span>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-clans"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-games"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="dashboard-layout-content player-ranking-page">
 					<div class="player-ranking-container">
 						<div class="player-ranking-list">
 							<h3 class="ranking-list-header">Ranking</h3>
@@ -116,7 +202,9 @@
 																/>
 															</div>
 															<div class="player-name">
-																<span class="player-name-style">Zeus</span>
+																<span class="player-name-style gold-style"
+																	>Zeus</span
+																>
 															</div>
 														</div>
 														<div class="right-side-rank-container">
@@ -130,6 +218,14 @@
 															</div>
 															<div class="player-score-container">
 																<span class="score-style">123456</span>
+															</div>
+															<div class="desktop-prize-container">
+																<img
+																	src="../img/player_profile//desktop-1-prize.svg"
+																	width="32"
+																	height="60"
+																	alt="prize"
+																/>
 															</div>
 														</div>
 													</div>
@@ -174,6 +270,14 @@
 															<div class="player-score-container">
 																<span class="score-style">123456</span>
 															</div>
+															<div class="desktop-prize-container">
+																<img
+																	src="../img/player_profile//desktop-2-prize.svg"
+																	width="32"
+																	height="60"
+																	alt="prize"
+																/>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -216,6 +320,14 @@
 															</div>
 															<div class="player-score-container">
 																<span class="score-style">123456</span>
+															</div>
+															<div class="desktop-prize-container">
+																<img
+																	src="../img/player_profile//desktop-3-prize.svg"
+																	width="32"
+																	height="60"
+																	alt="prize"
+																/>
 															</div>
 														</div>
 													</div>
@@ -847,11 +959,134 @@
 										</ul>
 									</div>
 								</div>
+								<div class="paginator-container player-ranking-pagination">
+									<span class="pagination-back-button"><a href="#"></a></span>
+									<a class="pagination-link active-link" href="#">1</a>
+									<a class="pagination-link" href="#">2</a>
+									<a class="pagination-link" href="#">3</a>
+									<a class="pagination-link" href="#">4</a>
+									<a class="pagination-forward-button" href="#"></a>
+								</div>
 							</div>
 							<div class="load-more-players-container">
 								<button class="profile-form-big-button green-button">
 									Load More
 								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="side-profile-clans-info desktop-player-rankig-page">
+					<div class="clan-logo-container">
+						<div class="clan-logo">
+							<figure>
+								<img
+									class="clan-logo-style"
+									src="../img/player_profile/clan-logo.svg"
+									alt="logo"
+								/>
+							</figure>
+						</div>
+					</div>
+					<div class="clan-language-container">
+						<h3 class="clan-language-header">Languages</h3>
+						<div class="languages-container">
+							<div class="language-flag-container">
+								<img
+									src="../img/user_profile/user-setting-flag.svg"
+									width="42"
+									height="24"
+									alt="language-flag"
+								/>
+							</div>
+							<div class="language-flag-container">
+								<img
+									src="../img/player_profile/britain-flag.svg"
+									width="42"
+									height="24"
+									alt="language-flag"
+								/>
+							</div>
+							<div class="language-flag-container">
+								<img
+									src="../img/player_profile/france-flag.svg"
+									width="42"
+									height="24"
+									alt="language-flag"
+								/>
+							</div>
+							<div class="language-flag-container">
+								<img
+									src="../img/player_profile/ukraine-flag.svg"
+									width="42"
+									height="24"
+									alt="language-flag"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="clans-communication-container">
+						<h3 class="clans-communication-header">Clans Communication</h3>
+						<div class="clan-social-container">
+							<div class="clan-social-image">
+								<img
+									src="../img/player_profile/facebook-icon.svg"
+									width="30"
+									height="30"
+									alt="facebook"
+								/>
+							</div>
+							<div class="clan-social-image">
+								<img
+									src="../img/player_profile/instagram-icon.svg"
+									width="30"
+									height="30"
+									alt="instagram"
+								/>
+							</div>
+							<div class="clan-social-image">
+								<img
+									src="../img/player_profile/youtube-icon.svg"
+									width="30"
+									height="30"
+									alt="youtube"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="player-communication-container">
+						<div class="message-container">
+							<div class="message-inner-container">
+								<div class="message-top-container">
+									<div class="players-icons-container">
+										<img
+											src="../img/player_profile/message-image.svg"
+											width="62"
+											height="72"
+											alt="players"
+										/>
+									</div>
+									<div class="message-text-container">
+										<h4 class="player-name">Max007</h4>
+										<p class="message-text">
+											Requests permissin to connect the player
+											<span class="message-style">StirgeX</span> to the
+											<span class="message-style">Valorant</span>
+										</p>
+									</div>
+								</div>
+								<div class="message-buttons-container">
+									<div>
+										<button class="profile-form-big-button cancel-button">
+											Cancel
+										</button>
+									</div>
+									<div>
+										<button class="profile-form-big-button save-button">
+											Allow
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
