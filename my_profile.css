@@ -933,6 +933,10 @@
 	background-color: var(--basic-deep-purple);
 }
 
+.leader-board-page {
+	background-color: var(--background-main-color);
+}
+
 .player-ranking-container {
 	padding: 25px 15px;
 	padding-top: 0;
@@ -1249,16 +1253,14 @@
 }
 
 .leader-board-menu-container {
-	padding-bottom: 15px;
-	margin: 0 auto;
+	margin: 15px auto;
 	max-width: 940px;
 	background-color: var(--background-main-color);
 }
 
 .leader-board-personalities {
 	padding: 16px 20px 15px 30px;
-	background-color: var(--basic-deep-purple);
-	margin-top: 15px;
+	background-color: #1e1d2b;
 }
 
 .leader-board-navigation-container {
@@ -1364,13 +1366,25 @@
 	border-radius: 10px;
 }
 
-.elder-page-container {
+.elder-page-container,
+.veteran-page-container,
+.prospect-page-container {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 10px 10px 20px;
 	border-radius: 10px;
 	background-color: #3e3835;
 	border: 1px solid #93762b;
+}
+
+.veteran-page-container {
+	background-color: #363541;
+	border: 1px solid #969599;
+}
+
+.prospect-page-container {
+	background-color: #352e35;
+	border: 1px solid #b59882;
 }
 
 .player-image-container {
@@ -1391,13 +1405,17 @@
 	margin-bottom: 35px;
 }
 
-.elder-list {
+.elder-list,
+.veteran-list,
+.prospect-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.elder-list .elder-list-item + .elder-list-item {
+.elder-list .elder-list-item + .elder-list-item,
+.veteran-list .veteran-list-item + .veteran-list-item,
+.prospect-list .prospect-list-item + .prospect-list-item {
 	margin-top: 25px;
 }
 
@@ -1420,7 +1438,46 @@
 	background-clip: text;
 }
 
-.player-rank.elder-rank {
+.veteran-name {
+	background: linear-gradient(
+		110.73deg,
+		#56524f -4.03%,
+		#787470 7.04%,
+		#95918e 16.71%,
+		#e6e6e6 25.85%,
+		#bbbbbb 35.53%,
+		#a3a3a3 46.81%,
+		#999999 58.64%,
+		#b2b2b2 69.39%,
+		#f1f1f1 80.13%,
+		#c4c4c4 91.42%,
+		#9a9a9a 99.16%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.prospect-name {
+	background: linear-gradient(
+		111.01deg,
+		#845625 4.43%,
+		#a6671e 15.38%,
+		#d38e57 27.04%,
+		#ffe1c5 38.7%,
+		#c77e44 50.37%,
+		#a4661e 61.52%,
+		#875724 73.18%,
+		#cf8a52 82.31%,
+		#ffe5cc 92.45%,
+		#cf8a52 101.78%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.player-rank.elder-rank,
+.player-rank.prospect-rank,
+.player-rank.veteran-rank {
 	color: var(--light-grey);
 	opacity: 0.7;
 }
@@ -1444,6 +1501,44 @@
 	border-radius: 5px;
 }
 
+.player-plate-container-veteran {
+	margin-top: 7px;
+	padding: 6px;
+	background: linear-gradient(
+		110.73deg,
+		#56524f -4.03%,
+		#787470 7.04%,
+		#95918e 16.71%,
+		#e6e6e6 25.85%,
+		#bbbbbb 35.53%,
+		#a3a3a3 46.81%,
+		#999999 58.64%,
+		#b2b2b2 69.39%,
+		#f1f1f1 80.13%,
+		#c4c4c4 91.42%,
+		#9a9a9a 99.16%
+	);
+	border-radius: 5px;
+}
+
+.player-plate-container-prospect {
+	border-radius: 5px;
+	padding: 6px;
+	background: linear-gradient(
+		111.01deg,
+		#845625 4.43%,
+		#a6671e 15.38%,
+		#d38e57 27.04%,
+		#ffe1c5 38.7%,
+		#c77e44 50.37%,
+		#a4661e 61.52%,
+		#875724 73.18%,
+		#cf8a52 82.31%,
+		#ffe5cc 92.45%,
+		#cf8a52 101.78%
+	);
+}
+
 .player-plate-name {
 	font-weight: 700;
 	font-size: 12px;
@@ -1454,7 +1549,9 @@
 	margin: 0;
 }
 
-.elder-rank-score {
+.elder-rank-score,
+.veteran-rank-score,
+.prospect-rank-score {
 	color: var(--light-grey);
 	font-weight: 400;
 	font-size: 14px;
@@ -1573,9 +1670,6 @@
 	display: none;
 }
 
-.desktop-player-rankig-page {
-	display: none;
-}
 .player-ranking-page {
 	background-color: #262835;
 }
@@ -1976,5 +2070,79 @@
 	.desktop-score-style-special {
 		display: block;
 		margin-right: 10px;
+	}
+
+	.leader-page-container,
+	.elder-page-container {
+		max-width: 230px;
+	}
+
+	.player-image-container img {
+		width: 80px;
+		height: 80px;
+	}
+
+	.elder-list,
+	.veteran-list,
+	.prospect-list {
+		display: flex;
+	}
+
+	.elder-list-item,
+	.veteran-list-item,
+	.prospect-list-item {
+		margin-right: 65px;
+	}
+
+	.elder-list .elder-list-item + .elder-list-item,
+	.veteran-list .veteran-list-item + .veteran-list-item,
+	.prospect-list .prospect-list-item + .prospect-list-item {
+		margin-top: 0;
+	}
+
+	.leader-board-personalities {
+		padding: 40px 30px 30px;
+		background-image: url('./img/player_profile/desktop-leader-borad-bg.png');
+		background-position: 0 0;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		border-radius: 20px;
+	}
+
+	.leader-board-page-style {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 45px;
+		width: 215px;
+		background-color: var(--basic-deep-purple);
+	}
+
+	.leader-board-menu-container {
+		margin: 0;
+	}
+
+	.leader-board-page {
+		padding: 40px 100px 65px 50px;
+	}
+
+	.ranking-tabs .rank-input:checked + .rank-label,
+	.leader-board-tabs .leader-input:checked + .leader-rank {
+		background-color: #272633;
+		border-bottom: none;
+		border-radius: 5px 5px 0 0;
+		color: var(--neon-green);
+		opacity: 1;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.elder-page-container,
+	.veteran-page-container,
+	.prospect-page-container {
+		min-height: 105px;
+		min-width: 230px;
 	}
 }
