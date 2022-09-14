@@ -874,7 +874,6 @@
 }
 
 .player-communication-container {
-	flex-grow: 1;
 	background-color: var(--basic-deep-purple);
 }
 
@@ -1049,6 +1048,7 @@
 	background-color: transparent;
 	border-radius: 12px;
 	padding-left: 12px;
+	padding-right: 20px;
 }
 
 .left-side-rank-container {
@@ -1091,7 +1091,7 @@
 	margin-right: 15px;
 }
 
-.rank-player-photo.top {
+.rank-player-photo.special {
 	margin-right: 8px;
 }
 
@@ -1566,7 +1566,10 @@
 
 .desktop-select-container,
 .player-ranking-pagination,
-.desktop-prize-container {
+.desktop-prize-container,
+.ranking-list-separator,
+.desktop-score-style,
+.desktop-score-style-special {
 	display: none;
 }
 
@@ -1670,9 +1673,13 @@
 	.chat-button-container {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
+		flex-grow: 1;
 		background-color: var(--basic-deep-purple);
-		height: 268px;
+	}
+
+	.chat-button-desktop {
+		padding-top: 30px;
 	}
 
 	.user-award-slider {
@@ -1911,7 +1918,7 @@
 	}
 
 	.player-score-container {
-		font-weight: 500;
+		position: relative;
 		font-size: 24px;
 		line-height: 28px;
 	}
@@ -1925,7 +1932,7 @@
 	}
 
 	.world-ranking-list-item {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	.profile-form-big-button {
@@ -1937,7 +1944,37 @@
 		display: flex;
 	}
 
-	.desktop-player-rankig-page {
+	.desktop-player-ranking-page {
 		display: flex;
+	}
+
+	.message-container {
+		margin-bottom: 0;
+	}
+
+	.ranking-list-separator {
+		display: block;
+		height: 1px;
+		color: var(--light-grey);
+		opacity: 0.5;
+		margin-bottom: 35px;
+	}
+
+	.prize-position {
+		margin-bottom: 20px;
+	}
+
+	.bottom-position-style {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: 1px solid var(--neon-green);
+		border-radius: 40px;
+		background-color: var(--basic-deep-purple);
+	}
+
+	.desktop-score-style,
+	.desktop-score-style-special {
+		display: block;
+		margin-right: 10px;
 	}
 }
