@@ -1143,8 +1143,6 @@ a {
 	z-index: 1;
 }
 
-/* Обязательно посмотреть!*/
-
 .password-button-step1 {
 	display: none;
 }
@@ -1648,5 +1646,9 @@ details[open] > summary {
 		padding-top: 1px;
 		font-size: 14px;
 		line-height: 16px;
+	}
+
+	.copyright-container p {
+		opacity: 0.5;
 	}
 }

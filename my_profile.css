@@ -64,6 +64,7 @@
 	padding: 8px 16px;
 	border-radius: 8px;
 	margin-bottom: 16px;
+	transform: scale(1);
 }
 
 .clan-slogan-header {
@@ -98,7 +99,6 @@
 }
 
 .clan-information-container {
-	transform: scale(1);
 	width: 205px;
 	margin: 0 auto;
 	margin-top: -16px;
@@ -173,6 +173,7 @@
 	background-color: var(--light-blue);
 	max-width: 162px;
 	margin: 0 auto;
+	appearance: none;
 }
 
 .user-profile-menu {
@@ -1005,6 +1006,10 @@
 	border-radius: 12px;
 }
 
+.desktop-related-container {
+	display: none;
+}
+
 #worldList:checked ~ #worldList,
 #continentalList:checked ~ #continentalList,
 #nationalList:checked ~ #nationalList,
@@ -1674,11 +1679,55 @@
 	background-color: #262835;
 }
 
+.header-right-container {
+	margin-right: auto;
+}
+
+.desktop-related-container {
+	padding: 6px 18px;
+	border: 1px solid #03ff49;
+	border-radius: 20px;
+	background-color: black;
+	min-width: 240px;
+}
+
+.related-select {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	appearance: none;
+	background-image: url('./img/player_profile/select-arrow-up.svg');
+	background-repeat: no-repeat;
+	background-position: right;
+	color: #7c8191;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.related-option {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: white;
+}
+
 @media screen and (min-width: 1200px) {
 	.side-profile-clans-info {
 		width: 385px;
 		display: flex;
 		flex-direction: column;
+	}
+
+	.leader-board-menu-container {
+		margin: 15px auto;
+		min-width: 940px;
+		background-color: var(--background-main-color);
+	}
+
+	.desktop-related-container {
+		display: block;
 	}
 
 	.user-profile-menu {
@@ -1786,6 +1835,7 @@
 
 	.my-profile-page {
 		padding: 15px 30px 70px;
+		background-color: var(--background-main-color);
 	}
 
 	.swiper-slide {
@@ -1850,7 +1900,6 @@
 
 	.clan-profile-bg-image {
 		height: 220px;
-		z-index: 22;
 	}
 
 	.clan-name-header {
@@ -2086,12 +2135,14 @@
 	.veteran-list,
 	.prospect-list {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.elder-list-item,
 	.veteran-list-item,
 	.prospect-list-item {
-		margin-right: 65px;
+		margin-right: 45px;
+		margin-bottom: 35px;
 	}
 
 	.elder-list .elder-list-item + .elder-list-item,
@@ -2144,5 +2195,11 @@
 	.prospect-page-container {
 		min-height: 105px;
 		min-width: 230px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.leader-board-menu-container {
+		max-width: 1240px;
 	}
 }
