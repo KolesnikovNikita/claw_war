@@ -59,6 +59,8 @@
 }
 
 .clan-slogan-container {
+	width: 205px;
+	margin: 0 auto;
 	background-color: var(--basic-deep-purple);
 	border: 1px solid var(--neon-green);
 	padding: 8px 16px;
@@ -106,6 +108,10 @@
 	background-color: var(--basic-deep-purple);
 }
 
+.open-clan-information-container {
+	margin-top: -16px;
+}
+
 .clan-info-sub-container {
 	display: flex;
 	justify-content: space-between;
@@ -148,9 +154,8 @@
 
 .user-profile-button-container button,
 .clan-invite-select,
-.clan-invite-select-desktop,
 .clan-leader-board,
-.user-profile-button-container select {
+.join-clan-button {
 	padding: 10px 25px;
 	font-weight: 500;
 	font-size: 14px;
@@ -162,18 +167,67 @@
 }
 
 .user-profile-add-button,
-.clan-leader-board {
+.clan-leader-board,
+.join-clan-button {
 	background-color: var(--light-green);
 	margin-bottom: 15px;
 }
 
 .user-profile-select-player,
-.clan-invite-select,
-.clan-invite-select-desktop {
+.clan-invite-select {
 	background-color: var(--light-blue);
 	max-width: 162px;
 	margin: 0 auto;
 	appearance: none;
+}
+
+.select-container-mobile {
+	padding: 6px 20px;
+	border: none;
+	border-radius: 30px;
+	background-color: var(--light-blue);
+	min-width: 162px;
+	height: 36px;
+}
+
+.clan-invite-select-mobile {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	appearance: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	background-image: url('./img/player_profile/select-arrow-up-grey.svg');
+	background-repeat: no-repeat;
+	background-position: 100px;
+}
+
+.select-container {
+	margin: 0 auto;
+	padding: 8px 20px;
+	max-width: 170px;
+	border: none;
+	border-radius: 30px;
+	background-color: var(--light-blue);
+}
+
+.clan-invite-select-desktop {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	appearance: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	padding-left: 17px;
+	background-image: url('./img/player_profile/select-arrow-up-grey.svg');
+	background-repeat: no-repeat;
+	background-position: 105px;
 }
 
 .user-profile-menu {
@@ -609,12 +663,16 @@
 }
 
 .clan-name-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #252734;
 	padding-top: 25px;
 	padding-bottom: 20px;
 }
 
-.clan-name-header {
+.clan-name-header,
+.clan-close-page {
 	margin: 0;
 	text-align: center;
 	font-weight: 700;
@@ -627,6 +685,20 @@
 .clan-flag-container {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.clan-open-profile {
+	padding-top: 25px;
+}
+
+.clans-open-communication-container {
+	margin-bottom: 40px;
+	padding: 30px 82px 35px 68px;
+	background-color: var(--basic-deep-purple);
+}
+
+.blocked-page-icon {
+	margin-right: 9px;
 }
 
 .clan-profile-menu {
@@ -693,6 +765,25 @@
 	margin-right: 12px;
 }
 
+.load-players-button {
+	padding: 12px 24px;
+	border-radius: 30px;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+	background: var(--light-green);
+}
+
+.message-button {
+	border-radius: 30px;
+	border: none;
+	padding: 8px 25px;
+	color: #fff;
+}
+
 .clan-active-games {
 	position: relative;
 	background-color: var(--basic-deep-purple);
@@ -754,6 +845,16 @@
 	padding-bottom: 20px;
 	padding-left: 16px;
 	margin-bottom: 16px;
+}
+
+.blurred-display {
+	filter: blur(12px);
+	pointer-events: none;
+	position: relative;
+}
+
+.blurred-button {
+	filter: blur(37.241px);
 }
 
 .strong-players-container {
@@ -1713,7 +1814,19 @@
 	color: white;
 }
 
+.clan-open-sub-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.clan-open-information {
+	margin-bottom: 20px;
+}
+
 @media screen and (min-width: 1200px) {
+	.select-container-mobile {
+		display: none;
+	}
 	.side-profile-clans-info {
 		width: 385px;
 		display: flex;
@@ -1742,19 +1855,25 @@
 		display: flex;
 		justify-content: space-between;
 		position: relative;
+		background-color: var(--basic-deep-purple);
+		border-radius: 0 0 20px 20px;
 	}
 
 	.user-profile-button-container {
-		flex-direction: row;
 		margin: 30px 0 0 0;
 		min-width: 377px;
 		justify-content: space-between;
-		align-items: flex-start;
 		padding-right: 12px;
 	}
 
 	.player-profile-information {
 		padding-top: 32px;
+	}
+
+	.clan-leader-board {
+		position: absolute;
+		top: 360px;
+		right: 450px;
 	}
 
 	.player-profile-image-container {
@@ -1796,8 +1915,8 @@
 	}
 
 	.games {
-		top: 26px;
-		left: 235px;
+		top: 37px;
+		left: 242px;
 	}
 	.screenshots {
 		top: 38px;
@@ -1852,6 +1971,7 @@
 	.user-profile-container,
 	.user-profile-screenshots {
 		padding-bottom: 30px;
+		padding-right: 25px;
 	}
 
 	.search-screenshot-container {
@@ -1893,11 +2013,6 @@
 		display: none;
 	}
 
-	.clan-leader-board {
-		position: absolute;
-		top: 363px;
-	}
-
 	.clan-profile-bg-image {
 		height: 220px;
 	}
@@ -1917,6 +2032,7 @@
 	.clan-gallery,
 	.strong-players-container {
 		border-radius: 15px;
+		padding-right: 25px;
 	}
 
 	.develop-clan-header {
@@ -1971,6 +2087,10 @@
 	.gallery {
 		top: 25px;
 		left: 237px;
+	}
+
+	.load-players-button {
+		display: none;
 	}
 
 	.person-name {
@@ -2196,10 +2316,31 @@
 		min-height: 105px;
 		min-width: 230px;
 	}
+
+	.leader-board-tabs .leader-content,
+	.leader-board-tabs .organizational-content {
+		max-height: 860px;
+		overflow: scroll;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.user-profile-button-container {
+		flex-direction: row;
+		margin: 30px 0 0 0;
+		min-width: 426px;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding-right: 12px;
+	}
 }
 
 @media screen and (min-width: 1600px) {
 	.leader-board-menu-container {
 		max-width: 1240px;
+	}
+
+	.user-profile-button-container {
+		min-width: 410px;
 	}
 }
