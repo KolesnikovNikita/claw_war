@@ -850,7 +850,28 @@
 .blurred-display {
 	filter: blur(12px);
 	pointer-events: none;
-	position: relative;
+}
+
+.blurred-attention {
+	top: 55%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	position: absolute;
+	z-index: 1;
+	min-width: 300px;
+	display: flex;
+	align-items: center;
+}
+
+.blurred-lock-image {
+	margin-right: 15px;
+}
+
+.blurred-header {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 23px;
+	color: rgba(255, 255, 255, 0.3);
 }
 
 .blurred-button {
@@ -1083,9 +1104,25 @@
 	padding-top: 65px;
 }
 
+.clan-ranking-tabs {
+	padding-top: 25px;
+}
+
+.clan-ranking-tabs .clan-rank-input,
 .ranking-tabs .rank-input,
 .leader-board-tabs .leader-input {
 	display: none;
+}
+
+.clan-ranking-tabs .clan-list-content {
+	display: none;
+	border: none;
+	padding: 25px 18px 20px 16px;
+	margin-bottom: 20px;
+}
+
+.clan-page-bg {
+	background-image: url('./img/player_profile/clan-list-image.svg');
 }
 
 .ranking-tabs .rank-content {
@@ -1111,6 +1148,11 @@
 	display: none;
 }
 
+#preferencesList:checked ~ #preferencesList,
+#gamesList:checked ~ #gamesList,
+#languagesList:checked ~ #languagesList,
+#membersList:checked ~ #membersList,
+#honourList:checked ~ #honourList,
 #worldList:checked ~ #worldList,
 #continentalList:checked ~ #continentalList,
 #nationalList:checked ~ #nationalList,
@@ -1124,6 +1166,7 @@
 }
 
 .ranking-tabs .rank-label,
+.clan-ranking-tabs .rank-label,
 .leader-board-tabs .leader-rank {
 	display: inline-block;
 	text-align: center;
@@ -1141,9 +1184,21 @@
 	top: 1px;
 }
 
+.clan-ranking-tabs .rank-label {
+	padding: 5px 7px;
+}
+
 .ranking-tabs .rank-input:checked + .rank-label,
 .leader-board-tabs .leader-input:checked + .leader-rank {
 	background-color: #272633;
+	border-bottom: none;
+	border-radius: 5px 5px 0 0;
+	color: var(--neon-green);
+	opacity: 1;
+}
+
+.clan-ranking-tabs .clan-rank-input:checked + .rank-label {
+	background-color: var(--basic-deep-purple);
 	border-bottom: none;
 	border-radius: 5px 5px 0 0;
 	color: var(--neon-green);
@@ -1178,10 +1233,85 @@
 	padding: 12px 15px 10px 12px;
 }
 
-.world-ranking-list {
+.world-ranking-list,
+.clan-ranking-list {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+
+.clan-list-content {
+	background-color: var(--basic-deep-purple);
+}
+
+.main-item-container {
+	padding: 15px 15px 20px;
+	border: 1px solid var(--light-grey);
+	border-radius: 12px;
+	width: 100%;
+}
+
+.bottom-side-container {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.body-image-container {
+	margin-right: 10px;
+}
+
+.bottom-side-container,
+.bottom-side-container > div {
+	display: flex;
+}
+
+.clan-ranking-list-item {
+	margin-bottom: 15px;
+}
+
+.top-side-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.top-side-image {
+	display: flex;
+	align-items: center;
+}
+
+.list-item-container {
+	display: flex;
+}
+
+.clan-name-style {
+	color: var(--light-grey);
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.list-place-container {
+	padding-right: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-place-style {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	opacity: 0.7;
+	color: var(--light-grey);
+}
+
+.player-name-container {
+	margin-left: 15px;
+}
+
+.language-flag-wrapper {
+	display: flex;
 }
 
 .world-ranking-list-item {
@@ -1689,6 +1819,7 @@
 	left: 350px;
 }
 
+.clan-search-input,
 .screenshot-search-input {
 	background-color: transparent;
 	border: 0.3px solid #e2e6ff;
@@ -1772,7 +1903,8 @@
 .desktop-prize-container,
 .ranking-list-separator,
 .desktop-score-style,
-.desktop-score-style-special {
+.desktop-score-style-special,
+.clan-list-page {
 	display: none;
 }
 
@@ -1790,6 +1922,49 @@
 	border-radius: 20px;
 	background-color: black;
 	min-width: 240px;
+}
+
+.eye-button {
+	padding: 8px;
+	border: none;
+	background-color: #e78d5b;
+	border-radius: 30px;
+	margin-right: 15px;
+}
+
+.clan-list-apply {
+	padding: 8px 20px;
+	text-align: center;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	border-radius: 30px;
+	background-color: var(--light-green);
+}
+
+.clan-list-apply-info {
+	padding: 8px 20px;
+	text-align: center;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	border-radius: 30px;
+	background-color: var(--light-green);
+	margin-left: 25px;
+}
+
+.clan-list-information {
+	margin-bottom: 20px;
+}
+
+.clan-list-buttons-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .related-select {
@@ -1823,7 +1998,19 @@
 	margin-bottom: 20px;
 }
 
+.desktop-list-container,
+.desktop-apply-container {
+	display: none;
+}
+
 @media screen and (min-width: 1200px) {
+	.clan-list-content {
+		border-radius: 0 15px 0 0;
+	}
+	.clan-ranking-tabs .clan-list-content {
+		margin-bottom: 0;
+	}
+
 	.select-container-mobile {
 		display: none;
 	}
@@ -1994,9 +2181,10 @@
 
 	.clan-information-container {
 		width: 100%;
-		padding-left: 40px;
-		padding-right: 40px;
+		padding-left: 20px;
+		padding-right: 20px;
 		border-radius: 0 0 15px 15px;
+		margin-bottom: 0;
 	}
 
 	.clan-information {
@@ -2075,6 +2263,16 @@
 		font-size: 20px;
 		line-height: 23px;
 		padding: 15px 45px;
+	}
+
+	.clan-ranking-tabs .rank-label {
+		padding: 8px 25px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: var(--light-grey);
+		opacity: 0.3;
+		background-color: #1e1d2b;
 	}
 
 	.profile-count,
@@ -2207,6 +2405,12 @@
 		display: flex;
 	}
 
+	.clan-list-pagination {
+		background-color: var(--basic-deep-purple);
+		padding-bottom: 25px;
+		border-radius: 0 0 15px 15px;
+	}
+
 	.desktop-player-ranking-page {
 		display: flex;
 	}
@@ -2298,9 +2502,21 @@
 		padding: 40px 100px 65px 50px;
 	}
 
+	.clan-ranking-tabs .clan-rank-input:checked + .rank-label,
 	.ranking-tabs .rank-input:checked + .rank-label,
 	.leader-board-tabs .leader-input:checked + .leader-rank {
 		background-color: #272633;
+		border-bottom: none;
+		border-radius: 5px 5px 0 0;
+		color: var(--neon-green);
+		opacity: 1;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.clan-ranking-tabs .clan-rank-input:checked + .rank-label {
+		background-color: var(--basic-deep-purple);
 		border-bottom: none;
 		border-radius: 5px 5px 0 0;
 		color: var(--neon-green);
@@ -2322,6 +2538,64 @@
 		max-height: 860px;
 		overflow: scroll;
 	}
+
+	.clans-open-communication-container {
+		margin-bottom: 0;
+	}
+
+	.clan-open-sub-container {
+		justify-content: flex-start;
+	}
+
+	.clans-desktop-container {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 40px;
+		padding-right: 40px;
+		background-color: var(--basic-deep-purple);
+		padding-top: 25px;
+		margin-top: 16px;
+		border-radius: 0 0 15px 15px;
+	}
+
+	.list-desktop-container {
+		display: flex;
+		background-color: var(--basic-deep-purple);
+		border-radius: 0 0 15px 15px;
+		justify-content: space-between;
+	}
+
+	.clan-page-slogan {
+		display: none;
+	}
+
+	.blurred-header {
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 42px;
+	}
+
+	.blurred-attention {
+		min-width: 500px;
+	}
+
+	.clan-list-menu {
+		position: relative;
+	}
+
+	.desktop-list-container {
+		position: absolute;
+		top: 30px;
+		right: 0;
+	}
+
+	.bottom-inner-image {
+		align-items: center;
+	}
+
+	.bottom-inner-prize {
+		align-items: center;
+	}
 }
 
 @media screen and (min-width: 1400px) {
@@ -2333,6 +2607,52 @@
 		justify-content: space-between;
 		padding-right: 12px;
 	}
+
+	.desktop-list-container {
+		display: block;
+	}
+
+	.desktop-apply-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.clan-name-style {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.clan-list-apply {
+		display: none;
+	}
+
+	.main-item-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.top-side-container {
+		margin-bottom: 0;
+	}
+
+	.bottom-inner-image {
+		margin-right: 60px;
+	}
+
+	.bottom-inner-prize {
+		margin-right: 20px;
+	}
+
+	.player-name-container {
+		margin-left: 30px;
+	}
+
+	.list-place-style {
+		font-size: 18px;
+		line-height: 21px;
+	}
 }
 
 @media screen and (min-width: 1600px) {
@@ -2342,5 +2662,9 @@
 
 	.user-profile-button-container {
 		min-width: 410px;
+	}
+
+	.desktop-list-search {
+		position: relative;
 	}
 }

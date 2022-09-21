@@ -44,13 +44,8 @@
 			</div>
 			<div class="header-sub-navigation-container">
 				<ul class="header-sub-navigation-list">
-					<li>
-						<a class="sub-navigation-item" href="#">My Profile</a>
-					</li>
-					<li><a class="sub-navigation-item" href="#">Profile Setting</a></li>
-					<li><a class="sub-navigation-item" href="#">My Clan</a></li>
 					<li><a class="sub-navigation-item" href="#">Player Ranking</a></li>
-					<li><a class="sub-navigation-item" href="#">Leader Board</a></li>
+					<li><a class="sub-navigation-item" href="#">Clan List</a></li>
 				</ul>
 			</div>
 		</header>
@@ -158,31 +153,34 @@
 					<div class="clan-profile-bg-image"></div>
 					<div class="desktop-clan-container"></div>
 					<div class="open-clan-information-container">
-						<div class="clan-slogan-container">
+						<div class="clan-slogan-container clan-page-slogan">
 							<div class="clan-slogan-header">We are the bravest knights!</div>
 						</div>
-						<div class="clan-open-information">
-							<div class="clan-open-sub-container">
-								<div class="clan-info leader">
-									<span class="title-top">Clan Leader</span>
-									<span class="info-name">Zeus</span>
+						<div class="clans-desktop-container">
+							<div class="clan-open-information">
+								<div class="clan-open-sub-container">
+									<div class="clan-info leader">
+										<span class="title-top">Clan Leader</span>
+										<span class="info-name">Zeus</span>
+									</div>
+									<div class="clan-info members">
+										<span class="title-top">Members</span>
+										<span class="info-name">1532</span>
+									</div>
+									<div class="clan-info honours">
+										<span class="title-top">Honours</span>
+										<span class="info-name">73891</span>
+									</div>
 								</div>
-								<div class="clan-info members">
-									<span class="title-top">Members</span>
-									<span class="info-name">1532</span>
-								</div>
-								<div class="clan-info honours">
-									<span class="title-top">Honours</span>
-									<span class="info-name">73891</span>
+							</div>
+							<div class="clan-information-buttons-container">
+								<div>
+									<button class="join-clan-button">Apply</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="clan-information-buttons-container">
-						<div>
-							<button class="join-clan-button">Apply</button>
-						</div>
-					</div>
+
 					<div class="clan-profile-menu clan-open-profile">
 						<div class="clan-active-games">
 							<h3 class="clan-games-header">Active Games</h3>
@@ -304,17 +302,17 @@
 							<h3 class="clan-gallery-header">Clan Gallery</h3>
 							<span class="clan-count gallery">25</span>
 							<button class="clan-gallery-button blurred-button">All</button>
+							<div class="blurred-attention">
+								<img
+									class="blurred-lock-image"
+									src="../img/player_profile/blurred-lock.svg"
+									alt="locked"
+								/>
+								<span class="blurred-header"
+									>Join a clan to display gallery</span
+								>
+							</div>
 							<div class="blurred-display">
-								<div class="blurred-attention">
-									<!-- <img
-										class="blurred-lock-image"
-										src="../img/player_profile/blurred-lock.svg"
-										alt="locked"
-									/>
-									<span class="blurred-header"
-										>Join a clan to display gallery</span
-									> -->
-								</div>
 								<div class="clan-profile-gallery">
 									<div class="clan-gallery-container">
 										<img
@@ -379,19 +377,6 @@
 									alt="logo"
 								/>
 							</figure>
-						</div>
-						<div class="desktop-select-container">
-							<div class="select-container">
-								<select id="invite" class="clan-invite-select-desktop">
-									<option selected class="invite-option">Invite Player</option>
-									<option value="qrCode" class="invite-option">
-										Generate QR code/ Link
-									</option>
-									<option value="printInvite" class="invite-option">
-										Printed Invitation
-									</option>
-								</select>
-							</div>
 						</div>
 					</div>
 					<div class="clan-language-container">
