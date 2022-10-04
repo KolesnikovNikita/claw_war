@@ -25,8 +25,40 @@ function initPasswordShow() {
 	});
 }
 
+function initTabs() {
+	const tabContainers = document.querySelectorAll('.tabs');
+	tabContainers.forEach(function (tabContainer) {
+		function switchTab(newIndex) {
+			tabContent.forEach(function (tabPanel, index) {
+				tabPanel.hidden = !(index === newIndex);
+			});
+
+			tabLinks.forEach(function (tabLink, index) {
+				if (index === newIndex) {
+					tabLink.classList.add('active');
+				} else {
+					tabLink.classList.remove('active');
+				}
+			});
+		}
+
+		const tabLinks = tabContainer.querySelectorAll('.tab-links');
+		const tabContent = tabContainer.querySelectorAll('.tab-content');
+
+		switchTab(0);
+
+		tabLinks.forEach(function (tabItem, index) {
+			tabItem.addEventListener('click', function (event) {
+				event.preventDefault();
+				switchTab(index);
+			});
+		});
+	});
+}
+
 function initComponents() {
 	initPasswordShow();
+	initTabs();
 }
 
 initComponents();

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="../main_page.css" />
+		<link rel="stylesheet" href="../my_world_profile.css" />
+		<link rel="stylesheet" href="../my_profile.css" />
+		<title>All Games</title>
+	</head>
+	<body>
+		<h2 class="visually-hidden">User Profile Setting</h2>
+		<header class="page-header">
+			<div class="container">
+				<div class="page-header-container user-profile">
+					<button
+						class="navigation-menu-toggler"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#side-menu-toggle"
+					></button>
+					<div class="header-logo"></div>
+					<div class="header-logo-profile-mobile"></div>
+				</div>
+			</div>
+			<div class="container-fluid header-navigation">
+				<ul class="header-navigation-list">
+					<li class="header-navigation-item"><a href="#">Main</a></li>
+					<li class="header-navigation-item"><a href="#">My World</a></li>
+					<li class="header-navigation-item"><a href="#">Clans</a></li>
+					<li class="header-navigation-item"><a href="#">Games</a></li>
+				</ul>
+			</div>
+			<div class="header-sub-navigation-container">
+				<ul class="header-sub-navigation-list">
+					<li><a class="sub-navigation-item" href="#">Player Ranking</a></li>
+					<li><a class="sub-navigation-item" href="#">Clan List</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main-page-profile-settings games-page-color">
+			<div class="dashboard-layout games-page">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<div class="side-container-news-container">
+							<img
+								src="../img/user_profile/side-news-bell.svg"
+								alt="news bell"
+								width="25"
+								height="28"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-counter"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/player_profile/side-container-players-images.svg"
+							width="71"
+							height="21"
+							alt="add friend icon"
+						/>
+						<span class="users-online-style">32 online</span>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-clans"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-games"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="dashboard-layout-content">
+					<div class="games-toggler">
+						<div class="all-games-container">
+							<label>
+								<input
+									type="radio"
+									checked
+									class="games-image-button"
+									name="games"
+								/>
+								<img
+									class="games-toggler-image"
+									src="../img/All_Games.png"
+									alt="all games"
+								/>
+							</label>
+							<div class="games-container-name">
+								<span>All Games</span>
+							</div>
+						</div>
+						<div class="my-games-container">
+							<label>
+								<input type="radio" class="games-image-button" name="games" />
+								<img
+									class="games-toggler-image"
+									src="../img/My_Games.png"
+									alt="all games"
+								/>
+							</label>
+							<div class="games-container-name">
+								<span>My Games</span>
+							</div>
+						</div>
+					</div>
+					<div class="priority-game-container">
+						<div class="top-side-priority">
+							<div class="image-game-container">
+								<img
+									src="../img/priority-game-image.svg"
+									alt="image"
+									width="200"
+									height="175"
+								/>
+							</div>
+							<div class="priority-button-container">
+								<div class="gallery-button">
+									<a class="priority-buttons gallery-button">Gallery </a>
+								</div>
+								<div class="gallery-button">
+									<a class="priority-buttons games-button">Games</a>
+								</div>
+								<div class="gallery-button">
+									<a class="priority-buttons download-button">Download </a>
+								</div>
+							</div>
+						</div>
+							<h3 class="priority-game-header">Valorant</h3>
+							
+								<p class="priority-game-description">
+									Valorant is a team-based first-person hero shooter set in the
+									near future. Players play as one of a set of Agents, characters
+									designed based on several countries and cultures around the
+									world. In the main game mode, players are assigned to either the
+									attacking or defending team with each team having five players
+								on it.
+								</p>
+						</div>
+					</div>
+
+					<!-- MAIN BODY CONTENT -->
+
+					<h3 class="all-games-page-headers">Other users recommend</h3>
+
+					<div class="users-recommend-container tabs">
+						<div class="user-recommend-tabs">
+							<ul class="recommended-games-list">
+								<li class="recommended-games-item">
+									<a href="#mostPlayed" class="tab-links">Most Played</a>
+								</li>
+								<li class="recommended-games-item">
+									<a href="#bestRating" class="tab-links">Best Rating</a>
+								</li>
+								<li class="recommended-games-item">
+									<a href="#topPromos" class="tab-links">Top Promos</a>
+								</li>
+							</ul>
+						</div>
+
+						<div id="mostPlayed" class="tab-content">
+							<div class="clan-profile-games">
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background 2.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background 3.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="bestRating" class="tab-content">
+							<h1>Best Rating</h1>
+						</div>
+						<div id="topPromos" class="tab-content">
+							<h1>Top Promos</h1>
+						</div>
+					</div>
+
+					<!-- WE RECOMMENDED -->
+					<h3 class="all-games-page-headers">We recommend</h3>
+					<div class="we-recommend-container  tabs">
+						<div class="user-recommend-tabs">
+							<ul class="recommended-games-list">
+								<li class="recommended-games-item">
+									<a href="#myPreferences" class="tab-links">My Preferences</a>
+								</li>
+								<li class="recommended-games-item">
+									<a href="#betaVersion" class="tab-links">Beta Version</a>
+								</li>
+								<li class="recommended-games-item">
+									<a href="#new" class="tab-links">New!</a>
+								</li>
+							</ul>
+						</div>
+						<div id="myPreferences" class="tab-content">
+							<div class="clan-profile-games">
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background 2.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+								<div class="clan-game-container">
+									<img
+										src="../img/user_profile/Background 3.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+									<div class="clan-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description all-games-page">
+											Valorant is a team-based first-person hero shooter set in
+											the near future. Players play as one of a set of Agents,
+											characters designed based on several countries.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="betaVersion" class="tab-content">
+							<h1>Beta Version</h1>
+						</div>
+						<div id="new" class="tab-content">
+							<h1>New!</h1>
+						</div>
+					</div>
+				</div>
+				<div class="side-profile-clans-info all-games">
+					<div class="video-promotion-container">
+						<div class="video-promotion">
+							<img
+								src="../img/video-promotion.svg"
+								width="276"
+								height="138"
+								alt="video"
+							/>
+						</div>
+						<h3 class="promotion-header">WINTER FESTIVAL IN FORTNITE</h3>
+						<p class="promotion-description">
+							Every day during the 2021 Winter Festival (from December 16, 2021,
+							5:00 pm, to January 6, 2022, 5:00 pm), General Moroz will give out
+							gifts to players, which will include two outfits! Do not miss!
+						</p>
+					</div>
+
+					<div class="new-game-container">
+						<div class="new-game-image">
+							<img
+								src="../img/new-game.svg"
+								width="276"
+								height="137"
+								alt="image"
+							/>
+						</div>
+						<h3 class="promotion-header">Meet the new game</h3>
+						<p class="promotion-description">
+							Horizon Forbidden West is now available for clan world. Join and
+							play live now.
+						</p>
+					</div>
+					<div class="advertising games-container">
+						<div class="advertising-description-container">
+							<div class="price-description">
+								<div>
+									<p class="price-description-text">Starting from</p>
+									<span class="product-price">$30.00</span>
+									<h4 class="product-name-header">Mouse</h4>
+								</div>
+							</div>
+							<div class="product-name">
+								<a class="product-link" href="#">Browse</a>
+							</div>
+						</div>
+						<div class="advertising-image-container-desktop"></div>
+						<div class="advertising-image-container-mobile"></div>
+					</div>
+
+					<div class="widget-container">
+						<img
+							src="../img/widget.svg"
+							width="314"
+							height="178"
+							alt="widget"
+						/>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer-container">
+				<div class="logo-container">
+					<img width="130" height="75" alt="logo" src="../img/logo.svg" />
+				</div>
+				<div class="site-navigation">
+					<ul class="navigation-list">
+						<li class="list-item"><a href="#">Main</a></li>
+						<li class="list-item"><a href="#">My World</a></li>
+						<li class="list-item"><a href="#">Clans</a></li>
+						<li class="list-item"><a href="#">Games</a></li>
+						<li class="list-item"><a href="#">About Us</a></li>
+					</ul>
+				</div>
+				<div class="social-contacts">
+					<ul class="social-list-container">
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Instagram</span
+								><img
+									alt="instagram"
+									src="../img/social-footer/Instagram.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Facebook</span
+								><img
+									alt="facebook"
+									src="../img/social-footer/Facebook.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Steam</span
+								><img
+									alt="steam"
+									src="../img/social-footer/Steam.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+					</ul>
+					<div>
+						<button id="scroll-up-arrow">
+							<img alt="scroll-up" src="../img/scroll-up-arrow.svg" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="copyright-container">
+				<p>CopyRight &#169; 2022. Clans World. All rights reserved</p>
+				<p><span>Terms & Conditions</span> Privacy Policy</p>
+			</div>
+		</footer>
+
+		<!-- Menu from left -->
+
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="side-menu-toggle">
+			<section class="side-menu">
+				<h2 class="visually-hidden">Side Menu</h2>
+				<div class="container side-menu-container">
+					<div class="button-close-container">
+						<button
+							type="button"
+							class="button-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="list-menu-container">
+						<ul class="list-menu-links">
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Home</summary>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">My World</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li>
+												<a class="drop-down-style" href="#">My Profile</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Profile Setting</a>
+											</li>
+											<li><a class="drop-down-style" href="#">My Clan</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Player Ranking</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Leader Board</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Clans</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">Clan List</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Clan Ranking</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Games</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">All Games</a></li>
+											<li><a class="drop-down-style" href="#">My Games</a></li>
+											<li><a class="drop-down-style" href="#">Games</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+						</ul>
+					</div>
+					<div class="chat-button">
+						<a href="#"
+							><img
+								height="43"
+								alt="enter chat"
+								width="130"
+								src="../img/chat-button.svg"
+						/></a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- End of Menu -->
+		<script src="../index.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../swiper.js"></script>
+	</body>
+</html>

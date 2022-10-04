@@ -351,10 +351,6 @@
 	border-radius: 10px;
 }
 
-.active-links {
-	display: none;
-}
-
 .user-profile-game-container.screenshot .profile-game-screenshot:hover {
 	border: 1px solid var(--neon-green);
 }
@@ -687,6 +683,10 @@
 	flex-wrap: wrap;
 }
 
+.clan-flag-container img {
+	margin-right: 10px;
+}
+
 .clan-open-profile {
 	padding-top: 25px;
 }
@@ -952,7 +952,7 @@
 }
 
 .clan-language-container {
-	padding: 30px 80px 30px 70px;
+	padding: 30px 37px 30px 70px;
 	background-color: var(--basic-deep-purple);
 	margin-bottom: 5px;
 }
@@ -972,6 +972,7 @@
 
 .languages-container .language-flag-container:not(:last-child) {
 	margin-right: 18px;
+	margin-bottom: 15px;
 }
 
 .clans-communication-container {
@@ -1030,6 +1031,17 @@
 	background-color: var(--background-main-color);
 	padding: 16px;
 	border-radius: 15px;
+}
+
+.games-page {
+	background-color: var(--background-main-color);
+}
+
+.games-toggler {
+	display: flex;
+	margin-top: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 .message-top-container {
@@ -1101,7 +1113,7 @@
 /* Ranking Tabs */
 
 .ranking-tabs {
-	padding-top: 65px;
+	padding-top: 45px;
 }
 
 .clan-ranking-tabs {
@@ -1123,6 +1135,40 @@
 
 .clan-page-bg {
 	background-image: url('./img/player_profile/clan-list-image.svg');
+}
+
+.best-games-item {
+	position: relative;
+	display: flex;
+}
+
+.carousel-best-games-container {
+	background-image: url('./img/player_profile/carousel-slide-image.svg');
+	min-height: 344px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-control-prev-icon {
+	background-image: url('./img/player_profile/carousel-prev.svg');
+}
+
+.carousel-control-next-icon {
+	background-image: url('./img/player_profile/carousel-next.svg');
+}
+
+.carousel-indicators button {
+	background-color: var(--neon-green) !important;
+}
+
+.best-games-item > div {
+	margin-right: 60px;
+}
+
+.carousel-item {
+	position: relative;
+	max-height: 342px;
 }
 
 .ranking-tabs .rank-content {
@@ -1148,6 +1194,8 @@
 	display: none;
 }
 
+#preferences:checked ~ #preferences,
+#mostPlayed:checked ~ #mostPlayed,
 #preferencesList:checked ~ #preferencesList,
 #gamesList:checked ~ #gamesList,
 #languagesList:checked ~ #languagesList,
@@ -1162,6 +1210,10 @@
 }
 
 .label-first-child {
+	margin-left: 45px;
+}
+
+.clan-label-first {
 	margin-left: 45px;
 }
 
@@ -1312,6 +1364,10 @@
 
 .language-flag-wrapper {
 	display: flex;
+}
+
+.language-flag-wrapper img:not(:last-child) {
+	margin-right: 10px;
 }
 
 .world-ranking-list-item {
@@ -1521,7 +1577,8 @@
 	opacity: 0.7;
 }
 
-.leader-board-links {
+.leader-board-links,
+.recommended-games-list {
 	margin: 0;
 	display: flex;
 	padding: 0;
@@ -1999,11 +2056,244 @@
 }
 
 .desktop-list-container,
-.desktop-apply-container {
+.desktop-apply-container,
+.clan-ranking-page,
+.games-image-button,
+.carousel {
 	display: none;
 }
 
+.games-image-button + img {
+	opacity: 0.5;
+	height: 116px;
+	z-index: 0;
+	width: 150px;
+}
+
+.games-image-button:checked + img {
+	opacity: 1;
+	transform: translate(16px 0);
+	width: 250px;
+	height: 140px;
+	z-index: 1;
+}
+
+.all-games-container,
+.my-games-container {
+	display: flex;
+	align-items: center;
+}
+
+.games-container-name {
+	position: absolute;
+	padding-left: 5px;
+}
+
+.games-container-name span {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: var(--light-grey);
+}
+
+/* Tabs options */
+
+.tab-links {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	opacity: 0.3;
+	padding: 7px 15px;
+	background-color: #1c1b26;
+	border-radius: 10px 10px 0px 0px;
+	border: none;
+}
+
+.tab-content {
+	padding-top: 25px;
+	padding-bottom: 15px;
+	background-color: #1c1b26;
+	padding-left: 20px;
+}
+
+.tab-links.active {
+	color: var(--neon-green);
+	background: #1c1b26;
+	opacity: 0.8;
+}
+
+.priority-game-header {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+
+/* Tabs options */
+
+.priority-game-container {
+	border-radius: 20px;
+	padding: 16px;
+	max-width: 345px;
+	margin: 75px auto 0 auto;
+	background-color: #1b1a26;
+	max-height: 340px;
+}
+
+.priority-game-description {
+	max-height: 105px;
+	font-weight: 300;
+	font-size: 14px;
+	opacity: 0.6;
+	color: var(--light-grey);
+	margin-bottom: 0;
+	overflow-y: auto;
+}
+
+.games-page-color {
+	background-color: var(--background-main-color);
+}
+
+.priority-buttons {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	border-radius: 30px;
+	color: var(--light-grey);
+	padding-left: 16px;
+	padding-right: 16px;
+	display: block;
+	width: 100%;
+}
+
+.all-games-page-headers {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: uppercase;
+	color: var(--light-grey);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 16px;
+}
+
+.priority-buttons.gallery-button {
+	background-color: #e78d5b;
+}
+
+.priority-buttons.games-button {
+	background-color: #64c14c;
+}
+
+.priority-buttons.download-button {
+	background-color: #4c90c1;
+}
+
+.gallery-button + .gallery-button {
+	margin-top: 16px;
+}
+
+.top-side-priority {
+	margin-top: -45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.priority-button-container {
+	flex-direction: column;
+}
+
+.video-promotion-container,
+.new-game-container,
+.games-container,
+.widget-container {
+	max-width: 315px;
+	margin: 30px auto 0 auto;
+	padding: 20px;
+	background-color: var(--background-main-color);
+	border-radius: 15px;
+}
+
+.we-recommend-container {
+	margin-bottom: 20px;
+}
+
+.all-games {
+	background-color: var(--basic-deep-purple);
+	padding-top: 15px;
+	margin-bottom: 55px;
+	padding-bottom: 30px;
+}
+
+.promotion-header {
+	margin-bottom: 0;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 5px;
+}
+
+.promotion-description {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.all-games-page {
+	font-weight: 300;
+	font-size: 9px;
+	line-height: 10px;
+	color: var(--light-grey);
+}
+
+/* CAROUSEL */
+
+.carousel-indicators {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	justify-content: flex-end;
+	margin-right: 0;
+	height: 0;
+}
+
+.games-toggler-image {
+	cursor: pointer;
+}
+
 @media screen and (min-width: 1200px) {
+	.mobile-header-container {
+		display: none;
+	}
+
+	.carousel {
+		display: block;
+	}
+	.languages-container img {
+		width: 56px;
+		height: 32px;
+	}
+
+	.clan-ranking-page {
+		display: flex;
+	}
+	.clan-label-first {
+		margin-left: 220px;
+	}
 	.clan-list-content {
 		border-radius: 0 15px 0 0;
 	}
@@ -2181,10 +2471,29 @@
 
 	.clan-information-container {
 		width: 100%;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 25px;
+		padding-right: 25px;
 		border-radius: 0 0 15px 15px;
 		margin-bottom: 0;
+	}
+
+	.carousel-control-next,
+	.carousel-control-prev {
+		height: 50px;
+		top: 40%;
+		width: 7%;
+	}
+
+	.carousel-clan-info-sub-container {
+		display: flex;
+	}
+
+	.carousel-clan-info-sub-container .clan-info {
+		margin-right: 30px;
+	}
+
+	.clan-info .title-top {
+		margin-bottom: 5px;
 	}
 
 	.clan-information {
@@ -2262,7 +2571,7 @@
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 23px;
-		padding: 15px 45px;
+		padding: 15px 44px;
 	}
 
 	.clan-ranking-tabs .rank-label {
@@ -2540,7 +2849,7 @@
 	}
 
 	.clans-open-communication-container {
-		margin-bottom: 0;
+		margin-bottom: 5px;
 	}
 
 	.clan-open-sub-container {
