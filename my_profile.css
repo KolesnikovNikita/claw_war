@@ -430,6 +430,10 @@
 
 /* Swiper-2 */
 
+/* Swier 3 */
+
+/* Swier 3 */
+
 .user-award-slider {
 	background-color: var(--basic-deep-purple);
 	padding: 20px 40px;
@@ -793,6 +797,14 @@
 	margin-bottom: 16px;
 }
 
+.games-history-header {
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 23px;
+	color: var(--light-grey);
+	margin-bottom: 20px;
+}
+
 .clan-games-header,
 .clan-gallery-header {
 	top: 20px;
@@ -838,6 +850,29 @@
 	left: 159px;
 }
 
+.game-info-container {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 25px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 7px;
+}
+
+.game-info-title span {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--light-grey);
+}
+
+.game-info-year span {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--neon-green);
+}
+
 .clan-gallery {
 	position: relative;
 	background-color: var(--basic-deep-purple);
@@ -845,6 +880,14 @@
 	padding-bottom: 20px;
 	padding-left: 16px;
 	margin-bottom: 16px;
+}
+
+.games-history-gallery {
+	position: relative;
+	background-color: var(--basic-deep-purple);
+
+	padding-bottom: 20px;
+	padding-left: 16px;
 }
 
 .blurred-display {
@@ -1035,13 +1078,6 @@
 
 .games-page {
 	background-color: var(--background-main-color);
-}
-
-.games-toggler {
-	display: flex;
-	margin-top: 16px;
-	padding-left: 16px;
-	padding-right: 16px;
 }
 
 .message-top-container {
@@ -2116,6 +2152,8 @@
 	padding-bottom: 15px;
 	background-color: #1c1b26;
 	padding-left: 20px;
+	border-radius: 0 0 0 8px;
+	min-height: 227px;
 }
 
 .tab-links.active {
@@ -2136,6 +2174,10 @@
 }
 
 /* Tabs options */
+
+.users-recommend-container {
+	padding-left: 16px;
+}
 
 .priority-game-container {
 	border-radius: 20px;
@@ -2226,6 +2268,7 @@
 
 .we-recommend-container {
 	margin-bottom: 20px;
+	padding-left: 16px;
 }
 
 .all-games {
@@ -2271,8 +2314,14 @@
 	height: 0;
 }
 
-.games-toggler-image {
-	cursor: pointer;
+.side-profile-games-info {
+	margin-bottom: 50px;
+	background-color: var(--basic-deep-purple);
+	padding-bottom: 30px;
+}
+
+.main-page-games {
+	background-color: var(--background-main-color);
 }
 
 @media screen and (min-width: 1200px) {
@@ -2304,7 +2353,9 @@
 	.select-container-mobile {
 		display: none;
 	}
-	.side-profile-clans-info {
+
+	.side-profile-clans-info,
+	side-profile-games-info {
 		width: 385px;
 		display: flex;
 		flex-direction: column;

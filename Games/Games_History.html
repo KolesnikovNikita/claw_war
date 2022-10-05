@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="../main_page.css" />
+		<link rel="stylesheet" href="../my_world_profile.css" />
+		<link rel="stylesheet" href="../my_profile.css" />
+		<title>Games History</title>
+	</head>
+	<body>
+		<h2 class="visually-hidden">Gear</h2>
+		<header class="page-header">
+			<div class="container">
+				<div class="page-header-container user-profile">
+					<button
+						class="navigation-menu-toggler"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#side-menu-toggle"
+					></button>
+					<div class="header-logo"></div>
+					<div class="header-logo-profile-mobile"></div>
+				</div>
+			</div>
+			<div class="container-fluid header-navigation">
+				<ul class="header-navigation-list">
+					<li class="header-navigation-item"><a href="#">Main</a></li>
+					<li class="header-navigation-item"><a href="#">My World</a></li>
+					<li class="header-navigation-item"><a href="#">Clans</a></li>
+					<li class="header-navigation-item"><a href="#">Games</a></li>
+				</ul>
+			</div>
+			<div class="header-sub-navigation-container">
+				<ul class="header-sub-navigation-list">
+					<li>
+						<a class="sub-navigation-item" href="#">My Profile</a>
+					</li>
+					<li><a class="sub-navigation-item" href="#">Profile Setting</a></li>
+					<li><a class="sub-navigation-item" href="#">My Clan</a></li>
+					<li><a class="sub-navigation-item" href="#">Player Ranking</a></li>
+					<li><a class="sub-navigation-item" href="#">Leader Board</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main-page-profile-settings">
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/side-news-bell.svg"
+							alt="news bell"
+							width="25"
+							height="28"
+						/>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/user_profile/add-friend-icon.svg"
+							alt="add friend icon"
+						/>
+						<button class="add-friend-button" type="button">
+							<span class="side-container-menu-text">+ Add Friend</span>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								width="47"
+								height="47"
+								alt="add clans"
+							/>
+						</button>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+
+				<div class="dashboard-layout-content">
+					<div class="games-history-container">
+						<div class="games-history-data">
+							<h3 class="user-profile-header">Redream Game Preferences</h3>
+							<div class="choose-game-container">
+								<div class="search-game-header">
+									<input
+										placeholder="Search game here..."
+										type="text"
+										class="search-game-input"
+									/>
+									<button
+										type="button"
+										class="profile-form-big-button green-button"
+									>
+										Search
+									</button>
+									<div class="device-type-container">
+										<select class="select-device-type" name="device" id="type">
+											<option value="ps4">PS4</option>
+										</select>
+									</div>
+								</div>
+								<a
+									data-bs-toggle="modal"
+									href="#add-game-modal"
+									role="button"
+									type="button"
+									class="profile-large-button"
+								>
+									Add New Game
+								</a>
+							</div>
+						</div>
+						<div class="games-history-data-container">
+							<div class="games-history-gallery">
+								<h3 class="games-history-header">2021</h3>
+								<div class="clan-profile-gallery">
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<button class="clan-game-option-button"></button>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Valorant</span></div>
+											<div class="game-info-year"><span>2021</span></div>
+										</div>
+									</div>
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<button class="clan-game-option-button"></button>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Fortnite</span></div>
+											<div class="game-info-year"><span>2020</span></div>
+										</div>
+									</div>
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<button class="clan-game-option-button"></button>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Valorant</span></div>
+											<div class="game-info-year"><span>2021</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="games-history-data-container">
+							<div class="games-history-gallery">
+								<h3 class="games-history-header">2016</h3>
+								<div class="clan-profile-gallery">
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Valorant</span></div>
+											<div class="game-info-year"><span>2021</span></div>
+										</div>
+									</div>
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Fortnite</span></div>
+											<div class="game-info-year"><span>2020</span></div>
+										</div>
+									</div>
+									<div class="clan-gallery-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="game-info-container">
+											<div class="game-info-title"><span>Valorant</span></div>
+											<div class="game-info-year"><span>2021</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer-container">
+				<div class="logo-container">
+					<img width="130" height="75" alt="logo" src="../img/logo.svg" />
+				</div>
+				<div class="site-navigation">
+					<ul class="navigation-list">
+						<li class="list-item"><a href="#">Main</a></li>
+						<li class="list-item"><a href="#">My World</a></li>
+						<li class="list-item"><a href="#">Clans</a></li>
+						<li class="list-item"><a href="#">Games</a></li>
+						<li class="list-item"><a href="#">About Us</a></li>
+					</ul>
+				</div>
+				<div class="social-contacts">
+					<ul class="social-list-container">
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Instagram</span
+								><img
+									alt="instagram"
+									src="../img/social-footer/Instagram.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Facebook</span
+								><img
+									alt="facebook"
+									src="../img/social-footer/Facebook.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Steam</span
+								><img
+									alt="steam"
+									src="../img/social-footer/Steam.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+					</ul>
+					<div>
+						<button id="scroll-up-arrow">
+							<img alt="scroll-up" src="../img/scroll-up-arrow.svg" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="copyright-container">
+				<p>CopyRight &#169; 2022. Clans World. All rights reserved</p>
+				<p><span>Terms & Conditions</span> Privacy Policy</p>
+			</div>
+		</footer>
+
+		<!-- Menu from left -->
+
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="side-menu-toggle">
+			<section class="side-menu">
+				<h2 class="visually-hidden">Side Menu</h2>
+				<div class="container side-menu-container">
+					<div class="button-close-container">
+						<button
+							type="button"
+							class="button-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="list-menu-container">
+						<ul class="list-menu-links">
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Home</summary>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">My World</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li>
+												<a class="drop-down-style" href="#">My Profile</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Profile Setting</a>
+											</li>
+											<li><a class="drop-down-style" href="#">My Clan</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Player Ranking</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Leader Board</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Clans</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">Clan List</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Clan Ranking</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Games</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">All Games</a></li>
+											<li><a class="drop-down-style" href="#">My Games</a></li>
+											<li><a class="drop-down-style" href="#">Games</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+						</ul>
+					</div>
+					<div class="chat-button">
+						<a href="#"
+							><img
+								height="43"
+								alt="enter chat"
+								width="130"
+								src="../img/chat-button.svg"
+						/></a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- End of Menu -->
+
+		<!-------------------- Add New Game Modal ------------------------->
+
+		<div class="modal" id="add-game-modal" aria-hidden="true" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<section class="add-game-container">
+						<div class="add-game-form">
+							<form class="add-game" action="#">
+								<h3 class="add-game-header">Add Game</h3>
+								<div class="desktop-form-container">
+									<div>
+										<div class="wrapper-column">
+											<label for="game-genre">Genre</label>
+											<select name="gameGenre" id="game-genre">
+												<option disabled selected>Add or change genre</option>
+												<option value="shooter">Shooter</option>
+											</select>
+										</div>
+										<div class="wrapper-column">
+											<label for="game-sub-genre">Subgenre</label>
+											<select name="sub-genre" id="game-sub-genre">
+												<option disabled selected>
+													Add or change subgenre
+												</option>
+												<option value="shooter">First-Person Shooter</option>
+											</select>
+										</div>
+										<div class="wrapper-column">
+											<label for="game-name">Game Name</label>
+											<input type="text" id="game-name" class="add-game-name" />
+										</div>
+									</div>
+									<div class="upload-picture-container">
+										<div class="game-image-container">
+											<img
+												src="../img/user_profile/logo-world.svg"
+												width="170"
+												height="78"
+												alt="logo"
+											/>
+										</div>
+										<div class="load-game-image-container">
+											<input
+												type="file"
+												id="load-picture"
+												class="input-game-image"
+											/>
+											<label class="file-load-wrapper" for="load-picture">
+												<span class="load-picture-container"
+													><img
+														class="input__file-icon"
+														src="../img/user_profile/upload-picture-image.svg"
+														alt="Choose File"
+														width="15"
+														height="12"
+													/>
+													<span class="load-image-text">Upload Picture</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-button-container">
+									<button
+										data-bs-dismiss="modal"
+										class="profile-form-middle-button cancel-button"
+									>
+										Close
+									</button>
+									<button
+										data-bs-target="#confirmModal"
+										data-bs-toggle="modal"
+										data-bs-dismiss="modal"
+										class="profile-form-middle-button save-button"
+									>
+										Add Game
+									</button>
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="confirmModal" aria-hidden="true" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<section class="confirm-add-game-container">
+						<div class="desktop-confirm-game-container">
+							<h3 class="add-game-header confirm-header">
+								Do you want to <br />
+								add this game to <br />
+								the database?
+							</h3>
+							<div class="bottom-button-container">
+								<button
+									data-bs-dismiss="modal"
+									data-bs-target="add-game-modal"
+									class="profile-form-middle-button cancel-button"
+								>
+									No
+								</button>
+								<button
+									type="submit"
+									data-bs-dismiss="modal"
+									class="profile-form-middle-button save-button"
+								>
+									Yes
+								</button>
+							</div>
+							<button
+								data-bs-dismiss="modal"
+								data-bs-target="add-game-modal"
+								class="close-cross-button"
+							></button>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- End of Modal -->
+
+		<script src="../index.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
