@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="../main_page.css" />
+		<link rel="stylesheet" href="../my_world_profile.css" />
+		<link rel="stylesheet" href="../my_profile.css" />
+		<title>Player Profile For Other</title>
+	</head>
+	<body>
+		<h2 class="visually-hidden">User Profile Setting</h2>
+		<header class="page-header">
+			<div class="container">
+				<div class="page-header-container user-profile">
+					<button
+						class="navigation-menu-toggler"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#side-menu-toggle"
+					></button>
+					<div class="header-logo"></div>
+					<div class="header-logo-profile-mobile"></div>
+				</div>
+			</div>
+			<div class="container-fluid header-navigation">
+				<ul class="header-navigation-list">
+					<li class="header-navigation-item"><a href="#">Main</a></li>
+					<li class="header-navigation-item"><a href="#">My World</a></li>
+					<li class="header-navigation-item"><a href="#">Clans</a></li>
+					<li class="header-navigation-item"><a href="#">Games</a></li>
+				</ul>
+			</div>
+			<div class="header-sub-navigation-container">
+				<ul class="header-sub-navigation-list">
+					<li>
+						<a class="sub-navigation-item" href="#">My Profile</a>
+					</li>
+					<li><a class="sub-navigation-item" href="#">Profile Setting</a></li>
+					<li><a class="sub-navigation-item" href="#">My Clan</a></li>
+					<li><a class="sub-navigation-item" href="#">Player Ranking</a></li>
+					<li><a class="sub-navigation-item" href="#">Leader Board</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main-page-profile-settings">
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop">
+					<div class="column-wrapper">
+						<div class="side-container-news-container">
+							<img
+								src="../img/user_profile/side-news-bell.svg"
+								alt="news bell"
+								width="25"
+								height="28"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-counter"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../img/player_profile/side-container-players-images.svg"
+							width="71"
+							height="21"
+							alt="add friend icon"
+						/>
+						<span class="users-online-style">32 online</span>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-clans"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-games"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="dashboard-layout-content my-profile-page">
+					<div class="player-profile-bg-image">
+						<div class="player-profile-image-container"></div>
+					</div>
+					<div class="player-profile-setting">
+						<div class="player-profile-information">
+							<div class="user-info friends">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Friends</span>
+							</div>
+							<div class="user-info clan">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Clans</span>
+							</div>
+							<span class="add-button-style my-profile-header">ReDream</span>
+							<div class="user-info games">
+								<span class="user-info-count">0</span
+								><span class="user-info-name">Games</span>
+							</div>
+							<div class="user-info country">
+								<img
+									class="user-country-flag-mobile"
+									src="../img/flags/AG.svg"
+									alt="flag country"
+								/>
+								<span class="user-info-name">Germany</span>
+							</div>
+						</div>
+						<div class="other-profile-socials-container">
+							<button class="other-profile-socials">
+								<img
+									src="../img/player_profile/steam-image.svg"
+									width="30"
+									height="30"
+									alt="steam"
+								/>
+							</button>
+							<button class="other-profile-socials">
+								<img
+									src="../img/player_profile/instagram-image.svg"
+									width="30"
+									height="30"
+									alt="instagram"
+								/>
+							</button>
+							<button class="other-profile-socials">
+								<img
+									src="../img/player_profile/discord-image.svg"
+									width="30"
+									height="30"
+									alt="discord"
+								/>
+							</button>
+						</div>
+						<div class="user-profile-button-container">
+							<div>
+								<button class="user-profile-add-button">Add as Friend</button>
+							</div>
+						</div>
+					</div>
+					<div class="user-profile-menu">
+						<div class="user-profile-container">
+							<h3 class="user-profile-header">Redream is Gaming</h3>
+							<span class="profile-count games">25</span>
+							<button class="profile-page-button">Add Game</button>
+							<div class="user-profile-games">
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background 2.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Vanquish</h4>
+										<p class="game-description genre">Shooter</p>
+										<p class="game-description sub-genre">
+											Third-person Shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background 3.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Ghostwire: Tokyo</h4>
+										<p class="game-description genre">Third-person Shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+								<div class="user-profile-game-container">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-image"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="user-image-overlay">
+										<h4 class="game-name">Valorant</h4>
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
+										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="user-profile-screenshots">
+							<h3 class="user-profile-header">Redream Screenshots</h3>
+							<span class="profile-count screenshots">25</span>
+							<div class="search-screenshot-main">
+								<div class="search-screenshot-container">
+									<input
+										placeholder="Search here..."
+										type="text"
+										class="screenshot-search-input"
+									/>
+									<img
+										class="search-screenshot-icon"
+										src="../img/user_profile/search-icon.svg"
+										width="14"
+										height="14"
+										alt="search"
+									/>
+								</div>
+							</div>
+							<button class="profile-page-button">All</button>
+							<div class="user-profile-games">
+								<div class="user-profile-game-container screenshot">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-screenshot"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="active-links">
+										<button class="profile-delete-button">Delete</button>
+										<button class="profile-cross-close-button">
+											<img
+												src="../img/player_profile/close-cross.svg"
+												width="12"
+												height="12"
+												alt="close"
+											/>
+										</button>
+									</div>
+								</div>
+								<div class="user-profile-game-container screenshot">
+									<img
+										src="../img/user_profile/Background 2.png"
+										class="profile-game-screenshot"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="active-links">
+										<button class="profile-delete-button">Delete</button>
+										<button class="profile-cross-close-button">
+											<img
+												src="../img/player_profile/close-cross.svg"
+												width="12"
+												height="12"
+												alt="close"
+											/>
+										</button>
+									</div>
+								</div>
+								<div class="user-profile-game-container screenshot">
+									<img
+										src="../img/user_profile/Background 3.png"
+										class="profile-game-screenshot"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="active-links">
+										<button class="profile-delete-button">Delete</button>
+										<button class="profile-cross-close-button">
+											<img
+												src="../img/player_profile/close-cross.svg"
+												width="12"
+												height="12"
+												alt="close"
+											/>
+										</button>
+									</div>
+								</div>
+								<div class="user-profile-game-container screenshot">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-screenshot"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="active-links">
+										<button class="profile-delete-button">Delete</button>
+										<button class="profile-cross-close-button">
+											<img
+												src="../img/player_profile/close-cross.svg"
+												width="12"
+												height="12"
+												alt="close"
+											/>
+										</button>
+									</div>
+								</div>
+								<div class="user-profile-game-container screenshot">
+									<img
+										src="../img/user_profile/Background.png"
+										class="profile-game-screenshot"
+										alt="game image"
+										width="223"
+										height="187"
+									/>
+									<div class="active-links">
+										<button class="profile-delete-button">Delete</button>
+										<button class="profile-cross-close-button">
+											<img
+												src="../img/player_profile/close-cross.svg"
+												width="12"
+												height="12"
+												alt="close"
+											/>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="user-profile-slider">
+							<h3 class="user-profile-header">Redream Album</h3>
+							<span class="profile-count album">25</span>
+							<div class="search-album-main">
+								<div class="search-screenshot-container">
+									<input
+										placeholder="Search here..."
+										type="text"
+										class="album-search-input"
+									/>
+									<img
+										class="search-screenshot-icon"
+										src="../img/user_profile/search-icon.svg"
+										width="14"
+										height="14"
+										alt="search"
+									/>
+								</div>
+							</div>
+							<button class="profile-page-button">All</button>
+							<section class="slider-album">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												height="243"
+												width="423"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="243"
+												width="423"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="243"
+												width="423"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="243"
+												width="423"
+												src="../img/player_profile/swiper-image.svg"
+											/>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</section>
+						</div>
+						<div class="user-award-slider">
+							<h3 class="awards-header">Awards</h3>
+							<section class="slider-album">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<div class="side-profile-clans-info">
+					<div class="side-user-profile-socials-container">
+						<div class="profile-socials-container">
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/steam-image.svg"
+									width="30"
+									height="30"
+									alt="steam"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/instagram-image.svg"
+									width="30"
+									height="30"
+									alt="instagram"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/discord-image.svg"
+									width="30"
+									height="30"
+									alt="discord"
+								/>
+							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/add-socials.svg"
+									width="30"
+									height="30"
+									alt="add button"
+								/>
+							</button>
+						</div>
+					</div>
+					<div class="side-profile-container">
+						<h3 class="clans-info-header">
+							<span class="green-style">Top </span>Clans
+						</h3>
+						<div class="top-clans-container">
+							<div class="chart-place-container first-place">
+								<h3 class="clans-status">Legends</h3>
+								<div class="clan-image-container">
+									<img
+										src="../img/player_profile/clan-status-image.svg"
+										height="60"
+										width="60"
+										alt="image"
+									/>
+								</div>
+							</div>
+							<div class="chart-place-container second-place">
+								<h3 class="clans-status">Emperors</h3>
+								<div class="clan-image-container">
+									<img
+										src="../img/player_profile/Default.svg"
+										height="60"
+										width="60"
+										alt="image"
+									/>
+								</div>
+							</div>
+							<div class="chart-place-container third-place">
+								<h3 class="clans-status">Emperors</h3>
+								<div class="clan-image-container">
+									<img
+										src="../img/player_profile/Default.svg"
+										height="60"
+										width="60"
+										alt="image"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="redream-gears-container">
+						<h3 class="gear-header">
+							<span class="green-style">ReDream</span> Gears
+						</h3>
+						<div class="gear-image-container">
+							<div>
+								<img
+									src="../img/player_profile/gear-mouse.svg"
+									width="105"
+									height="79"
+									alt="mouse"
+								/>
+							</div>
+							<div>
+								<img
+									src="../img/player_profile/gear-keyboard.svg"
+									width="163"
+									height="107"
+									alt="keyboard"
+								/>
+							</div>
+						</div>
+						<div class="gear-button-container">
+							<button class="gear-button">See all Gears</button>
+						</div>
+					</div>
+					<div class="redream-latest-activity-container">
+						<h3 class="latest-activity-header">
+							<span class="green-style">ReDream</span> Latest Activity
+						</h3>
+						<div class="latest-activity-content">
+							<div class="latest-activity-image-container">
+								<img
+									src="../img/player_profile/Photo.png"
+									class="latest-activity-image"
+									width="143"
+									height="150"
+									alt="image"
+								/>
+							</div>
+							<div class="latest-activity-description-container">
+								<p class="latest-activity-description">
+									ReDream added a new game:
+								</p>
+								<p class="latest-activity-event">Battlefield</p>
+								<p class="time-activity">2 hours ago</p>
+							</div>
+						</div>
+					</div>
+					<div class="chat-button-container">
+						<div class="chat-button-desktop">
+							<a href="#"
+								><img
+									height="43"
+									alt="enter chat"
+									width="130"
+									src="../img/chat-button.svg"
+							/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer-container">
+				<div class="logo-container">
+					<img width="130" height="75" alt="logo" src="../img/logo.svg" />
+				</div>
+				<div class="site-navigation">
+					<ul class="navigation-list">
+						<li class="list-item"><a href="#">Main</a></li>
+						<li class="list-item"><a href="#">My World</a></li>
+						<li class="list-item"><a href="#">Clans</a></li>
+						<li class="list-item"><a href="#">Games</a></li>
+						<li class="list-item"><a href="#">About Us</a></li>
+					</ul>
+				</div>
+				<div class="social-contacts">
+					<ul class="social-list-container">
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Instagram</span
+								><img
+									alt="instagram"
+									src="../img/social-footer/Instagram.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Facebook</span
+								><img
+									alt="facebook"
+									src="../img/social-footer/Facebook.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+						<li class="social-list">
+							<a href="#"
+								><span class="visually-hidden">Steam</span
+								><img
+									alt="steam"
+									src="../img/social-footer/Steam.svg"
+									height="32"
+									width="32"
+							/></a>
+						</li>
+					</ul>
+					<div>
+						<button id="scroll-up-arrow">
+							<img alt="scroll-up" src="../img/scroll-up-arrow.svg" />
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="copyright-container">
+				<p>CopyRight &#169; 2022. Clans World. All rights reserved</p>
+				<p><span>Terms & Conditions</span> Privacy Policy</p>
+			</div>
+		</footer>
+
+		<!-- Menu from left -->
+
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="side-menu-toggle">
+			<section class="side-menu">
+				<h2 class="visually-hidden">Side Menu</h2>
+				<div class="container side-menu-container">
+					<div class="button-close-container">
+						<button
+							type="button"
+							class="button-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="list-menu-container">
+						<ul class="list-menu-links">
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Home</summary>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">My World</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li>
+												<a class="drop-down-style" href="#">My Profile</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Profile Setting</a>
+											</li>
+											<li><a class="drop-down-style" href="#">My Clan</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Player Ranking</a>
+											</li>
+											<li>
+												<a class="drop-down-style" href="#">Leader Board</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Clans</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">Clan List</a></li>
+											<li>
+												<a class="drop-down-style" href="#">Clan Ranking</a>
+											</li>
+										</ul>
+									</div>
+								</details>
+							</li>
+							<li class="list-menu-item">
+								<details>
+									<summary class="menu-item-style">Games</summary>
+									<div class="drop-down-menu">
+										<ul class="list-menu-links">
+											<li><a class="drop-down-style" href="#">All Games</a></li>
+											<li><a class="drop-down-style" href="#">My Games</a></li>
+											<li><a class="drop-down-style" href="#">Games</a></li>
+										</ul>
+									</div>
+								</details>
+							</li>
+						</ul>
+					</div>
+					<div class="chat-button">
+						<a href="#"
+							><img
+								height="43"
+								alt="enter chat"
+								width="130"
+								src="../img/chat-button.svg"
+						/></a>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- End of Menu -->
+		<script src="../index.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../swiper.js"></script>
+	</body>
+</html>

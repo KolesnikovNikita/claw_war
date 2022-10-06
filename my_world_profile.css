@@ -305,6 +305,28 @@ html {
 	padding-left: 40px;
 }
 
+.history-header {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	padding-left: 25px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.history-header::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background-color: var(--neon-green);
+	margin-left: -25px;
+	margin-top: 8px;
+}
+
 .user-profile-header::before {
 	position: absolute;
 	content: '';
@@ -1129,6 +1151,7 @@ html {
 	margin-bottom: 20px;
 }
 
+.select-device-type,
 .choose-device-type {
 	appearance: none;
 	background-image: url('./img/user_profile/select-gender-arrow.svg');
@@ -1137,6 +1160,7 @@ html {
 	background-size: 0.9em auto, 100%;
 }
 
+.select-device-type option,
 .choose-device-type option {
 	background-color: var(--background-color-input);
 }
@@ -1196,6 +1220,62 @@ html {
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 1200px) {
+	.history-header {
+		padding-left: 0;
+	}
+	.history-header::before {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 31px;
+		height: 2px;
+		background-color: var(--neon-green);
+		margin-left: -40px;
+		margin-top: 8px;
+	}
+	.dashboard-layout-content.games-history {
+		background-color: var(--background-main-color);
+	}
+
+	.games-history-container {
+		padding-top: 0;
+		padding-bottom: 200px;
+		border-radius: 200px;
+		border-radius: 20px;
+	}
+
+	.games-history-data {
+		padding-top: 55px;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 40px;
+		border-radius: 20px 20px 0 0;
+		display: flex;
+	}
+
+	.history-game-header {
+		display: flex;
+	}
+
+	.history-header-container {
+	}
+
+	.choose-game-container {
+		display: flex;
+	}
+
+	.history-page {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 45px;
+		width: 215px;
+		background-color: var(--basic-deep-purple);
+		width: 215px;
+	}
+
 	.header-sub-navigation-container {
 		opacity: 50%;
 		padding: 0;
