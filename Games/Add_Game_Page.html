@@ -96,7 +96,7 @@
 					<div class="add-game-page-container">
 						<div class="add-game-data">
 							<span class="add-game-header">Add Game</span>
-							<form action="#">
+							<form class="load-game-form" action="#">
 								<div class="add-game-form-inner">
 									<div class="wrapper-column">
 										<label for="user-name">Name</label>
@@ -126,41 +126,71 @@
 												class="user-game-input"
 											/>
 										</div>
-									</div>
-									<div class="wrapper-column select-device-type">
-										<label for="deviceType">Device</label>
-										<select
-											class="form-select-device"
-											name="device"
-											id="deviceType"
-										>
-											<option value="male">Male</option>
-											<option value="female">Female</option>
-										</select>
-									</div>
-									<div class="wrapper-column select-device-type">
-										<label for="deviceType">Device</label>
-										<select
-											class="form-select-device"
-											name="device"
-											id="deviceType"
-										>
-											<option value="male">Male</option>
-											<option value="female">Female</option>
-										</select>
-									</div>
-
-									<div class="upload-picture-container">
-										<div class="wrapper-column select-device-type">
-											<label for="deviceType">Status</label>
+										<div class="wrapper-column">
+											<label for="deviceName">Device</label>
 											<select
-												class="form-select-device"
+												class="choose-device-type"
 												name="device"
-												id="deviceType"
+												id="deviceName"
 											>
-												<option value="male">Male</option>
-												<option value="female">Female</option>
+												<option value="device">Choose device</option>
 											</select>
+										</div>
+										<div class="wrapper-column">
+											<label for="deviceName">Status</label>
+											<select
+												class="choose-device-type"
+												name="device"
+												id="deviceName"
+											>
+												<option value="device">Choose status</option>
+											</select>
+										</div>
+										<div class="upload-image-container">
+											<div class="top-side-image-container">
+												<div class="select-image-container">
+													<img
+														src="../img/user_profile/Background 2.png"
+														width="180"
+														height="130"
+														alt="image"
+													/>
+												</div>
+
+												<div class="choose-image-container">
+													<div class="choose-image-container">
+														<img
+															src="../img/user_profile/Background 2.png"
+															alt="image"
+														/>
+													</div>
+													<div class="choose-image-container">
+														<img
+															src="../img/user_profile/Background 2.png"
+															alt="image"
+														/>
+													</div>
+													<div class="choose-image-container">
+														<img
+															src="../img/user_profile/Background 2.png"
+															alt="image"
+														/>
+													</div>
+												</div>
+											</div>
+											<div class="upload-button-container">
+												<button class="upload-picture-button">
+													Upload Own Picture
+												</button>
+											</div>
+										</div>
+										<div class="form-buttons-container">
+											<div>
+												<button class="form-cancel-button">Cancel</button>
+											</div>
+											<div>
+												<button class="add-game-style">Add Game</button>
+											</div>
 										</div>
 									</div>
 								</div>

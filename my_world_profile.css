@@ -216,6 +216,8 @@ html {
 }
 
 .add-game-page-container {
+	padding-top: 25px;
+	padding-bottom: 100px;
 	background-color: var(--background-main-color);
 	position: relative;
 }
@@ -234,7 +236,21 @@ html {
 	border-radius: 12px;
 }
 
+.add-game-header::before {
+	display: block;
+	position: absolute;
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 2px;
+	background-color: var(--neon-green);
+	margin-left: -25px;
+	margin-top: 8px;
+}
+
 .add-game-data {
+	padding-top: 20px;
 	position: relative;
 	background-color: var(--basic-deep-purple);
 }
@@ -1064,6 +1080,117 @@ html {
 	color: var(--light-grey);
 	outline: none;
 	appearance: none;
+}
+
+.select-image-container img {
+	border-radius: 10px;
+}
+
+.select-image-container {
+	margin-right: 10px;
+}
+
+.choose-image-container {
+	margin-bottom: 5px;
+}
+
+.choose-image-container img {
+	width: 55px;
+	height: 45px;
+	border-radius: 5px;
+}
+
+.load-game-form label {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0.22px;
+	color: var(--light-grey);
+	padding-left: 17px;
+}
+
+.load-game-form {
+	padding: 25px 30px;
+}
+
+.load-game-form input,
+.load-game-form select {
+	display: block;
+	width: 100%;
+	border-radius: 35px;
+	border: none;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	padding: 12px 15px;
+	outline: none;
+	background-color: var(--background-color-input);
+	margin-bottom: 20px;
+}
+
+.choose-device-type {
+	appearance: none;
+	background-image: url('./img/user_profile/select-gender-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 94% 55%;
+	background-size: 0.9em auto, 100%;
+}
+
+.choose-device-type option {
+	background-color: var(--background-color-input);
+}
+
+.top-side-image-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.upload-image-container {
+	margin-bottom: 50px;
+}
+
+.upload-picture-button {
+	display: block;
+	min-width: 175px;
+	margin: 0 auto;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 30px;
+	border: none;
+	padding: 8px 25px;
+	background-color: var(--dark-green);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.form-buttons-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-buttons-container button {
+	border-radius: 30px;
+	border: none;
+	padding: 8px 25px;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.form-cancel-button {
+	background: rgba(229, 229, 229, 0.5);
+	opacity: 0.5;
+}
+
+.add-game-style {
+	background-color: var(--dark-green);
 }
 
 /* ======================================================   Media Queries   =========================================== */
