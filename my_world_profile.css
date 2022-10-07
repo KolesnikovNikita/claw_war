@@ -893,6 +893,7 @@ html {
 	margin-bottom: 20px;
 }
 
+.history-game-input,
 .search-game-input {
 	background-color: var(--background-input-color);
 	padding: 10px 20px;
@@ -911,6 +912,7 @@ html {
 	background: var(--light-green);
 }
 
+.add-game-button,
 .profile-large-button {
 	display: block;
 	text-align: center;
@@ -1220,6 +1222,10 @@ html {
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 1200px) {
+	.history-container {
+		margin-right: 45px;
+	}
+
 	.history-header {
 		padding-left: 0;
 	}
@@ -1251,18 +1257,6 @@ html {
 		padding-right: 40px;
 		padding-bottom: 40px;
 		border-radius: 20px 20px 0 0;
-		display: flex;
-	}
-
-	.history-game-header {
-		display: flex;
-	}
-
-	.history-header-container {
-	}
-
-	.choose-game-container {
-		display: flex;
 	}
 
 	.history-page {
@@ -1822,7 +1816,57 @@ html {
 	}
 }
 
+@media screen and (min-width: 1400px) {
+	.history-header {
+		font-size: 18px;
+		line-height: 21px;
+	}
+	.games-history-data {
+		display: flex;
+	}
+	.choose-game-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.history-game-header {
+		display: flex;
+	}
+
+	.device-type-container {
+		margin-top: 0;
+	}
+
+	.history-game-input {
+		width: 240px;
+		height: 35px;
+		border-color: var(--neon-green);
+		margin-left: 120px;
+		background-color: var(--background-color-search-select);
+	}
+
+	.add-game-button {
+		background-color: var(--dark-green);
+		min-width: 150px;
+		height: 35px;
+		padding: 7px 0;
+		margin-left: 50px;
+	}
+
+	.select-device-type {
+		width: 185px;
+		border: 1px solid var(--neon-green);
+		margin-left: 40px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		background-color: var(--background-color-search-select);
+	}
+}
+
 @media screen and (min-width: 1600px) {
+	.add-game-button {
+		margin-left: 210px;
+	}
 	.side-layout-menu-desktop {
 		display: flex;
 		flex-direction: column;

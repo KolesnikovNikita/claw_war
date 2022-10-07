@@ -176,6 +176,29 @@
 	outline: none;
 }
 
+.add-game-base {
+	text-transform: none;
+}
+
+.add-game-base::before {
+	display: none;
+}
+
+.birthday-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.birthday-container label {
+	display: block;
+}
+
+.birthday-container input {
+	display: block;
+	width: 140px;
+}
+
+.add-game-base,
 .user-profile-add-button,
 .clan-leader-board,
 .join-clan-button {
@@ -465,6 +488,10 @@
 
 .side-profile-clans-info {
 	background-color: var(--background-main-color);
+}
+
+.add-game-side {
+	display: none;
 }
 
 .clans-info-header {
@@ -2338,7 +2365,28 @@
 	background-color: var(--background-main-color);
 }
 
+.user-info-header {
+	display: none;
+}
+
+.left-side-desktop-form {
+	display: flex;
+	flex-direction: column;
+}
+
 @media screen and (min-width: 1200px) {
+	.add-game-data {
+		border-radius: 10px;
+	}
+
+	.history-container {
+		margin-right: 45px;
+	}
+	.games-history-header {
+		margin-right: 45px;
+		font-size: 36px;
+		line-height: 42px;
+	}
 	.games-history-gallery {
 		padding-left: 40px;
 		padding-right: 40px;
@@ -2984,6 +3032,44 @@
 }
 
 @media screen and (min-width: 1400px) {
+	.select-image-container img {
+		height: 115px;
+	}
+
+	.choose-image-container {
+		height: 30px;
+	}
+	.upload-image-container {
+		margin-bottom: 0;
+	}
+	.left-side-desktop-form .wrapper-column {
+		order: 2;
+	}
+	.add-game-header {
+		margin-left: 150px;
+	}
+
+	.header-page {
+		margin-left: 0;
+	}
+
+	.user-info-header {
+		display: block;
+	}
+
+	.load-game-form {
+		padding: 40px;
+	}
+
+	.desktop-form-style {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.desktop-form-style > div {
+		min-width: 330px;
+	}
+
 	.user-profile-button-container {
 		flex-direction: row;
 		margin: 30px 0 0 0;
