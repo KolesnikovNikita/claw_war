@@ -56,9 +56,37 @@ function initTabs() {
 	});
 }
 
+function initGameSelector() {
+	const links = document.querySelectorAll('[data-component=GameSelectorItem]');
+
+	function switchGame(gameIndex) {
+		links.forEach(function (link, index) {
+			const gameSection = document.getElementById(link.dataset.show);
+			if (gameIndex === index) {
+				links[gameIndex].classList.add('game-selector-item-active');
+				gameSection.hidden = false;
+			} else {
+				link.classList.remove('game-selector-item-active');
+				gameSection.hidden = true;
+			}
+		});
+	}
+
+	links.forEach(function (link, index) {
+		link.addEventListener('click', function (event) {
+			event.preventDefault();
+
+			switchGame(index);
+		});
+	});
+
+	switchGame(0);
+}
+
 function initComponents() {
 	initPasswordShow();
 	initTabs();
+	initGameSelector();
 }
 
 initComponents();

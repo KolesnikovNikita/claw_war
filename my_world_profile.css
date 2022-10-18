@@ -1142,7 +1142,7 @@ html {
 	display: block;
 	width: 100%;
 	border-radius: 35px;
-	border: none;
+	border: 2px solid transparent;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 19px;
@@ -1151,6 +1151,11 @@ html {
 	outline: none;
 	background-color: var(--background-color-input);
 	margin-bottom: 20px;
+}
+
+.load-game-form input:active,
+.load-game-form select:active {
+	border: 2px solid var(--neon-green);
 }
 
 .select-device-type,
@@ -1217,6 +1222,40 @@ html {
 
 .add-game-style {
 	background-color: var(--dark-green);
+}
+
+.game-switcher {
+	display: flex;
+	padding-left: 16px;
+	padding-right: 16px;
+	width: 100%;
+}
+
+.game-selector-item {
+	transition: transform 0.38s ease;
+	width: 50%;
+}
+
+.game-selector-item img {
+	width: 100%;
+}
+
+.game-switcher-container {
+	margin-top: 44px;
+	margin-bottom: 85px;
+}
+
+.game-selector-item-active {
+	transform: scaleY(1.4) scaleX(1.4);
+	z-index: 1;
+}
+
+.game-selector-item:nth-child(1) {
+	transform-origin: center left;
+}
+
+.game-selector-item:nth-child(2) {
+	transform-origin: center right;
 }
 
 /* ======================================================   Media Queries   =========================================== */

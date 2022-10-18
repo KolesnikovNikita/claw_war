@@ -143,57 +143,437 @@
 					</div>
 				</div>
 				<div class="dashboard-layout-content all-games-content">
-					<div class="games-page-navigation"></div>
-					<div class="priority-game-container">
-						<div class="top-side-priority">
-							<div class="image-game-container">
-								<img
-									src="../img/priority-game-image.svg"
-									alt="image"
-									width="200"
-									height="175"
-								/>
-							</div>
-							<div class="priority-button-container">
-								<div class="gallery-button">
-									<a class="priority-buttons gallery-button">Gallery </a>
-								</div>
-								<div class="gallery-button">
-									<a class="priority-buttons games-button">Games</a>
-								</div>
-								<div class="gallery-button">
-									<a class="priority-buttons download-button">Download </a>
-								</div>
-							</div>
+					<div class="game-switcher-container">
+						<div class="game-switcher" data-component="GameSelector">
+							<a
+								data-component="GameSelectorItem"
+								data-show="all-games"
+								class="game-selector-item"
+								><img src="../img/All_games.png" alt="All Games"
+							/></a>
+							<a
+								data-component="GameSelectorItem"
+								data-show="my-games"
+								class="game-selector-item"
+								><img src="../img/My_games.png" alt="My Games"
+							/></a>
 						</div>
-						<h3 class="priority-game-header">Valorant</h3>
-						<p class="priority-game-description">
-							Valorant is a team-based first-person hero shooter set in the near
-							future. Players play as one of a set of Agents, characters
-							designed based on several countries and cultures around the world.
-							In the main game mode, players are assigned to either the
-							attacking or defending team with each team having five players on
-							it.
-						</p>
 					</div>
-					<h3 class="all-games-page-headers">Other users recommend</h3>
 
-					<div class="users-recommend-container tabs">
-						<div class="user-recommend-tabs">
-							<ul class="recommended-games-list">
-								<li class="recommended-games-item">
-									<a href="#mostPlayed" class="tab-links">Most Played</a>
-								</li>
-								<li class="recommended-games-item">
-									<a href="#bestRating" class="tab-links">Best Rating</a>
-								</li>
-								<li class="recommended-games-item">
-									<a href="#topPromos" class="tab-links">Top Promos</a>
-								</li>
-							</ul>
+					<div id="all-games">
+						<div class="priority-game-container all-game-case">
+							<div class="top-side-priority">
+								<div class="image-game-container">
+									<img
+										src="../img/priority-game-image.svg"
+										alt="image"
+										width="200"
+										height="175"
+									/>
+								</div>
+								<div class="priority-button-container">
+									<div class="gallery-button">
+										<a class="priority-buttons gallery-button"
+											>Gallery
+											<img
+												src="../img/plus-image.svg"
+												width="15"
+												height="15"
+												alt="add"
+											/>
+										</a>
+									</div>
+									<div class="gallery-button">
+										<a class="priority-buttons games-button"
+											>Games<img
+												src="../img/plus-image.svg"
+												width="15"
+												height="15"
+												alt="add"
+										/></a>
+									</div>
+									<div class="gallery-button">
+										<a class="priority-buttons download-button"
+											>Download
+											<img
+												src="../img/download-image.svg"
+												width="15"
+												height="15"
+												alt="add"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="priority-game-description-container">
+								<h3 class="priority-game-header">Valorant</h3>
+								<p class="priority-game-description">
+									Valorant is a team-based first-person hero shooter set in the
+									near future. Players play as one of a set of Agents,
+									characters designed based on several countries and cultures
+									around the world. In the main game mode, players are assigned
+									to either the attacking or defending team with each team
+									having five players on it.
+								</p>
+							</div>
 						</div>
+						<h3 class="all-games-page-headers all-game-case">
+							Other users recommend
+						</h3>
+						<div class="users-recommend-container tabs all-game-case">
+							<div class="user-recommend-tabs">
+								<ul class="recommended-games-list">
+									<li class="recommended-games-item">
+										<a href="#mostPlayed" class="tab-links">Most Played</a>
+									</li>
+									<li class="recommended-games-item">
+										<a href="#bestRating" class="tab-links">Best Rating</a>
+									</li>
+									<li class="recommended-games-item">
+										<a href="#topPromos" class="tab-links">Top Promos</a>
+									</li>
+								</ul>
+							</div>
 
-						<div id="mostPlayed" class="tab-content">
+							<div id="mostPlayed" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="bestRating" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="topPromos" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="all-games-page-headers all-game-case">We recommend</h3>
+						<div class="we-recommend-container tabs all-game-case">
+							<div class="user-recommend-tabs">
+								<ul class="recommended-games-list">
+									<li class="recommended-games-item">
+										<a href="#myPreferences" class="tab-links"
+											>My Preferences</a
+										>
+									</li>
+									<li class="recommended-games-item">
+										<a href="#betaVersion" class="tab-links">Beta Version</a>
+									</li>
+									<li class="recommended-games-item">
+										<a href="#new" class="tab-links">New!</a>
+									</li>
+								</ul>
+							</div>
+							<div id="myPreferences" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="betaVersion" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="new" class="tab-content">
+								<div class="clan-profile-games">
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 2.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+									<div class="clan-game-container">
+										<img
+											src="../img/user_profile/Background 3.png"
+											height="187"
+											width="223"
+											alt="game"
+										/>
+										<div class="clan-image-overlay">
+											<h4 class="game-name">Valorant</h4>
+											<p class="game-description all-games-page">
+												Valorant is a team-based first-person hero shooter set
+												in the near future. Players play as one of a set of
+												Agents, characters designed based on several countries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="my-games">
+						<div class="clan-active-games my-games-case">
+							<h3 class="clan-games-header">My Games</h3>
+							<span class="clan-count games">25</span>
+							<button class="clan-games-button">All</button>
 							<div class="clan-profile-games">
 								<div class="clan-game-container">
 									<img
@@ -202,13 +582,16 @@
 										width="223"
 										alt="game"
 									/>
+									<button class="clan-game-option-button"></button>
 									<div class="clan-image-overlay">
 										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
 										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
 									</div>
 								</div>
 								<div class="clan-game-container">
@@ -220,11 +603,13 @@
 									/>
 									<div class="clan-image-overlay">
 										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
 										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
 									</div>
 								</div>
 								<div class="clan-game-container">
@@ -236,264 +621,130 @@
 									/>
 									<div class="clan-image-overlay">
 										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
+										<p class="game-description genre">Tactical shooter</p>
+										<p class="game-description sub-genre">
+											First-person shooter
 										</p>
+										<div class="add-button-container">
+											<button class="user-game-button play">Play</button>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div id="bestRating" class="tab-content">
-							<h1>Best Rating</h1>
-						</div>
-						<div id="topPromos" class="tab-content">
-							<h1>Top Promos</h1>
-						</div>
-					</div>
-					<h3 class="all-games-page-headers">We recommend</h3>
-					<div class="we-recommend-container tabs">
-						<div class="user-recommend-tabs">
-							<ul class="recommended-games-list">
-								<li class="recommended-games-item">
-									<a href="#myPreferences" class="tab-links">My Preferences</a>
-								</li>
-								<li class="recommended-games-item">
-									<a href="#betaVersion" class="tab-links">Beta Version</a>
-								</li>
-								<li class="recommended-games-item">
-									<a href="#new" class="tab-links">New!</a>
-								</li>
-							</ul>
-						</div>
-						<div id="myPreferences" class="tab-content">
-							<div class="clan-profile-games">
-								<div class="clan-game-container">
+						<div class="clan-gallery my-games-case">
+							<h3 class="clan-gallery-header">My Gallery</h3>
+							<span class="clan-count gallery">25</span>
+
+							<div class="clan-profile-gallery">
+								<div class="clan-gallery-container">
 									<img
 										src="../img/user_profile/Background.png"
 										height="187"
 										width="223"
 										alt="game"
 									/>
-									<div class="clan-image-overlay">
-										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
-										</p>
-									</div>
 								</div>
-								<div class="clan-game-container">
+								<div class="clan-gallery-container">
 									<img
 										src="../img/user_profile/Background 2.png"
 										height="187"
 										width="223"
 										alt="game"
 									/>
-									<div class="clan-image-overlay">
-										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
-										</p>
-									</div>
 								</div>
-								<div class="clan-game-container">
+								<div class="clan-gallery-container">
 									<img
 										src="../img/user_profile/Background 3.png"
 										height="187"
 										width="223"
 										alt="game"
 									/>
-									<div class="clan-image-overlay">
-										<h4 class="game-name">Valorant</h4>
-										<p class="game-description all-games-page">
-											Valorant is a team-based first-person hero shooter set in
-											the near future. Players play as one of a set of Agents,
-											characters designed based on several countries.
-										</p>
-									</div>
+								</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+								</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+								</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
 								</div>
 							</div>
 						</div>
-						<div id="betaVersion" class="tab-content">
-							<h1>Beta Version</h1>
-						</div>
-						<div id="new" class="tab-content">
-							<h1>New!</h1>
-						</div>
-					</div>
-					<div class="clan-active-games">
-						<h3 class="clan-games-header">My Games</h3>
-						<span class="clan-count games">25</span>
-						<button class="clan-games-button">All</button>
-						<div class="clan-profile-games">
-							<div class="clan-game-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-								<button class="clan-game-option-button"></button>
-								<div class="clan-image-overlay">
-									<h4 class="game-name">Valorant</h4>
-									<p class="game-description genre">Tactical shooter</p>
-									<p class="game-description sub-genre">First-person shooter</p>
-									<div class="add-button-container">
-										<button class="user-game-button play">Play</button>
-									</div>
+						<div class="clan-gallery my-games-case">
+							<h3 class="clan-gallery-header">My Preferences</h3>
+							<span class="clan-count gallery">25</span>
+
+							<div class="clan-profile-gallery">
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
 								</div>
-							</div>
-							<div class="clan-game-container">
-								<img
-									src="../img/user_profile/Background 2.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-								<div class="clan-image-overlay">
-									<h4 class="game-name">Valorant</h4>
-									<p class="game-description genre">Tactical shooter</p>
-									<p class="game-description sub-genre">First-person shooter</p>
-									<div class="add-button-container">
-										<button class="user-game-button play">Play</button>
-									</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background 2.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
 								</div>
-							</div>
-							<div class="clan-game-container">
-								<img
-									src="../img/user_profile/Background 3.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-								<div class="clan-image-overlay">
-									<h4 class="game-name">Valorant</h4>
-									<p class="game-description genre">Tactical shooter</p>
-									<p class="game-description sub-genre">First-person shooter</p>
-									<div class="add-button-container">
-										<button class="user-game-button play">Play</button>
-									</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background 3.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clan-gallery">
-						<h3 class="clan-gallery-header">My Gallery</h3>
-						<span class="clan-count gallery">25</span>
-						<button class="clan-gallery-button">All</button>
-						<div class="clan-profile-gallery">
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background 2.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background 3.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-						</div>
-					</div>
-					<div class="clan-gallery">
-						<h3 class="clan-gallery-header">My Preferences</h3>
-						<span class="clan-count gallery">25</span>
-						<button class="clan-gallery-button">All</button>
-						<div class="clan-profile-gallery">
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background 2.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background 3.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
-							</div>
-							<div class="clan-gallery-container">
-								<img
-									src="../img/user_profile/Background.png"
-									height="187"
-									width="223"
-									alt="game"
-								/>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+								</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+								</div>
+								<div class="clan-gallery-container">
+									<img
+										src="../img/user_profile/Background.png"
+										height="187"
+										width="223"
+										alt="game"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="side-profile-games-info">
+				<div class="side-profile-games-info all-games-side">
 					<div class="video-promotion-container">
 						<div class="video-promotion">
 							<img
@@ -538,7 +789,9 @@
 								<a class="product-link" href="#">Browse</a>
 							</div>
 						</div>
-						<div class="advertising-image-container-desktop"></div>
+						<div
+							class="advertising-image-container-desktop all-games-advertising"
+						></div>
 						<div class="advertising-image-container-mobile"></div>
 					</div>
 					<div class="widget-container">

@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="../main_page.css" />
 		<link rel="stylesheet" href="../my_world_profile.css" />
 		<link rel="stylesheet" href="../my_profile.css" />
-		<title>Player Profile For Other</title>
+		<title>Recruitment Standard Invitation</title>
 	</head>
 	<body>
 		<h2 class="visually-hidden">User Profile Setting</h2>
@@ -164,14 +164,14 @@
 							<div class="user-info country">
 								<img
 									class="user-country-flag-mobile"
-									src="../img/flags/DE.svg"
+									src="../img/user_profile/user-setting-flag.svg"
 									alt="flag country"
 								/>
 								<span class="user-info-name">Germany</span>
 							</div>
 						</div>
-						<div class="other-profile-socials-container">
-							<button class="other-profile-socials">
+						<div class="user-profile-socials-container">
+							<button class="user-profile-socials">
 								<img
 									src="../img/player_profile/steam-image.svg"
 									width="30"
@@ -179,7 +179,7 @@
 									alt="steam"
 								/>
 							</button>
-							<button class="other-profile-socials">
+							<button class="user-profile-socials">
 								<img
 									src="../img/player_profile/instagram-image.svg"
 									width="30"
@@ -187,7 +187,7 @@
 									alt="instagram"
 								/>
 							</button>
-							<button class="other-profile-socials">
+							<button class="user-profile-socials">
 								<img
 									src="../img/player_profile/discord-image.svg"
 									width="30"
@@ -195,10 +195,34 @@
 									alt="discord"
 								/>
 							</button>
+							<button class="user-profile-socials">
+								<img
+									src="../img/player_profile/add-socials.svg"
+									width="30"
+									height="30"
+									alt="add button"
+								/>
+							</button>
 						</div>
-						<div class="user-profile-button-container">
-							<div>
-								<button class="player-profile-add-button">Add as Friend</button>
+						<div class="top-profile-button-container">
+							<div class="top-profile-add-button-container">
+								<button class="user-profile-add-button">
+									Add game to the Database
+								</button>
+							</div>
+							<div class="select-container">
+								<select id="invite" class="clan-invite-select-desktop">
+									<option selected class="invite-option">Invite Player</option>
+									<option value="qrCode" class="invite-option">
+										Generate QR code/ Link
+									</option>
+									<option value="printInvite" class="invite-option">
+										Printed Invitation
+									</option>
+									<option value="printInvite" class="invite-option">
+										Email Invitation
+									</option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -354,7 +378,7 @@
 										height="187"
 									/>
 									<div class="active-links">
-										<button class="user-delete-button">Report Content</button>
+										<button class="profile-delete-button">Delete</button>
 										<button class="profile-cross-close-button">
 											<img
 												src="../img/player_profile/close-cross.svg"
@@ -374,7 +398,7 @@
 										height="187"
 									/>
 									<div class="active-links">
-										<button class="user-delete-button">Report Content</button>
+										<button class="profile-delete-button">Delete</button>
 										<button class="profile-cross-close-button">
 											<img
 												src="../img/player_profile/close-cross.svg"
@@ -394,7 +418,7 @@
 										height="187"
 									/>
 									<div class="active-links">
-										<button class="user-delete-button">Report Content</button>
+										<button class="profile-delete-button">Delete</button>
 										<button class="profile-cross-close-button">
 											<img
 												src="../img/player_profile/close-cross.svg"
@@ -414,7 +438,7 @@
 										height="187"
 									/>
 									<div class="active-links">
-										<button class="user-delete-button">Report Content</button>
+										<button class="profile-delete-button">Delete</button>
 										<button class="profile-cross-close-button">
 											<img
 												src="../img/player_profile/close-cross.svg"
@@ -434,7 +458,7 @@
 										height="187"
 									/>
 									<div class="active-links">
-										<button class="user-delete-button">Report Content</button>
+										<button class="profile-delete-button">Delete</button>
 										<button class="profile-cross-close-button">
 											<img
 												src="../img/player_profile/close-cross.svg"
@@ -503,6 +527,44 @@
 								</div>
 							</section>
 						</div>
+						<div class="user-award-slider">
+							<h3 class="awards-header">Awards</h3>
+							<section class="slider-album">
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+										<div class="swiper-slide">
+											<img
+												height="125"
+												width="215"
+												src="../img/player_profile/swiper-image-2.svg"
+											/>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</section>
+						</div>
 					</div>
 				</div>
 				<div class="side-profile-clans-info">
@@ -541,44 +603,6 @@
 								/>
 							</button>
 						</div>
-					</div>
-					<div class="user-award-slider for-other-page">
-						<h3 class="awards-header">Awards</h3>
-						<section class="slider-album">
-							<div class="swiper mySwiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img
-											height="125"
-											width="215"
-											src="../img/player_profile/swiper-image-2.svg"
-										/>
-									</div>
-									<div class="swiper-slide">
-										<img
-											height="125"
-											width="215"
-											src="../img/player_profile/swiper-image-2.svg"
-										/>
-									</div>
-									<div class="swiper-slide">
-										<img
-											height="125"
-											width="215"
-											src="../img/player_profile/swiper-image-2.svg"
-										/>
-									</div>
-									<div class="swiper-slide">
-										<img
-											height="125"
-											width="215"
-											src="../img/player_profile/swiper-image-2.svg"
-										/>
-									</div>
-								</div>
-								<div class="swiper-pagination"></div>
-							</div>
-						</section>
 					</div>
 					<div class="side-profile-container">
 						<h3 class="clans-info-header">
@@ -669,7 +693,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="chat-button-container"></div>
+					<div class="chat-button-container">
+						<div class="chat-button-desktop">
+							<a href="#"
+								><img
+									height="43"
+									alt="enter chat"
+									width="130"
+									src="../img/chat-button.svg"
+							/></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -815,6 +849,156 @@
 				</div>
 			</section>
 		</div>
+
+		<section class="invite-modal">
+			<div class="invite-user-container">
+				<div class="invite-header-container">
+					<span class="invite-user-style">Invite users to</span>
+					<h1 class="invite-header-style">ClansWorld</h1>
+					<div class="qr-code-container">
+						<span class="qr-code-style">With QR code</span>
+					</div>
+					<p class="invite-description-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut
+					</p>
+				</div>
+				<div class="bottom-modal-container">
+					<div class="qr-modal-container">
+						<img src="../img/qr-modal-image.svg" alt="QR" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="invite-modal">
+			<div class="email-invitation-container">
+				<div class="left-side-invitation-modal">
+					<h1 class="invitation-header">
+						Invite users to <span class="green-style">ClansWorld</span> with
+						Email
+					</h1>
+					<form>
+						<div class="input-invite-container">
+							<input
+								type="email"
+								class="invite-input"
+								placeholder="Enter user email"
+							/>
+						</div>
+						<div class="invite-email-bottom-container">
+							<button class="invite-close-button">Close</button>
+							<button class="invite-submit-button">Invite</button>
+						</div>
+					</form>
+				</div>
+				<div class="email-invitation-container-desktop"></div>
+			</div>
+		</section>
+
+		<section class="invite-modal">
+			<div class="messenger-invitation-container">
+				<div class="left-side-invitation-modal">
+					<h1 class="invitation-header">
+						Send an invitation to
+						<span class="green-style">ClansWorld</span> using the link
+					</h1>
+					<div class="input-invite-container">
+						<input
+							type="email"
+							class="invite-input message-input"
+							placeholder="http://clans-design.goldensoft.com"
+						/>
+					</div>
+					<div class="invite-email-bottom-container">
+						<button class="invite-close-button">Close</button>
+						<button class="invite-submit-button">Copy</button>
+					</div>
+				</div>
+				<div class="messenger-invitation-container-desktop"></div>
+			</div>
+		</section>
+
+		<section class="invite-modal">
+			<div class="award-container">
+				<h1 class="invitation-header">
+					Create a <span class="green-style">personal award</span> for a new
+					user
+				</h1>
+				<span class="award-span">Or use the standard</span>
+				<div class="award-image-container">
+					<div class="award-image-inner">
+						<div class="upload-award-button-container">
+							<img src="../img/welcome-image.svg" alt="welcome" />
+							<input
+								class="input-file-style"
+								type="file"
+								accept="image/png, image/jpeg"
+								id="input-file"
+								name="file"
+							/>
+							<label class="user-file-upload" for="input-file">
+								<span class="upload-file-wrapper">
+									<img
+										alt="choose file"
+										width="18"
+										height="18"
+										src="../img/upload-icon.svg"
+									/>
+									<span class="upload-award-span">Upload Own Award</span>
+								</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="invite-email-bottom-container">
+					<button class="invite-close-button">Close</button>
+					<button class="invite-submit-button">Send</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="invite-modal">
+			<div class="qr-link-container">
+				<h1 class="invitation-header">
+					Invite users to <span class="green-style">Legends</span> clan with qr
+					code or Link
+				</h1>
+				<div class="qr-container">
+					<img src="../img/welcome-image.svg" alt="QR" />
+				</div>
+				<div class="qr-link-container-buttons">
+					<button class="qr-link-button">
+						<img
+							src="../img/qr-refresh-button.svg"
+							width="27"
+							height="27"
+							alt="refresh"
+						/>
+					</button>
+					<button class="qr-link-button">
+						<img
+							src="../img/upload-button.svg"
+							width="27"
+							height="27"
+							alt="upload"
+						/>
+					</button>
+				</div>
+				<div class="copy-link-container">
+					<input
+						class="copy-link-input"
+						type="text"
+						placeholder="http://clans-design.goldensoft.com.ua/"
+					/>
+					<button class="qr-link-button-copy">Copy</button>
+				</div>
+				<div class="qr-close-container">
+					<button class="qr-link-button-close">Close</button>
+				</div>
+			</div>
+		</section>
 
 		<!-- End of Menu -->
 		<script src="../index.js"></script>

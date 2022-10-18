@@ -386,6 +386,23 @@ a {
 	position: absolute;
 }
 
+.upload-file-wrapper {
+	margin-top: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: center;
+	background-color: var(--dark-green);
+	border-radius: 30px;
+	color: var(--light-grey);
+}
+
+.upload-award-span {
+	padding-left: 10px;
+}
+
 .input-file-icon-wrapper {
 	padding-left: 16px;
 	padding-right: 24px;
@@ -644,6 +661,25 @@ a {
 
 .invitation-person-container {
 	margin-bottom: 15px;
+}
+
+.qr-code-container {
+	color: var(--light-grey);
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.qr-code-container::after,
+.qr-code-container::before {
+	content: '';
+	height: 1px;
+	background-color: currentColor;
+	flex-grow: 1;
+}
+
+.qr-code-style {
+	padding: 0 10px;
 }
 
 .qr-code-invitation-container {
