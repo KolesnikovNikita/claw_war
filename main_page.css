@@ -113,6 +113,7 @@ a {
 	padding-bottom: 20px;
 }
 
+.admin-header-navigation-item a,
 .header-navigation-item a {
 	min-width: 76px;
 	padding: 2px 7px;
@@ -120,8 +121,10 @@ a {
 	border-radius: 23px;
 }
 
+.admin-header-navigation-item a:hover,
 .header-navigation-item a:hover {
 	border-color: var(--neon-green);
+	opacity: 1;
 }
 
 /* Main Page */
@@ -1307,6 +1310,19 @@ details[open] > summary {
 	line-height: 19px;
 }
 
+.admin-header-navigation-list {
+	padding-left: 0;
+	margin-bottom: 0;
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	color: var(--light-grey);
+	width: 381px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /* ========================================   Media quarries   =================================== */
 
 @media screen and (min-width: 1200px) {
@@ -1332,6 +1348,14 @@ details[open] > summary {
 
 	.header-navigation-list li:not(:last-child) {
 		margin-right: 30px;
+	}
+
+	.admin-header-navigation-item a {
+		color: var(--light-grey);
+		opacity: 0.5;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
 	}
 
 	.header-navigation-item a {

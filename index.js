@@ -1,8 +1,8 @@
 // scroll up by click
 
-document.getElementById('scroll-up-arrow').onclick = function scrollUpPage() {
-	window.scrollTo(0, 0);
-};
+// document.getElementById('scroll-up-arrow').onclick = function scrollUpPage() {
+// 	window.scrollTo(0, 0);
+// };
 
 // 	show / hide password
 
@@ -83,10 +83,47 @@ function initGameSelector() {
 	switchGame(0);
 }
 
+function initInvitePlayerSelect() {
+	var modalLinks = document.querySelectorAll('.dropdown-item');
+
+	modalLinks.forEach(function (modalLink) {
+		modalLink.addEventListener('click', function (event) {
+			event.preventDefault();
+			var modalNode = document.getElementById(modalLink.dataset.value);
+			var modalComponent = new bootstrap.Modal(modalNode);
+			modalComponent.show();
+		});
+	});
+}
+
+function initAdminSections() {
+	var adminButtons = document.querySelectorAll('.admin-tab-link');
+	function setAdminLinks(sectionIndex) {
+		adminButtons.forEach(function (adminButton, index) {
+			var activeSection = document.getElementById(
+				adminButton.dataset.adminPage
+			);
+			if (sectionIndex === index) {
+				activeSection.hidden = false;
+			} else {
+				activeSection.hidden = true;
+			}
+		});
+	}
+	adminButtons.forEach(function (adminButton, index) {
+		adminButton.addEventListener('click', function () {
+			setAdminLinks(index);
+		});
+	});
+	setAdminLinks(3);
+}
+
 function initComponents() {
 	initPasswordShow();
 	initTabs();
 	initGameSelector();
+	initInvitePlayerSelect();
+	initAdminSections();
 }
 
 initComponents();

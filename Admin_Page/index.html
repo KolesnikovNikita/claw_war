@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="../main_page.css" />
+		<link rel="stylesheet" href="../my_world_profile.css" />
+		<link rel="stylesheet" href="../my_profile.css" />
+		<title>Admin Page</title>
+	</head>
+	<body>
+		<h2 class="visually-hidden">Recruitment Advanced Invitation</h2>
+		<header class="page-header">
+			<div class="container">
+				<div class="page-header-container user-profile">
+					<div class="header-logo"></div>
+					<div class="header-logo-profile-mobile"></div>
+				</div>
+			</div>
+			<div class="container-fluid header-navigation">
+				<ul class="admin-header-navigation-list">
+					<li class="admin-header-navigation-item"><a href="#">Home</a></li>
+					<li class="admin-header-navigation-item"><a href="#">Games</a></li>
+					<li class="admin-header-navigation-item"><a href="#">Users</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main-page-admin-content">
+			<section class="admin-menu">
+				<div class="admin-menu-container">
+					<button data-admin-page="PendingReview" class="admin-tab-link">
+						Pending review
+					</button>
+					<button data-admin-page="Confirmed" class="admin-tab-link">
+						Confirmed
+					</button>
+					<button data-admin-page="Unconfirmed" class="admin-tab-link">
+						Unconfirmed
+					</button>
+					<button data-admin-page="Activities" class="admin-tab-link">
+						Activities
+					</button>
+					<button data-admin-page="ReportedContent" class="admin-tab-link">
+						Reported Content
+					</button>
+				</div>
+			</section>
+			<section class="admin-layout-content">
+				<div class="admin-layout-container">
+					<div id="PendingReview" class="admin-tab-content">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Confirm game addition</h1>
+								<button class="add-all-button">Add All</button>
+							</div>
+							<div class="admin-page-container">
+								<ul class="addition-game-list">
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>1</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Valorant</span>
+											</div>
+											<div class="genre-title">
+												<span>Tactical shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>First-person shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>2</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vanquish</span>
+											</div>
+											<div class="genre-title">
+												<span>Shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>3</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/shinobi-image.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vampire: The Masquerade...</span>
+											</div>
+											<div class="genre-title">
+												<span>Action role-playing</span>
+											</div>
+											<div class="sub-genre-title">
+												<span></span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>4</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Call of Duty: Warzone</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>5</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Fortnite</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="Confirmed" class="admin-tab-content">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Confirmed games</h1>
+							</div>
+							<div class="admin-page-container">
+								<ul class="addition-game-list">
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>1</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Valorant</span>
+											</div>
+											<div class="genre-title">
+												<span>Tactical shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>First-person shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>2</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vanquish</span>
+											</div>
+											<div class="genre-title">
+												<span>Shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>3</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/shinobi-image.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vampire: The Masquerade...</span>
+											</div>
+											<div class="genre-title">
+												<span>Action role-playing</span>
+											</div>
+											<div class="sub-genre-title">
+												<span></span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>4</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Call of Duty: Warzone</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>5</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Fortnite</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="cancel-button">Delete</button>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="Unconfirmed" class="admin-tab-content">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Unconfirmed games</h1>
+								<button class="delete-all-button">Delete All</button>
+							</div>
+							<div class="admin-page-container">
+								<ul class="addition-game-list">
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>1</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Valorant</span>
+											</div>
+											<div class="genre-title">
+												<span>Tactical shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>First-person shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Finally Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>2</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vanquish</span>
+											</div>
+											<div class="genre-title">
+												<span>Shooter</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Finally Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>3</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/shinobi-image.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Vampire: The Masquerade...</span>
+											</div>
+											<div class="genre-title">
+												<span>Action role-playing</span>
+											</div>
+											<div class="sub-genre-title">
+												<span></span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Finally Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>4</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/ranking-player-avatar.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Call of Duty: Warzone</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Finally Delete</button>
+										</div>
+									</li>
+									<li class="add-game-item">
+										<div class="game-position">
+											<div><span>5</span></div>
+										</div>
+										<div class="game-information">
+											<div class="game-picture-container">
+												<img
+													src="../img/player_profile/side-container-your-clan-2.svg"
+													width="40"
+													height="40"
+													alt="game-image"
+												/>
+											</div>
+											<div class="game-title-container">
+												<span>Fortnite</span>
+											</div>
+											<div class="genre-title">
+												<span>Action</span>
+											</div>
+											<div class="sub-genre-title">
+												<span>Third-person Shooter</span>
+											</div>
+										</div>
+										<div class="game-option-container">
+											<button class="save-button">Add</button>
+											<button class="cancel-button">Finally Delete</button>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="Activities" class="admin-tab-content-alt">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Unconfirmed games</h1>
+								<input type="text" class="activities-select" />
+								<input type="date" class="activities-search" />
+							</div>
+							<div class="activities-table-container">
+								<table class='activities-table'>
+								 <tr class='table-header'>
+									 <th class='table-position'>№</th>
+									 <th class='table-user-name'>User</th>
+									 <th class='table-game-name'>Game</th>
+									 <th class='table-genre-name'>Genre</th>
+									 <th class='table-date-name'>Date</th>
+									 <th class='table-buttons'>Actions</th>
+								 </tr>								
+								 <tr class='table-content'>
+									 <td class='position-style'>1</td>
+									 <td>User Name</td>
+									 <td>Valorant</td>
+									 <td>Tactical shooter,<br>First-person shooter</td>
+									 <td>06.01.2022</td>
+									 <td class='table-options'>
+										<button>
+											<img
+												src="../img/edit-icon.svg"
+												width="20"
+												height="20"
+												alt="edit"
+											/>
+										</button>
+										<button>
+											<img
+												src="../img/delete-icon.svg"
+												width="20"
+												height="20"
+												alt="delete"
+											/>
+										</button>
+									 </td>
+								 </tr>
+								</table>
+								</tr>
+							</div>
+						</div>
+					</div>
+					<div id="ReportedContent" class="admin-tab-content-alt">
+						<h1>Reported Content</h1>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="../index.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../swiper.js"></script>
+	</body>
+</html>

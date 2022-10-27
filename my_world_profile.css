@@ -1863,6 +1863,7 @@ html {
 	.games-history-data {
 		display: flex;
 	}
+
 	.choose-game-container {
 		display: flex;
 		justify-content: space-between;
