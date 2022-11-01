@@ -115,7 +115,7 @@ function initAdminSections() {
 			setAdminLinks(index);
 		});
 	});
-	setAdminLinks(3);
+	setAdminLinks(0);
 }
 
 function initComponents() {

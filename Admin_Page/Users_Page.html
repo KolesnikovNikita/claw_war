@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="../main_page.css" />
+		<link rel="stylesheet" href="../my_world_profile.css" />
+		<link rel="stylesheet" href="../my_profile.css" />
+		<title>User Page</title>
+	</head>
+	<body>
+		<h2 class="visually-hidden">Users Page</h2>
+		<header class="page-header">
+			<div class="container">
+				<div class="page-header-container user-profile">
+					<div class="header-logo"></div>
+					<div class="header-logo-profile-mobile"></div>
+				</div>
+			</div>
+			<div class="admin-header-navigation">
+				<div class="admin-toggle-button-container">
+					<button
+						class="admin-toggle-button"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#admin-side-menu-toggle"
+					></button>
+				</div>
+				<ul class="admin-header-navigation-list">
+					<li class="admin-header-navigation-item"><a href="#">Home</a></li>
+					<li class="admin-header-navigation-item"><a href="#">Games</a></li>
+					<li class="admin-header-navigation-item"><a href="#">Users</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main-page-admin-content">
+			<aside
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="admin-side-menu-toggle"
+			>
+				<div class="side-admin-menu">
+					<div class="admin-column-wrapper">
+						<div class="side-container-news-container">
+							<img
+								src="../img/user_profile/side-news-bell.svg"
+								alt="news bell"
+								width="25"
+								height="28"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-counter"
+							/>
+						</div>
+					</div>
+					<div class="admin-column-wrapper">
+						<img
+							src="../img/player_profile/side-container-players-images.svg"
+							width="71"
+							height="21"
+							alt="add friend icon"
+						/>
+						<span class="users-online-style">32 online</span>
+					</div>
+					<div class="admin-column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-clans"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-clan-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+					</div>
+					<div class="admin-column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+							<img
+								src="../img/player_profile/side-ring-seven.svg"
+								height="13"
+								width="13"
+								alt="news count"
+								class="side-container-news-games"
+							/>
+						</div>
+						<div>
+							<img
+								src="../img/player_profile/side-container-your-games-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<button type="button">
+							<img
+								src="../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
+						</button>
+					</div>
+				</div>
+			</aside>
+			<section class="admin-menu">
+				<div class="admin-menu-container">
+					<button data-admin-page="invitedUsers" class="admin-tab-link">
+						Invited Users
+					</button>
+					<button data-admin-page="deletedUsers" class="admin-tab-link">
+						Deleted
+					</button>
+				</div>
+			</section>
+			<section class="admin-layout-content">
+				<div class="admin-layout-container">
+					<div id="invitedUsers" class="admin-tab-user-alt">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Users</h1>
+								<div class="activities-options-container">
+									<select class="activities-select" name="name">
+										<option value="select">User</option>
+									</select>
+									<input
+										class="activities-date"
+										placeholder="Date"
+										type="text"
+										class="activities-search"
+									/>
+								</div>
+							</div>
+							<div class="activities-table-container">
+								<table class="activities-table">
+									<tr class="table-header">
+										<th class="table-user-position">№</th>
+										<th class="table-user-user-name">User</th>
+										<th class="table-user-game-name">invited</th>
+										<th class="table-user-prize">Award</th>
+										<th class="table-user-date-name">Date</th>
+										<th class="table-user-buttons user-admin-page">Actions</th>
+									</tr>
+									<!-- User-1					 -->
+									<tr class="table-users-content">
+										<td class="position-style">1</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-blue.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-2					 -->
+									<tr class="table-users-content">
+										<td class="position-style">2</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-3					 -->
+									<tr class="table-users-content">
+										<td class="position-style">3</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-red.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-3					 -->
+									<tr class="table-users-content">
+										<td class="position-style">4</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-violet.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-5					 -->
+									<tr class="table-users-content">
+										<td class="position-style">5</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-6					 -->
+									<tr class="table-users-content">
+										<td class="position-style">6</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-red.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-7					 -->
+									<tr class="table-users-content">
+										<td class="position-style">7</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-violet.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-8					 -->
+									<tr class="table-users-content">
+										<td class="position-style">8</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-blue.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-9					 -->
+									<tr class="table-users-content">
+										<td class="position-style">9</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-10				 -->
+									<tr class="table-users-content">
+										<td class="position-style">10</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-red.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#editGameModal"
+											>
+												<img
+													src="../img/edit-icon.svg"
+													width="20"
+													height="20"
+													alt="edit"
+												/>
+											</button>
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="admin-pagination-container">
+							<span class="pagination-back-button"><a href="#"></a></span>
+							<a class="pagination-link active-link" href="#">1</a>
+							<a class="pagination-link" href="#">2</a>
+							<a class="pagination-link" href="#">3</a>
+							<a class="pagination-link" href="#">4</a>
+							<a class="pagination-forward-button" href="#"></a>
+						</div>
+					</div>
+					<div id="deletedUsers" class="admin-tab-user-alt">
+						<div class="inner-content">
+							<div class="top-side-block">
+								<h1 class="admin-style-header">Users</h1>
+								<div class="activities-options-container">
+									<select class="activities-select" name="name">
+										<option value="select">User</option>
+									</select>
+									<input
+										class="activities-date"
+										placeholder="Date"
+										type="text"
+										class="activities-search"
+									/>
+								</div>
+							</div>
+							<div class="activities-table-container">
+								<table class="activities-table">
+									<tr class="table-header">
+										<th class="table-user-position">№</th>
+										<th class="table-user-user-name">User</th>
+										<th class="table-user-game-name">invited</th>
+										<th class="table-user-prize">Award</th>
+										<th class="table-delete-date-name">Date</th>
+										<th class="table-user-buttons">Actions</th>
+									</tr>
+									<!-- User-1					 -->
+									<tr class="table-users-content">
+										<td class="position-style">1</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-blue.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-2					 -->
+									<tr class="table-users-content">
+										<td class="position-style">2</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-3					 -->
+									<tr class="table-users-content">
+										<td class="position-style">3</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-4					 -->
+									<tr class="table-users-content">
+										<td class="position-style">4</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-red.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-5					 -->
+									<tr class="table-users-content">
+										<td class="position-style">5</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-violet.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-6					 -->
+									<tr class="table-users-content">
+										<td class="position-style">6</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-violet.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-7					 -->
+									<tr class="table-users-content">
+										<td class="position-style">7</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-8					 -->
+									<tr class="table-users-content">
+										<td class="position-style">8</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-blue.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-9				 -->
+									<tr class="table-users-content">
+										<td class="position-style">9</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-orange.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+									<!-- User-10				 -->
+									<tr class="table-users-content">
+										<td class="position-style">10</td>
+										<td>
+											<img
+												class="activities-user-icon"
+												src="../img/user-name-red.svg"
+												alt="user-icon"
+											/>User Name
+										</td>
+										<td>Invited User Name</td>
+										<td>
+											<img
+												src="../img/admin-award.svg"
+												height="60"
+												width="60"
+												alt="award"
+											/>
+										</td>
+										<td>06.01.2022</td>
+										<td class="table-options user-admin-option">
+											<button type="button">
+												<img
+													src="../img/admin-refresh.svg"
+													width="20"
+													height="20"
+													alt="refresh"
+												/>
+											</button>
+
+											<button
+												type="button"
+												data-toggle="modal"
+												data-target="#confirmDeleteModal"
+												confirmDeleteModal
+											>
+												<img
+													src="../img/delete-icon.svg"
+													width="20"
+													height="20"
+													alt="delete"
+												/>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="admin-pagination-container">
+								<span class="pagination-back-button"><a href="#"></a></span>
+								<a class="pagination-link active-link" href="#">1</a>
+								<a class="pagination-link" href="#">2</a>
+								<a class="pagination-link" href="#">3</a>
+								<a class="pagination-link" href="#">4</a>
+								<a class="pagination-forward-button" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<section
+			class="modal fade"
+			id="editGameModal"
+			tabindex="-1"
+			role="dialog"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<section class="add-game-container">
+						<div class="add-game-form">
+							<form class="add-game" action="#">
+								<h3 class="edit-game-header">Edit Game</h3>
+								<div class="edit-form-container">
+									<div>
+										<div class="wrapper-column">
+											<label for="game-genre">Genre</label>
+											<select name="gameGenre" id="game-genre">
+												<option disabled selected>Add or change genre</option>
+												<option value="shooter">Shooter</option>
+											</select>
+											<div class="selected-value-container">
+												<div class="selected-value">
+													<span>Tactical shooter</span>
+													<button>
+														<img
+															class="edit-modal-cross-img"
+															src="../img/green-cross-button.svg"
+															width="8"
+															height="8"
+															alt="close"
+														/>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="wrapper-column">
+											<label for="game-sub-genre">Subgenre</label>
+											<select name="sub-genre" id="game-sub-genre">
+												<option disabled selected>
+													Add or change subgenre
+												</option>
+												<option value="shooter">First-Person Shooter</option>
+											</select>
+											<div class="selected-value-container">
+												<div class="selected-value">
+													<span>First-person shooter</span>
+													<button>
+														<img
+															class="edit-modal-cross-img"
+															src="../img/green-cross-button.svg"
+															width="8"
+															height="8"
+															alt="close"
+														/>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="wrapper-column">
+											<label for="game-name">Game Name</label>
+											<input type="text" id="game-name" class="add-game-name" />
+										</div>
+									</div>
+									<div class="upload-picture-container">
+										<div class="edit-game-image-container">
+											<img
+												src="../img/edit-form-image.svg"
+												width="240"
+												height="160"
+												alt="logo"
+											/>
+										</div>
+										<div class="load-game-image-container">
+											<input
+												type="file"
+												id="load-picture"
+												class="input-game-image"
+											/>
+											<label class="file-load-wrapper" for="load-picture">
+												<span class="edit-picture-container"
+													><img
+														class="input__file-icon"
+														src="../img/user_profile/upload-picture-image.svg"
+														alt="Choose File"
+														width="15"
+														height="12"
+													/>
+													<span class="load-image-text"
+														>Upload New Picture</span
+													>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-button-container">
+									<button
+										type="button"
+										data-dismiss="modal"
+										class="profile-form-middle-button cancel-button"
+									>
+										Close
+									</button>
+									<button
+										type="button"
+										data-dismiss="modal"
+										data-bs-toggle="modal"
+										data-bs-target="#confirmEditModal"
+										class="profile-form-middle-button save-button"
+									>
+										Save Changes
+									</button>
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="modal"
+			id="confirmEditModal"
+			aria-hidden="true"
+			tabindex="-1"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<div class="confirm-edit-game-container">
+						<h3 class="confirm-game-header">
+							Do you want to save your<br />
+							changes?
+						</h3>
+						<div class="edit-options-container">
+							<button data-bs-dismiss="modal" class="save-button">Yes</button>
+							<button class="cancel-button">No</button>
+						</div>
+						<button data-dismiss="modal" class="close-cross-button"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="modal"
+			id="confirmDeleteModal"
+			aria-hidden="true"
+			tabindex="-1"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-transparent">
+					<div class="confirm-edit-game-container">
+						<h3 class="confirm-game-header">
+							Are you sure you want<br />
+							to delete?
+						</h3>
+						<div class="edit-options-container">
+							<button data-dismiss="modal" class="save-button">Yes</button>
+							<button class="cancel-button">No</button>
+						</div>
+						<button data-dismiss="modal" class="close-cross-button"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="../index.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../swiper.js"></script>
+	</body>
+</html>

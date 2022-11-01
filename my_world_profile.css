@@ -1036,6 +1036,8 @@ html {
 	margin-bottom: 25px;
 }
 
+/* CONFIRM CONTAINER */
+
 .confirm-add-game-container {
 	padding: 40px 15px;
 	background-color: var(--basic-deep-purple);
@@ -1256,6 +1258,107 @@ html {
 
 .game-selector-item:nth-child(2) {
 	transform-origin: center right;
+}
+
+.pagination-button.active-link {
+	background-color: var(--dark-green);
+	color: #fff;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 19px;
+	opacity: 100%;
+}
+
+/* Edit Game Form */
+
+.edit-game-header {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+	color: var(--light-grey);
+}
+
+.edit-form-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+
+.edit-form-container select,
+.edit-form-container input {
+	width: 360px;
+	opacity: 0.5;
+}
+
+.edit-game-image-container {
+	margin-bottom: 20px;
+}
+
+.edit-picture-container {
+	padding: 12px;
+	background-color: #4986fd;
+	display: flex;
+	justify-content: center;
+	border-radius: 30px;
+}
+
+.confirm-edit-game-container {
+	width: 650px;
+	height: 220px;
+	position: relative;
+	padding: 55px 15px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+	border: 1px solid var(--dark-green);
+	box-shadow: 0px 0px 16px 4px rgb(3 255 73 / 26%),
+		-5px 0px 14px rgb(0 0 0 / 25%);
+}
+
+.confirm-game-header {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: var(--light-grey);
+	margin-bottom: 32px;
+}
+
+.edit-options-container button {
+	border: none;
+	border-radius: 30px;
+	color: var(--light-grey);
+}
+
+.edit-options-container {
+	display: flex;
+	justify-content: space-between;
+	width: 220px;
+	margin: 0 auto;
+}
+
+.confirm-edit-game-container::before {
+	content: '';
+	position: absolute;
+	background-image: url('./img/user_profile/modal-guy.svg');
+	width: 364px;
+	height: 310px;
+	background-repeat: no-repeat;
+	bottom: 0;
+	left: -115px;
+}
+
+.confirm-edit-game-container::after {
+	content: '';
+	position: absolute;
+	background-image: url('./img/user_profile/modal-girl.svg');
+	width: 290px;
+	height: 359px;
+	background-repeat: no-repeat;
+	bottom: 0;
+	right: -17px;
 }
 
 /* ======================================================   Media Queries   =========================================== */
@@ -1681,7 +1784,10 @@ html {
 		color: var(--light-grey);
 	}
 
+	/* PAGINATION */
+
 	.paginator-container {
+		margin-top: 16px;
 		display: flex;
 		justify-content: center;
 		align-content: center;
@@ -1729,6 +1835,7 @@ html {
 		border-radius: 50%;
 		margin-left: 10px;
 	}
+
 	.load-button-container {
 		margin-bottom: 32px;
 	}
@@ -1752,6 +1859,19 @@ html {
 
 	.game-image-container {
 		width: 240px;
+	}
+
+	.edit-game-form {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -385px;
+		margin-top: -210px;
+		min-width: 770px;
+		padding-top: 32px;
+		padding-left: 56px;
+		padding-right: 56px;
+		padding-bottom: 30px;
 	}
 
 	.add-game-form {

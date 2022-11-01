@@ -107,6 +107,115 @@ a {
 	align-items: center;
 }
 
+.admin-header-navigation-item a {
+	color: var(--light-grey);
+	opacity: 0.5;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.admin-column-wrapper div {
+	position: relative;
+}
+
+.selected-value-container {
+	display: flex;
+	margin-bottom: 20px;
+	overflow-x: auto;
+	max-width: 360px;
+}
+
+.selected-value {
+	flex-shrink: 0;
+	margin-left: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+	border: 1px solid var(--neon-green);
+}
+
+.edit-modal-cross-img {
+	margin-left: 10px;
+}
+
+.selected-value button {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+}
+
+.selected-value span {
+	display: block;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--neon-green);
+}
+
+.admin-column-wrapper span {
+	display: block;
+	margin-bottom: 25px;
+}
+
+.admin-column-wrapper button {
+	display: block;
+	margin: 0 auto;
+	background-color: transparent;
+	border: none;
+	margin-top: 25px;
+}
+
+.admin-column-wrapper div + div {
+	margin-top: 12px;
+}
+
+.admin-column-wrapper:not(:last-child) {
+	margin-bottom: 55px;
+}
+
+.side-admin-menu {
+	height: 100vh;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 45px;
+	width: 270px;
+	background-color: var(--basic-deep-purple);
+}
+
+.side-admin-menu img {
+	margin: 0 auto;
+}
+
+.admin-toggle-button {
+	background-image: url('./img/menu\ hamburger.svg');
+	padding: 0;
+	width: 48px;
+	height: 48px;
+	background-color: transparent;
+	border: none;
+	background-repeat: no-repeat;
+}
+
+.admin-toggle-button-container {
+	position: absolute;
+	top: 20px;
+	left: 40px;
+}
+
+.admin-header-navigation {
+	border-top: 1px solid var(--dark-green);
+	padding-bottom: 20px;
+	position: relative;
+}
+
 .header-navigation {
 	display: none;
 	border-top: 1px solid var(--dark-green);
@@ -1348,14 +1457,6 @@ details[open] > summary {
 
 	.header-navigation-list li:not(:last-child) {
 		margin-right: 30px;
-	}
-
-	.admin-header-navigation-item a {
-		color: var(--light-grey);
-		opacity: 0.5;
-		font-weight: 400;
-		font-size: 18px;
-		line-height: 21px;
 	}
 
 	.header-navigation-item a {
