@@ -93,6 +93,13 @@ a {
 	padding-bottom: 15px;
 }
 
+.side-admin-menu-text-bold {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--light-grey);
+}
+
 .main-header-login {
 	color: var(--dark-green);
 	margin-right: 18px;
