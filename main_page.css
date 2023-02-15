@@ -1193,7 +1193,6 @@ a {
 .social-list-container {
 	display: flex;
 	padding-left: 0;
-
 	margin-bottom: 0;
 }
 
@@ -1349,7 +1348,7 @@ a {
 }
 
 .offcanvas-start {
-	width: 200px;
+	width: 0px;
 }
 
 .side-menu-container {
@@ -1457,7 +1456,7 @@ details[open] > summary {
 		display: flex;
 		list-style: none;
 		color: var(--light-grey);
-		width: 381px;
+		max-width: 480px;
 		margin-right: auto;
 		margin-left: auto;
 	}

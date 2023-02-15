@@ -45,7 +45,11 @@
 			</div>
 		</header>
 		<main class="main-page-admin-content">
-			<aside class='offcanvas offcanvas-start' tabindex="-1" id='admin-side-menu-toggle'>
+			<aside
+				class="offcanvas offcanvas-start"
+				tabindex="-1"
+				id="admin-side-menu-toggle"
+			>
 				<div class="side-admin-menu">
 					<div class="admin-column-wrapper">
 						<div class="side-container-news-container">
@@ -135,7 +139,10 @@
 			</aside>
 			<section class="admin-menu">
 				<div class="admin-menu-container">
-					<button data-admin-page="PendingReview" class="admin-tab-link">
+					<button
+						data-admin-page="PendingReview"
+						class="admin-tab-link link-active"
+					>
 						Pending review
 					</button>
 					<button data-admin-page="Confirmed" class="admin-tab-link">
@@ -612,12 +619,9 @@
 									<select class="activities-select" name="name">
 										<option value="select">User</option>
 									</select>
-									<input
-										class="activities-date"
-										placeholder="Date"
-										type="text"
-										class="activities-search"
-									/>
+									<div class="set-date-container">
+										<input class="set-date-input" type="date" />
+									</div>
 								</div>
 							</div>
 							<div class="activities-table-container">
@@ -1061,6 +1065,7 @@
 							<a class="pagination-forward-button" href="#"></a>
 						</div>
 					</div>
+
 					<div id="ReportedContent" class="admin-tab-content">
 						<div class="inner-content">
 							<div class="top-side-block">
@@ -1212,7 +1217,7 @@
 								</ul>
 							</div>
 						</div>
-					
+					</div>
 				</div>
 			</section>
 		</main>
@@ -1226,7 +1231,7 @@
 		>
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
-					<section class="add-game-container">
+					<section>
 						<div class="add-game-form">
 							<form class="add-game" action="#">
 								<h3 class="edit-game-header">Edit Game</h3>
@@ -1241,7 +1246,15 @@
 											<div class="selected-value-container">
 												<div class="selected-value">
 													<span>Tactical shooter</span>
-													<button ><img class='edit-modal-cross-img' src="../img/green-cross-button.svg" width='8' height='8' alt="close"></button>
+													<button>
+														<img
+															class="edit-modal-cross-img"
+															src="../img/green-cross-button.svg"
+															width="8"
+															height="8"
+															alt="close"
+														/>
+													</button>
 												</div>
 											</div>
 										</div>
@@ -1256,9 +1269,16 @@
 											<div class="selected-value-container">
 												<div class="selected-value">
 													<span>First-person shooter</span>
-													<button ><img class='edit-modal-cross-img' src="../img/green-cross-button.svg" width='8' height='8' alt="close"></button>
+													<button>
+														<img
+															class="edit-modal-cross-img"
+															src="../img/green-cross-button.svg"
+															width="8"
+															height="8"
+															alt="close"
+														/>
+													</button>
 												</div>
-												
 											</div>
 										</div>
 										<div class="wrapper-column">

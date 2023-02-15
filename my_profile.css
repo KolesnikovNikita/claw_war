@@ -314,10 +314,10 @@
 	font-size: 14px;
 	line-height: 16px;
 	color: var(--light-grey);
-	padding-left: 17px;
+	padding-left: 6px;
 	background-image: url('./img/player_profile/select-arrow-up-grey.svg');
 	background-repeat: no-repeat;
-	background-position: 105px;
+	background-position: 87px;
 }
 
 .user-profile-menu {
@@ -2809,7 +2809,7 @@
 	opacity: 0.5;
 }
 
-.admin-tab-link:active {
+.link-active {
 	border-color: var(--neon-green);
 	opacity: 1;
 }
@@ -3057,7 +3057,7 @@
 	padding: 8px 16px;
 	outline: none;
 	border-radius: 25px;
-	border: 1px solid var(--light-grey);
+	border: 0.3px solid #e2e6ff;
 	background-color: #262835;
 	appearance: none;
 	min-width: 140px;
@@ -3065,6 +3065,15 @@
 	background-image: url('./img/user_profile/select-gender-arrow.svg');
 	background-repeat: no-repeat;
 	background-position: 82% 55%;
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.activities-select option {
+	background-color: var(--background-main-color);
+	color: var(--light-grey);
 }
 
 .activities-search {
@@ -3077,17 +3086,22 @@
 	min-width: 140px;
 }
 
-.activities-date {
+.set-date-input::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
+.set-date-input {
+	background: url('./img/icon-date.svg') no-repeat 84% 50%;
 	padding: 8px 16px;
 	outline: none;
 	border-radius: 25px;
-	border: 1px solid var(--light-grey);
+	border: 0.3px solid #e2e6ff;
 	background-color: #262835;
-	appearance: none;
-	max-width: 140px;
-	background-image: url('./img/icon-date.svg');
-	background-repeat: no-repeat;
-	background-position: 82% 50%;
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
 }
 
 .activities-options-container {

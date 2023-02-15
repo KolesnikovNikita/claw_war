@@ -139,7 +139,10 @@
 			</aside>
 			<section class="admin-menu">
 				<div class="admin-menu-container">
-					<button data-admin-page="invitedUsers" class="admin-tab-link">
+					<button
+						data-admin-page="invitedUsers"
+						class="admin-tab-link link-active"
+					>
 						Invited Users
 					</button>
 					<button data-admin-page="deletedUsers" class="admin-tab-link">
@@ -157,12 +160,9 @@
 									<select class="activities-select" name="name">
 										<option value="select">User</option>
 									</select>
-									<input
-										class="activities-date"
-										placeholder="Date"
-										type="text"
-										class="activities-search"
-									/>
+									<div class="set-date-container">
+										<input class="set-date-input" type="date" />
+									</div>
 								</div>
 							</div>
 							<div class="activities-table-container">
@@ -755,12 +755,9 @@
 									<select class="activities-select" name="name">
 										<option value="select">User</option>
 									</select>
-									<input
-										class="activities-date"
-										placeholder="Date"
-										type="text"
-										class="activities-search"
-									/>
+									<div class="set-date-container">
+										<input class="set-date-input" type="date" />
+									</div>
 								</div>
 							</div>
 							<div class="activities-table-container">

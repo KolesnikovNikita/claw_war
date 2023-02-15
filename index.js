@@ -1,10 +1,14 @@
 // scroll up by click
 
-// document.getElementById('scroll-up-arrow').onclick = function scrollUpPage() {
-// 	window.scrollTo(0, 0);
-// };
+function scrollUpPage() {
+	var scrollUp = document.getElementById('scroll-up-arrow');
+	if (!scrollUp) return;
+	scrollUp.addEventListener('click', function () {
+		window.scrollTo(0, 0);
+	});
+}
 
-// 	show / hide password
+// show / hide password
 
 function initPasswordShow() {
 	const passwordInputEyes = document.querySelectorAll(
@@ -118,12 +122,49 @@ function initAdminSections() {
 	setAdminLinks(0);
 }
 
+function initChatSearchInput() {
+	var searchButton = document.querySelector('.search-button');
+	var chatHeader = document.querySelector('.chat-title-container');
+	var searchInput = document.querySelector('.input-search-container');
+	function setChatItemsVisibility() {
+		if (!searchInput) return;
+		searchButton.addEventListener('click', function () {
+			if (searchInput.hidden == false) {
+				searchInput.hidden = true;
+				chatHeader.hidden = false;
+			} else {
+				chatHeader.hidden = true;
+				searchInput.hidden = false;
+			}
+		});
+	}
+
+	setChatItemsVisibility();
+}
+
+function initTabLinkStyle() {
+	var links = document.querySelectorAll('.admin-tab-link');
+	function changeLinkStyle() {
+		for (let index = 0; index < links.length; index++) {
+			links[index].addEventListener('click', function () {
+				var current = document.getElementsByClassName('link-active');
+				current[0].className = current[0].className.replace(' link-active', '');
+				this.className += ' link-active';
+			});
+		}
+	}
+	changeLinkStyle();
+}
+
 function initComponents() {
+	scrollUpPage();
 	initPasswordShow();
 	initTabs();
 	initGameSelector();
 	initInvitePlayerSelect();
 	initAdminSections();
+	initChatSearchInput();
+	initTabLinkStyle();
 }
 
 initComponents();
