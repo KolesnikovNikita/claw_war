@@ -48,86 +48,194 @@
 			</div>
 		</header>
 		<main class="album-page">
-			<div class="clan-album-container">
-				<div class="album-clan-inner">
-					<h3 class="user-profile-header">Emperors Album</h3>
-					<div class="search-container">
-						<input class="search-game-input" type="text" placeholder="Search" />
-						<button type="button" class="profile-form-big-button green-button">
-							Search
+			<div class="dashboard-layout">
+				<div class="side-layout-menu-desktop history-page">
+					<div class="column-wrapper">
+						<div class="side-container-news-container">
+							<img
+								src="../../../img/user_profile/side-news-bell.svg"
+								alt="news bell"
+								width="25"
+								height="28"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<img
+							src="../../../img/player_profile/side-container-players-images.svg"
+							width="71"
+							height="21"
+							alt="add friend icon"
+						/>
+						<span class="side-container-menu-text-bold">32 online</span>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Clans</span>
+						<div>
+							<img
+								src="../../../img/player_profile/side-container-your-clan.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<div>
+							<img
+								src="../../../img/player_profile/side-container-your-clan-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+					</div>
+					<div class="column-wrapper">
+						<span class="side-container-menu-text-bold">Your Games</span>
+						<div>
+							<img
+								src="../../../img/player_profile/side-container-your-games.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<div>
+							<img
+								src="../../../img/player_profile/side-container-your-games-2.svg"
+								width="48"
+								height="48"
+								alt="image"
+							/>
+						</div>
+						<button type="button">
+							<img
+								src="../../../img/user_profile/add-plus-button.svg"
+								alt="add games"
+							/>
 						</button>
 					</div>
-					<select class="edit-year">
-						<option>2020-2023</option>
-					</select>
-					<select class="edit-album">
-						<option>Edit Album</option>
-					</select>
-					<div class="album-gallery">
-						<h3 class="list-gallery-header">2023</h3>
-						<div class="list-gallery">
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
+				</div>
+				<div class="clan-album-container">
+					<div class="album-clan-inner">
+						<h3 class="user-profile-header">Emperors Album</h3>
+						<div class="desktop-search-album">
+							<div class="first-container">
+								<input type="text" class="search-album" />
 							</div>
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background 3.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
+							<div>
+								<select
+									placeholder="2021-2023"
+									class="select-year"
+									name=""
+									id=""
+								>
+									<option>2018-2021</option>
+								</select>
 							</div>
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background 2.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
+							<div>
+								<button class="pdf-button">PDF Export</button>
+							</div>
+							<div>
+								<button class="edit-button">Edit Button</button>
+							</div>
+							<div>
+								<button class="add-photo-button">Add Photo</button>
 							</div>
 						</div>
-						<h3 class="list-gallery-header">2023</h3>
-						<div class="list-gallery">
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
-							</div>
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background 3.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
-							</div>
-							<div class="list-gallery-container">
-								<img
-									src="../../../img/user_profile/Background 2.png"
-									width="300"
-									height="250"
-									alt="gallery img"
-								/>
-								<span class="gallery-user-name">@username</span>
-							</div>
-						</div>
-						<div class="load-button-container">
-							<button class="profile-form-big-button green-button">
-								Load More
+						<div class="search-container">
+							<input
+								class="search-game-input"
+								type="text"
+								placeholder="Search"
+							/>
+							<button
+								type="button"
+								class="profile-form-big-button green-button"
+							>
+								Search
 							</button>
+						</div>
+						<select class="edit-year">
+							<option>2020-2023</option>
+						</select>
+						<select class="edit-album">
+							<option>Edit Album</option>
+						</select>
+						<div class="album-gallery">
+							<h3 class="list-gallery-header">2023</h3>
+							<div class="list-gallery">
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background 3.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background 2.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+							</div>
+							<h3 class="list-gallery-header">2022</h3>
+							<div class="list-gallery">
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background 3.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+								<div class="list-gallery-container">
+									<img
+										src="../../../img/user_profile/Background 2.png"
+										width="300"
+										height="250"
+										alt="gallery img"
+									/>
+									<span class="gallery-user-name">@username</span>
+								</div>
+							</div>
+							<div class="desktop-pagination">
+								<div class="album-pagination">
+									<span class="pagination-back-link"><a href="#"></a></span>
+									<a class="pagination-item active-item" href="#">1</a>
+									<a class="pagination-item" href="#">2</a>
+									<a class="pagination-item" href="#">3</a>
+									<a class="pagination-item" href="#">4</a>
+									<a class="pagination-forward-link" href="#"></a>
+								</div>
+							</div>
+							<div class="load-button-container">
+								<button class="profile-form-big-button green-button">
+									Load More
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -83,11 +83,19 @@ html {
 
 .upload-img-container {
 	position: relative;
-	background-image: url('./img/empty-field-img.svg');
-	background-position: 0 0;
-	background-size: 100% auto;
+	background-image: url('./img/empty-album.svg');
+	background-position: 50% 50%;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
-	min-height: 630px;
+	min-height: 657px;
+	min-width: 375px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner-image > div:not(:last-child) {
+	margin-bottom: 16px;
 }
 
 .user-profile-information {
@@ -222,6 +230,15 @@ html {
 	background-color: var(--background-main-color);
 }
 
+.desktop-vers-buttons {
+	display: none;
+}
+
+.edit-album-section {
+	margin-top: 25px;
+	margin-bottom: 45px;
+}
+
 .publisher-links {
 	margin: 0;
 	display: flex;
@@ -242,6 +259,9 @@ html {
 	background-color: var(--basic-deep-purple);
 	padding: 25px 20px;
 	margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* ============================ PAGINATION ============================ */
@@ -325,6 +345,7 @@ html {
 	padding-right: 25px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	color: var(--light-grey);
 	background-color: #ff8b03;
 }
 
@@ -584,6 +605,7 @@ html {
 
 .edit-album-container {
 	margin-left: auto;
+	margin-right: 16px;
 	margin-bottom: 15px;
 	padding: 8px 25px;
 	max-width: 135px;
@@ -594,26 +616,6 @@ html {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 16px;
-}
-
-.upload-page-header {
-	padding-top: 16px;
-	margin-bottom: 0;
-	text-align: center;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 21px;
-	color: var(--light-grey);
-}
-
-.upload-page-note {
-	padding-top: 210px;
-	margin: 0;
-	text-align: center;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 21px;
-	color: rgba(226, 230, 255, 0.5);
 }
 
 .edit-album-select {
@@ -642,9 +644,14 @@ html {
 }
 
 .clan-album-container {
+	margin-top: 16px;
+	margin-bottom: 40px;
 	padding-top: 0;
 	background-color: var(--background-main-color);
 	position: relative;
+
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .album-clan-inner {
@@ -693,7 +700,7 @@ html {
 	appearance: none;
 	background-image: url('./img/select-arrow-down.svg');
 	background-repeat: no-repeat;
-	background-position: 65% 55%;
+	background-position: 94% 55%;
 	background-size: 0.9em auto, 100%;
 	background-color: #4540cd;
 	margin-bottom: 30px;
@@ -2371,6 +2378,52 @@ html {
 	margin-bottom: 25px;
 }
 
+.desktop-search-album,
+.desktop-pagination {
+	display: none;
+}
+
+.select-year {
+	appearance: none;
+	background-color: var(--background-input-color);
+	border: 1px solid var(--neon-green);
+	border-radius: 35px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 140px;
+	outline: none;
+	color: var(--light-grey);
+	background-image: url('./img/user_profile/select-gender-arrow.svg');
+	background-repeat: no-repeat;
+	background-position: 94% 55%;
+	background-size: 0.9em auto, 100%;
+}
+
+.search-album {
+	background-color: var(--background-input-color);
+	border: 1px solid var(--neon-green);
+	border-radius: 35px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 100%;
+	outline: none;
+	color: var(--light-grey);
+	background-image: url('./img/user_profile/search-icon.svg');
+	background-repeat: no-repeat;
+	background-position: 94% 55%;
+	background-size: 0.9em auto, 100%;
+}
+
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 768px) {
@@ -2394,6 +2447,106 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+	.clan-album-container {
+		width: 1125px;
+	}
+
+	.album-clan-inner {
+		border-radius: 10px;
+	}
+
+	.edit-year,
+	.edit-album,
+	.load-button-container,
+	.search-container {
+		display: none;
+	}
+
+	.desktop-search-album {
+		display: flex;
+		margin-top: 15px;
+		margin-bottom: 16px;
+	}
+
+	.desktop-search-album > div {
+		margin-left: 25px;
+	}
+
+	.desktop-search-album > div button {
+		border-radius: 30px;
+		border: none;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--light-grey);
+	}
+
+	.desktop-pagination {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.inner-image {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 25px;
+	}
+
+	.inner-image img {
+		width: 420px;
+		height: 315px;
+	}
+
+	.upload-img-container {
+		background-image: url('./img/empty-album-desktop.svg');
+		background-size: 100% auto;
+		min-height: 1050px;
+	}
+
+	.desktop-vers-buttons {
+		display: flex;
+		width: 1180px;
+		margin-left: auto;
+	}
+
+	.desktop-search-album .first-container,
+	.desktop-vers-buttons .first-container {
+		margin-left: auto;
+	}
+
+	.pdf-button {
+		background-color: #ff8b03;
+	}
+
+	.edit-button {
+		background-color: #64c14c;
+	}
+
+	.add-photo-button {
+		background-color: #19afff;
+	}
+
+	.desktop-vers-buttons > div button {
+		margin-left: 15px;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border: none;
+		border-radius: 30px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: var(--light-grey);
+	}
+
+	.edit-album-container {
+		display: none;
+	}
 	.upload-picture-container,
 	.form-container {
 		border-radius: 10px;
@@ -2423,6 +2576,25 @@ html {
 		height: 470px;
 		margin-top: 40px;
 		margin-left: 45px;
+	}
+
+	.edit-album-section {
+		margin-top: 35px;
+		margin-left: 50px;
+		width: 1240px;
+		height: 1110px;
+	}
+
+	.upload-page-header {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.upload-page-note {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
 	}
 
 	.create-album-header {
@@ -2518,7 +2690,6 @@ html {
 		padding: 45px;
 		width: 215px;
 		background-color: var(--basic-deep-purple);
-		width: 215px;
 	}
 
 	.header-sub-navigation-container {
