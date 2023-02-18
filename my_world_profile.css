@@ -51,10 +51,6 @@ html {
 	margin: 0;
 }
 
-.main-menu-profile-setting {
-	background-color: var(--basic-deep-purple);
-}
-
 .profile-setting-bg-image {
 	position: relative;
 	background-image: url('./img/user_profile/Rectangle\ 80.svg');
@@ -228,6 +224,9 @@ html {
 
 .album-page {
 	background-color: var(--background-main-color);
+}
+
+.inner-image {
 }
 
 .desktop-vers-buttons {
@@ -445,16 +444,14 @@ html {
 
 .official-page-content {
 	background-image: url('./img/official-album.svg');
-	background-repeat: no-repeat;
 	background-position: 50% 50%;
-	background-size: cover;
-	height: 405px;
-	width: 375px;
-}
-
-.official-img-list {
-	padding-left: 40px;
-	padding-right: 40px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	min-height: 384px;
+	min-width: 375px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .create-album-container {
@@ -721,7 +718,6 @@ html {
 	font-size: 18px;
 	line-height: 21px;
 	color: var(--light-grey);
-	margin-bottom: 15px;
 }
 
 .liked-album-item {
@@ -2424,6 +2420,35 @@ html {
 	background-size: 0.9em auto, 100%;
 }
 
+.album-header-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.show-all-button {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--neon-green);
+	background-color: transparent;
+	border: none;
+	margin-right: 25px;
+}
+
+.inner-official {
+	width: 350px;
+	display: grid;
+	grid-template-columns: 1fr;
+	place-items: center;
+	gap: 6px;
+}
+
+.inner-official div img {
+	width: 135px;
+	height: 102px;
+}
+
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 768px) {
@@ -2447,6 +2472,37 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+	.official-page {
+		padding: 0;
+	}
+	.inner-official {
+		grid-template-columns: 1fr 1fr;
+		width: auto;
+	}
+	.inner-official div img {
+		width: 420px;
+		height: 315px;
+	}
+	.official-page-content {
+		background-image: url('./img/desktop-official-album.svg');
+		height: 1050px;
+	}
+
+	.album-header-options {
+		margin-bottom: 15px;
+	}
+	.liked-album-container,
+	.list-gallery {
+		margin-bottom: 35px;
+	}
+
+	.publishers-page {
+		padding-bottom: 0;
+	}
+	.desktop-album-list {
+		width: 1125px;
+	}
+
 	.clan-album-container {
 		width: 1125px;
 	}
@@ -2995,12 +3051,10 @@ html {
 		width: 385px;
 	}
 
-	.dashboard-layout-content {
+	.album-list {
 		margin: 0 auto;
-		background-color: var(--background-desktop-main-color);
 		padding: 40px 30px;
 		flex-grow: 1;
-		width: 600px;
 	}
 
 	.profile-games-container {
