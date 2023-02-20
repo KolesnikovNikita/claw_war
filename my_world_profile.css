@@ -346,6 +346,9 @@ html {
 	padding-bottom: 8px;
 	color: var(--light-grey);
 	background-color: #ff8b03;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .publishing-button-container {
@@ -445,9 +448,9 @@ html {
 .official-page-content {
 	background-image: url('./img/official-album.svg');
 	background-position: 50% 50%;
-	background-size: auto 100%;
+	background-size: contain;
 	background-repeat: no-repeat;
-	min-height: 384px;
+	min-height: 400px;
 	min-width: 375px;
 	display: flex;
 	justify-content: center;
@@ -2437,16 +2440,16 @@ html {
 }
 
 .inner-official {
-	width: 350px;
+	margin-top: 35px;
 	display: grid;
-	grid-template-columns: 1fr;
-	place-items: center;
-	gap: 6px;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
 }
 
-.inner-official div img {
-	width: 135px;
-	height: 102px;
+.official-page,
+.official-page-inner {
+	display: flex;
+	justify-content: center;
 }
 
 /* ======================================================   Media Queries   =========================================== */
@@ -2472,12 +2475,44 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+	.non-official-page-content {
+		border-radius: 10px;
+	}
+	.images-list {
+		margin-top: 65px;
+		margin-bottom: 60px;
+	}
+
+	.name-publisher {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	.item-link {
+		font-size: 14px;
+		line-height: 16px;
+	}
 	.official-page {
 		padding: 0;
 	}
+
+	.official-page-container {
+		width: 1125px;
+		margin-top: 29px;
+		margin-left: 65px;
+		margin-bottom: 40px;
+	}
+
+	.images-item img {
+		width: 420px;
+		height: 316px;
+	}
+
 	.inner-official {
 		grid-template-columns: 1fr 1fr;
 		width: auto;
+		gap: 35px;
+		margin-top: 50px;
 	}
 	.inner-official div img {
 		width: 420px;
@@ -2485,7 +2520,15 @@ html {
 	}
 	.official-page-content {
 		background-image: url('./img/desktop-official-album.svg');
-		height: 1050px;
+		height: 1180px;
+	}
+
+	.official-page-inner {
+		width: 1150px;
+		margin-top: 20px;
+		margin-left: 45px;
+		margin-bottom: 135px;
+		display: block;
 	}
 
 	.album-header-options {
