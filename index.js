@@ -156,6 +156,30 @@ function initTabLinkStyle() {
 	changeLinkStyle();
 }
 
+function selectImage() {
+	const navItems = document.querySelectorAll('.slider-nav-item');
+	const mainImage = document.querySelector('.slider-main-image');
+
+	navItems.forEach(item => {
+		item.addEventListener('click', () => {
+			navItems.forEach(navItem => {
+				navItem.classList.remove('selected-background');
+			});
+			item.classList.add('selected-background');
+			mainImage.src = item.src;
+		});
+	});
+}
+
+function dropDownMenu() {
+	const dropdownBtn = document.querySelector('.edit-album');
+
+	dropdownBtn.addEventListener('click', () => {
+		const dropdownContent = document.querySelector('.dropdown-content');
+		dropdownContent.classList.toggle('show-menu');
+	});
+}
+
 function initComponents() {
 	scrollUpPage();
 	initPasswordShow();
@@ -165,6 +189,8 @@ function initComponents() {
 	initAdminSections();
 	initChatSearchInput();
 	initTabLinkStyle();
+	selectImage();
+	dropDownMenu();
 }
 
 initComponents();

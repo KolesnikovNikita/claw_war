@@ -1456,7 +1456,7 @@ details[open] > summary {
 		display: flex;
 		list-style: none;
 		color: var(--light-grey);
-		max-width: 480px;
+		max-width: 490px;
 		margin-right: auto;
 		margin-left: auto;
 	}

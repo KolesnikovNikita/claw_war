@@ -2452,6 +2452,141 @@ html {
 	justify-content: center;
 }
 
+/* ====================================================  Custom Frame  ================================================*/
+
+.side-frame-options {
+	width: 160px;
+	padding-left: 55px;
+	padding-right: 55px;
+	padding-top: 55px;
+}
+
+.selected-img-container {
+	border-radius: 20px;
+	width: 800px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: palegreen;
+}
+
+.green-save-button {
+	background-color: var(--light-green);
+	border: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+	padding-left: 25px;
+	padding-top: 12px;
+	padding-right: 25px;
+	padding-bottom: 12px;
+	border-radius: 30px;
+}
+
+.main-frame-page {
+	width: 1000px;
+	background-color: #262835;
+	padding-bottom: 135px;
+}
+
+.custom-save-img-container {
+	margin-bottom: 25px;
+	margin-left: auto;
+	width: 80px;
+	margin-top: 40px;
+	margin-right: 40px;
+}
+
+.side-frame-options div button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.side-frame-options div:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.select-bg-container .bg-image:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.select-frame-side {
+	padding-top: 50px;
+	padding-right: 60px;
+	padding-left: 60px;
+	width: 445px;
+}
+
+.select-frame-header {
+	text-align: center;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--light-grey);
+	margin-bottom: 25px;
+}
+
+.select-bg-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.bg-image img {
+	width: 320px;
+	height: 270px;
+	border-radius: 10px;
+}
+.selected-background {
+	border: 3px solid var(--neon-green);
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	top: 55px;
+}
+
+.dropdown-content a {
+	display: block;
+	width: 100%;
+	border-radius: 30px;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: var(--light-grey);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.dropdown-content a:first-child {
+	margin-bottom: 15px;
+}
+
+.pdf-button {
+	background-color: #ff8b03;
+}
+
+.edit-button {
+	background-color: #64c14c;
+}
+
+.add-photo-button {
+	background-color: #19afff;
+}
+
+.show-menu {
+	display: block;
+}
+
+/* ====================================================  Custom Frame  ================================================*/
+
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 768px) {
@@ -2615,18 +2750,6 @@ html {
 	.desktop-search-album .first-container,
 	.desktop-vers-buttons .first-container {
 		margin-left: auto;
-	}
-
-	.pdf-button {
-		background-color: #ff8b03;
-	}
-
-	.edit-button {
-		background-color: #64c14c;
-	}
-
-	.add-photo-button {
-		background-color: #19afff;
 	}
 
 	.desktop-vers-buttons > div button {
