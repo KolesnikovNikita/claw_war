@@ -226,9 +226,6 @@ html {
 	background-color: var(--background-main-color);
 }
 
-.inner-image {
-}
-
 .desktop-vers-buttons {
 	display: none;
 }
@@ -498,16 +495,6 @@ html {
 	text-align: center;
 }
 
-.upload-picture-container {
-	margin-top: 25px;
-	margin-bottom: 80px;
-	background-color: var(--basic-deep-purple);
-	padding-top: 20px;
-	padding-bottom: 30px;
-	padding-right: 30px;
-	padding-left: 30px;
-}
-
 .album-picture {
 	background-image: url('./img/Template.svg');
 	background-repeat: no-repeat;
@@ -527,7 +514,7 @@ html {
 	color: #e2e6ff;
 }
 
-.uload-inner-style {
+.upload-inner-style {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
@@ -607,7 +594,7 @@ html {
 	margin-left: auto;
 	margin-right: 16px;
 	margin-bottom: 15px;
-	padding: 8px 25px;
+
 	max-width: 135px;
 	border: none;
 	border-radius: 30px;
@@ -700,10 +687,9 @@ html {
 	appearance: none;
 	background-image: url('./img/select-arrow-down.svg');
 	background-repeat: no-repeat;
-	background-position: 94% 55%;
+	background-position: 89% 55%;
 	background-size: 0.9em auto, 100%;
 	background-color: #4540cd;
-	margin-bottom: 30px;
 }
 
 .gallery-user-name {
@@ -721,6 +707,10 @@ html {
 	font-size: 18px;
 	line-height: 21px;
 	color: var(--light-grey);
+}
+
+.album-gallery {
+	margin-top: 30px;
 }
 
 .liked-album-item {
@@ -2452,7 +2442,33 @@ html {
 	justify-content: center;
 }
 
+.upload-picture-container {
+	background-color: var(--basic-deep-purple);
+	margin-top: 15px;
+	margin-bottom: 45px;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-container.create-album {
+	max-width: 768px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* ====================================================  Custom Frame  ================================================*/
+
+.frame-page-layout {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: 1600px;
+}
 
 .side-frame-options {
 	width: 160px;
@@ -2539,6 +2555,7 @@ html {
 	width: 320px;
 	height: 270px;
 	border-radius: 10px;
+	cursor: pointer;
 }
 .selected-background {
 	border: 3px solid var(--neon-green);
@@ -2610,6 +2627,16 @@ html {
 }
 
 @media screen and (min-width: 1200px) {
+	.side-layout-menu-desktop {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 45px;
+		width: 215px;
+		background-color: var(--basic-deep-purple);
+	}
+
 	.non-official-page-content {
 		border-radius: 10px;
 	}
@@ -2769,14 +2796,10 @@ html {
 	.edit-album-container {
 		display: none;
 	}
-	.upload-picture-container,
+
 	.form-container {
 		border-radius: 10px;
 		border: 1px solid var(--neon-green);
-	}
-
-	.upload-picture-container {
-		width: 700px;
 	}
 
 	.upload-picture-container h3 {

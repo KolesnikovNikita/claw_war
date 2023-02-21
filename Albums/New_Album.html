@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="../main_page.css" />
 		<link rel="stylesheet" href="../my_profile" />
 		<link rel="stylesheet" href="../my_world_profile.css" />
-		<title>My Album</title>
+		<title>New Album</title>
 	</head>
 	<body>
 		<h2 class="visually-hidden">Create Album Setting</h2>
@@ -275,16 +275,10 @@
 			</div>
 		</section>
 
-		<section
-			class="modal fade"
-			id="step2Modal"
-			tabindex="-1"
-			aria-hidden="true"
-			aria-labelledby="step1Modal"
-		>
+		<section class="modal fade" id="step2Modal">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
-					<section class="upload-picture-container">
+					<div class="upload-picture-container">
 						<h3>Upload Pictures</h3>
 						<div class="upload-container">
 							<div class="upload-info">
@@ -297,7 +291,7 @@
 									/>
 								</button>
 								<p><a class="upload-link">Tap to upload</a></p>
-								<p class="uload-inner-style">Maximum size 50 Mb</p>
+								<p class="upload-inner-style">Maximum size 50 Mb</p>
 							</div>
 							<div class="upload-list">
 								<div class="upload-img">
@@ -310,7 +304,7 @@
 								</div>
 								<div class="upload-img-inner">
 									<p class="img-name">File_name.jpg</p>
-									<p class="uload-inner-style">20 Mb</p>
+									<p class="upload-inner-style">20 Mb</p>
 									<div class="load-bar"></div>
 								</div>
 								<div class="upload-img-state">
@@ -322,12 +316,19 @@
 											alt=""
 										/>
 									</button>
-									<p class="uload-inner-style">100%</p>
+									<p class="upload-inner-style">100%</p>
 								</div>
 							</div>
 							<div class="form-buttons-container">
 								<div>
-									<button class="form-cancel-button">Back</button>
+									<button
+										class="form-cancel-button"
+										data-bs-target="#step1Modal"
+										data-bs-toggle="modal"
+										data-bs-dismiss="modal"
+									>
+										Back
+									</button>
 								</div>
 								<div>
 									<button data-bs-dismiss="modal" class="add-game-style">
@@ -336,7 +337,7 @@
 								</div>
 							</div>
 						</div>
-					</section>
+					</div>
 				</div>
 			</div>
 		</section>
