@@ -3178,6 +3178,19 @@
 }
 
 @media screen and (min-width: 1200px) {
+	.upload-picture-container {
+		width: 700px;
+		min-height: 380px;
+		border: 1px solid var(--neon-green);
+		border-radius: 10px;
+	}
+
+	.upload-info {
+		height: 240px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.advanced-recruitment-desktop {
 		display: none;
 	}

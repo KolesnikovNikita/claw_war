@@ -102,6 +102,7 @@ function initInvitePlayerSelect() {
 
 function initAdminSections() {
 	var adminButtons = document.querySelectorAll('.admin-tab-link');
+	if (adminButtons.length === 0) return;
 	function setAdminLinks(sectionIndex) {
 		adminButtons.forEach(function (adminButton, index) {
 			var activeSection = document.getElementById(
@@ -173,7 +174,7 @@ function selectImage() {
 
 function dropDownMenu() {
 	const dropdownBtn = document.querySelector('.edit-album');
-
+	if (!dropdownBtn) return;
 	dropdownBtn.addEventListener('click', () => {
 		const dropdownContent = document.querySelector('.dropdown-content');
 		dropdownContent.classList.toggle('show-menu');
