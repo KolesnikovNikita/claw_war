@@ -2461,6 +2461,82 @@ html {
 	margin-right: auto;
 }
 
+.user-publishing-img {
+	margin-right: 16px;
+}
+
+/* ====================================================  Template Page Content  ========================================*/
+
+.template-page-content {
+	height: 1200px;
+	width: 1150px;
+}
+
+.template-page-content.mario {
+	background-image: url('./img/Templates/Mario.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.pokemon {
+	background-image: url('./img/Templates/Pokemon.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.horizon {
+	background-image: url('./img/Templates/Horizon.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.cod4 {
+	background-image: url('./img/Templates/COD4.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.witcher3 {
+	background-image: url('./img/Templates/Wither3.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.starCraft {
+	background-image: url('./img/Templates/SC2.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.minecraft {
+	background-image: url('./img/Templates/MineCarft.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.deepspace {
+	background-image: url('./img/Templates/Space.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.template-page-content.mountains {
+	background-image: url('./img/Templates/Forest.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+/* ====================================================  Template Page Content  ========================================*/
+
 /* ====================================================  Custom Frame  ================================================*/
 
 .frame-page-layout {
