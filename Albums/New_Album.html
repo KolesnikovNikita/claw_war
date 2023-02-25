@@ -116,22 +116,24 @@
 						</button>
 					</div>
 				</div>
-				<div class="new-album">
-					<div class="create-album-container">
-						<h3 class="create-album-header">Let's create your album!</h3>
-						<p class="create-album-description">
-							Create an album and add your own unique images. Get rewarded for
-							the best album frame!
-						</p>
-						<div class="create-album-button">
-							<button
-								type="button"
-								data-bs-toggle="modal"
-								data-bs-target="#step1Modal"
-								class="main-page-button"
-							>
-								Create New Album
-							</button>
+				<div class="album-page-background">
+					<div class="new-album">
+						<div class="create-album-container">
+							<h3 class="create-album-header">Let's create your album!</h3>
+							<p class="create-album-description">
+								Create an album and add your own unique images. Get rewarded for
+								the best album frame!
+							</p>
+							<div class="create-album-button">
+								<button
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#step1Modal"
+									class="main-page-button"
+								>
+									Create New Album
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -207,7 +209,7 @@
 			aria-labelledby="step1Modal"
 		>
 			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
+				<div class="modal-content create-modal">
 					<section class="form-container">
 						<form class="load-album-form">
 							<fieldset>
@@ -278,8 +280,8 @@
 
 		<section class="modal fade" id="step2Modal">
 			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="upload-picture-container">
+				<div class="modal-content create-modal">
+					<div class="upload-picture-container step-2">
 						<h3>Upload Pictures</h3>
 						<div class="upload-container">
 							<div class="upload-info">
