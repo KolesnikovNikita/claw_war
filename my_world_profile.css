@@ -357,6 +357,18 @@ html {
 	margin-bottom: 20px;
 }
 
+.publishing-content {
+	display: flex;
+	padding-left: 16px;
+	padding-right: 16px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.inner-wrapper {
+	min-width: 375px;
+}
+
 .publishing-button {
 	border-radius: 30px;
 	border: none;
@@ -416,8 +428,6 @@ html {
 
 .official-page {
 	background-color: var(--basic-deep-purple);
-	padding-bottom: 85px;
-	padding-top: 20px;
 }
 
 .publishers-header {
@@ -476,7 +486,7 @@ html {
 	background-size: contain;
 	background-repeat: no-repeat;
 	min-height: 400px;
-	min-width: 375px;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2470,10 +2480,12 @@ html {
 	gap: 10px;
 }
 
-.official-page,
 .official-page-inner {
 	display: flex;
 	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	min-width: 375px;
 }
 
 .form-container-wrapper {
@@ -2711,11 +2723,22 @@ html {
 	padding-top: 25px;
 }
 
+.official-page-container {
+	margin-top: 20px;
+
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 85px;
+}
+
 /* ====================================================  Custom Frame  ================================================*/
 
 /* ======================================================   Media Queries   =========================================== */
 
 @media screen and (min-width: 768px) {
+	.official-page-container {
+		width: 768px;
+	}
 	.contact-image-container {
 		margin-right: 25px;
 	}
@@ -2788,7 +2811,6 @@ html {
 		margin-top: 29px;
 		margin-left: 65px;
 		margin-bottom: 40px;
-		margin-right: 190px;
 	}
 
 	.images-item img {
@@ -2813,11 +2835,10 @@ html {
 
 	.official-page-inner {
 		width: 1150px;
-		margin-top: 20px;
-		margin-left: 45px;
 		margin-bottom: 135px;
-		margin-right: 190px;
+		background-color: var(--background-main-color);
 		display: block;
+		margin-left: 45px;
 	}
 
 	.album-header-options {
@@ -2900,6 +2921,7 @@ html {
 		display: flex;
 		width: 1180px;
 		margin-left: auto;
+		padding-right: 32px;
 	}
 
 	.desktop-search-album .first-container,
