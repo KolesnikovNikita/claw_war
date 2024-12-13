@@ -30,6 +30,9 @@ body {
 	overflow-wrap: break-word;
 	color: black;
 	background-color: white;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .visually-hidden {
@@ -59,8 +62,6 @@ a {
 
 .page-header {
 	background-color: var(--basic-deep-purple);
-	padding-top: 25px;
-	padding-bottom: 25px;
 }
 
 .button {
@@ -85,7 +86,10 @@ a {
 }
 
 .page-header-container {
+	padding-top: 15px;
+	position: relative;
 	display: flex;
+	padding-bottom: 15px;
 }
 
 .main-header-login {
@@ -102,15 +106,679 @@ a {
 	align-items: center;
 }
 
+.header-navigation {
+	display: none;
+	border-top: 1px solid var(--dark-green);
+	padding-bottom: 20px;
+}
+
+.header-navigation-item a {
+	min-width: 76px;
+	padding: 2px 7px;
+	border: 2px solid transparent;
+	border-radius: 23px;
+}
+
+.header-navigation-item a:hover {
+	border-color: var(--neon-green);
+}
+
+/* Main Page */
+
+.thumbnail-container {
+	position: relative;
+	background-color: var(--basic-deep-purple);
+	padding: 25px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	border-radius: 12px;
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.greeting-user-container {
+	width: 70%;
+}
+
+.user-photo-container img,
+.guest-photo-container img {
+	margin-right: 12px;
+	width: 40px;
+	height: 40px;
+}
+
+.time-post-container,
+.guest-time-post-container {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	opacity: 0.5;
+}
+
+.user-description-container,
+.guest-description-container {
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-page-image-container-mobile::after {
+	content: '';
+	position: absolute;
+	background-image: url('./img/main_page/main-page-mario-image.svg');
+	bottom: 0;
+	right: -7px;
+	bottom: 70px;
+	background-repeat: no-repeat;
+	width: 103px;
+	height: 130px;
+}
+
+.main-page-image-container-mobile::before {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	background-image: url('./img/main_page/main-page-pubg-image.svg');
+	width: 121px;
+	height: 119px;
+	background-repeat: no-repeat;
+	bottom: 0;
+	right: -1px;
+}
+
+.main-page {
+	position: relative;
+	background-image: url('./img/main_page/main-page-bck-dragon-fly.jpeg');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding-top: 30px;
+	padding-bottom: 45px;
+	padding-right: 15px;
+	padding-left: 15px;
+	background-color: #252734;
+}
+
+.main-page-background-image::before {
+	content: '';
+	position: relative;
+	background-image: url('./img/main_page/main-page-background-image.svg');
+	bottom: 0;
+	right: 10px;
+	background-repeat: no-repeat;
+	width: auto;
+	height: 125px;
+}
+
+.main-page-header {
+	color: #fff;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+
+.main-page-header-description {
+	color: var(--light-grey);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	opacity: 0.7;
+	margin-bottom: 30px;
+}
+
+.main-page-button {
+	padding: 10px 40px;
+	border-radius: 30px;
+	border: none;
+	background-color: var(--light-green);
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.main-page-filter {
+	max-width: 770px;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 45px;
+}
+
+.main-page-filter label {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+}
+
+.main-page-select-style {
+	border: none;
+	color: var(--neon-green);
+	background-color: transparent;
+	outline: none;
+}
+
+.main-page-select-style option {
+	color: #1b1a26;
+	font-weight: 400;
+}
+
+.user-post-container,
+.guest-post-container {
+	background-color: var(--basic-deep-purple);
+	border-radius: 12px;
+	margin-bottom: 15px;
+}
+
+.input-file-desktop-style {
+	display: none;
+}
+
+.game-description {
+	padding-top: 10px;
+}
+
+.user-post-header,
+.guest-post-header {
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 12px;
+}
+
+.main-page-post-container {
+	margin-bottom: 15px;
+	max-width: 770px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.user-post-top-container,
+.guest-post-top-container {
+	padding-top: 20px;
+
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.user-post-bottom-container,
+.guest-post-bottom-container {
+	padding-bottom: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.user-text-post-container,
+.guest-user-text-post-container {
+	margin-bottom: 0;
+	color: var(--light-grey);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.user-post-buttons-container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.text-area-post-container,
+.guest-text-area-post-container {
+	padding-bottom: 20px;
+}
+
+.user-image-post-container {
+	background-image: url('./img/main_page/main-page-ghostbusters-image.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	min-width: 250px;
+	min-height: 120px;
+}
+
+.write-post-container {
+	background-color: var(--basic-deep-purple);
+	padding-top: 30px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 12px;
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.text-post-container {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid var(--light-grey);
+}
+
+.text-area-style {
+	color: var(--light-grey);
+	opacity: 70%;
+	padding: 12px 20px;
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	outline: none;
+}
+
+.user-post-input-container {
+	margin-top: 20px;
+	position: relative;
+	text-align: center;
+}
+
+.user-file-upload {
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+}
+
+.input-file-style {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.input-file-icon-wrapper {
+	padding-left: 16px;
+	padding-right: 24px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--light-grey);
+	border-radius: 30px;
+}
+
+.button-post {
+	padding: 8px 25px;
+	border: none;
+	background-color: var(--light-green);
+	border-radius: 30px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.user-post-select {
+	padding: 2px 16px;
+	background-color: var(--basic-deep-purple);
+	border: 1px solid var(--light-grey);
+	border-radius: 30px;
+	background: #212430;
+}
+
+.type-post-select {
+	width: 96px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 500;
+	/* background-image: url('./img/main_page/select-arrow-icon.svg'); */
+}
+
+.type-post-select option {
+	color: #1b1a26;
+	font-weight: 400;
+}
+
+.user-options-button-container {
+	position: relative;
+}
+
+.user-post-options {
+	padding: 0;
+	position: absolute;
+	background-image: url('./img/main_page/user-post-options-button.svg');
+	background-repeat: no-repeat;
+	top: 2px;
+	width: 4px;
+	height: 24px;
+	background-color: transparent;
+	display: block;
+	border: none;
+}
+
+.text-area-user-container {
+	flex-grow: 1;
+}
+
+.guest-post-container {
+	background-color: var(--basic-deep-purple);
+	border-radius: 12px;
+	margin-bottom: 15px;
+}
+
+.information-post-bar,
+.guest-information-post-bar {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.non-registered {
+	margin-bottom: 0;
+}
+
+.user-name,
+.guest-name {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	margin: 0;
+}
+
+.post-label {
+	margin-right: 25px;
+}
+
+.post-label-non-registred,
+.guest-post-label-non-registred {
+	margin-bottom: 21px;
+}
+
+.name-game {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+}
+
+.download-game {
+	line-height: 14px;
+	font-weight: 400;
+	font-size: 12px;
+	color: var(--light-grey);
+	opacity: 0.5;
+}
+
+.information-post-bar,
+.guest-information-post-bar {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--light-grey);
+}
+
+.message-answer-container,
+.guest-message-answer-container {
+	margin-right: 25px;
+}
+
+.message-answer-container,
+.repost-message-container,
+.like-message-container {
+	display: flex;
+}
+
+.quantity-number {
+	padding-left: 10px;
+}
+
+.repost-message-container {
+	margin-right: auto;
+}
+
+/* Add Comment Form */
+
+.user-add-comment-container {
+	position: relative;
+}
+
+.user-add-comment-image {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 20px;
+}
+
+.user-comment-submit {
+	display: none;
+}
+
+.user-add-comment-input {
+	background-color: rgba(226, 230, 255, 0.1);
+	color: var(--light-grey);
+	border: none;
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 40px;
+	border-radius: 12px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	outline: none;
+}
+
+.user-comment-submit {
+	position: absolute;
+	background-image: url('./img/main_page/main-page-user-submit-button.svg');
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	display: block;
+	width: 17px;
+	height: 17px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	right: 21px;
+}
+
+/* ------------ */
+
+/* QR Invitation Container */
+
+.invitation-person {
+	width: 54px;
+	height: 20px;
+}
+
+.qr-join-clan-container {
+	max-width: 770px;
+	position: relative;
+	padding: 20px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	align-items: flex-start;
+}
+
+.qr-join-clan-container-bg-image-mobile {
+	position: absolute;
+	background-image: url('./img/main_page/invitation_container/invitation-bg-image.svg');
+	width: 194px;
+	height: 129px;
+	bottom: -65px;
+	transform: translate(-50%, -50%);
+	right: -5px;
+}
+
+.invitation-user-header {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: var(--light-grey);
+	margin-bottom: 5px;
+}
+
+.invitation-user-header-span {
+	color: var(--neon-green);
+}
+
+.invitation-user-comment {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--light-grey);
+	opacity: 0.5;
+	margin-bottom: 12px;
+}
+
+.invitation-join-button {
+	padding: 8px 23px;
+	background-color: var(--dark-green);
+	border: none;
+	border-radius: 30px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.invitation-person-container {
+	margin-bottom: 15px;
+}
+
+.qr-code-invitation-container {
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: 45px;
+	z-index: 1;
+}
+
+.qr-code-invitation-container img {
+	margin: 0;
+	width: 117px;
+	height: 117px;
+}
+
+/*-------------------------------------*/
+
+.main-page-user-photo {
+	width: 40px;
+	height: 40px;
+}
+
+.registered {
+	margin-bottom: 20px;
+}
+
+.advertising {
+	display: flex;
+	padding: 20px;
+	background-color: var(--basic-deep-purple);
+	border-radius: 4.5px;
+	max-width: 770px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.join-clan-invitation {
+	z-index: 1;
+}
+
+.advertising-header {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--light-grey);
+	text-transform: uppercase;
+}
+
+.advertising-description-container::before {
+	position: absolute;
+	content: 'Mouse';
+	text-transform: uppercase;
+	bottom: 50px;
+	color: #fff;
+	opacity: 10%;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 900;
+}
+
+.advertising-comment {
+	font-weight: 400;
+	color: var(--light-grey);
+	font-size: 12px;
+	line-height: 14px;
+	opacity: 0.5;
+	letter-spacing: 0.5px;
+}
+
+.price-description {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.price-description-text {
+	font-weight: 400;
+	color: var(--light-grey);
+	font-size: 10px;
+	opacity: 0.2;
+	line-height: 12px;
+	margin-bottom: 5px;
+}
+
+.product-price {
+	line-height: 23px;
+	font-size: 20px;
+	line-height: 16px;
+	font-weight: 500;
+	font-size: 14px;
+	color: var(--neon-green);
+}
+
+.product-name-header {
+	margin-top: 25px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.advertising-image-container-mobile {
+	margin: auto;
+	margin-right: 0;
+	min-width: 140px;
+	min-height: 112px;
+	background-repeat: no-repeat;
+	background-image: url('./img/main_page//main-page-advertising-mouse.svg');
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+.product-link {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--neon-green);
+	text-decoration: underline;
+}
+
 /* User Login Form*/
 
 .main-container {
 	position: relative;
-	background: url(./img/main-background-image.svg) no-repeat center center;
-	background-size: cover;
+	background-image: url(./img/main-background-image.svg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	background-color: var(--basic-deep-purple);
 	padding-top: 25px;
 	padding-bottom: 95px;
+	flex-grow: 1;
 	border-bottom: 1px solid var(--neon-green);
 }
 
@@ -122,11 +790,15 @@ a {
 	padding-bottom: 150px;
 }
 
-.form-container {
+.user-login-form {
 	position: relative;
+	padding: 25px 20px;
+	background: rgba(196, 196, 196, 0.15);
+	backdrop-filter: blur(10.8329px);
+	border-radius: 12px;
 }
 
-.user-login-form {
+.user-step-form {
 	position: relative;
 	padding: 25px 20px;
 	background: rgba(196, 196, 196, 0.15);
@@ -145,8 +817,12 @@ a {
 	text-shadow: 0px 0px 14px rgba(3, 255, 73, 0.48);
 }
 
-input[type='text'],
-input[type='password'] {
+.email-input,
+.password-input,
+.user-name-input,
+.country-input,
+.city-input,
+.confirm-password-input {
 	width: 100%;
 	padding: 10px 25px;
 	background: #212430;
@@ -238,6 +914,11 @@ input[type='password'] {
 	margin-bottom: 15px;
 }
 
+.gender-select option {
+	color: #1b1a26;
+	font-weight: 400;
+}
+
 .gender-select {
 	width: 100%;
 	background-color: transparent;
@@ -319,6 +1000,7 @@ input[type='password'] {
 }
 
 .copyright-container {
+	border-top: 0.5px solid #03ff49;
 	padding-top: 20px;
 }
 
@@ -344,7 +1026,8 @@ input[type='password'] {
 	justify-content: space-around;
 	padding-bottom: 40px;
 	padding-top: 20px;
-	border-bottom: 1px solid var(--neon-green);
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .social-list-container {
@@ -362,7 +1045,12 @@ input[type='password'] {
 	position: relative;
 }
 
+.password-step-3-container {
+	position: relative;
+}
+
 .password-button {
+	z-index: 2;
 	position: absolute;
 	right: 20px;
 	top: 10px;
@@ -441,6 +1129,7 @@ input[type='password'] {
 /* JS*/
 
 #scroll-up-arrow {
+	margin-left: 85px;
 	background-color: transparent;
 	border: transparent;
 	z-index: 1;
@@ -457,8 +1146,8 @@ input[type='password'] {
 	background-color: transparent;
 	border: none;
 	position: absolute;
-	right: 40px;
-	top: 151px;
+	right: 30px;
+	bottom: 83px;
 	width: 24px;
 	height: 24px;
 	background-image: url(./img/password-eye.svg);
@@ -469,8 +1158,8 @@ input[type='password'] {
 	background-color: transparent;
 	border: none;
 	position: absolute;
-	right: 40px;
-	top: 209px;
+	right: 30px;
+	bottom: 25px;
 	width: 24px;
 	height: 24px;
 	background-image: url(./img/password-eye.svg);
@@ -483,6 +1172,8 @@ input[type='password'] {
 /* Side Menu*/
 
 .side-menu {
+	display: flex;
+	flex-direction: column;
 	position: fixed;
 	width: 268px;
 	height: 100vh;
@@ -529,8 +1220,8 @@ input[type='password'] {
 }
 
 .chat-button {
-	position: absolute;
-	top: 400px;
+	margin-top: auto;
+	margin-bottom: 95px;
 }
 
 .menu-item-style {
@@ -574,21 +1265,80 @@ details[open] > summary {
 	line-height: 19px;
 }
 
-/* .overlay {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(37, 39, 52, 0.8);
-} */
+/* Media quarries */
 
 @media screen and (min-width: 1200px) {
+	.social-contacts {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.header-navigation {
+		display: block;
+	}
+
+	.header-navigation-list {
+		padding-left: 0;
+		margin-bottom: 0;
+		padding-top: 20px;
+		display: flex;
+		list-style: none;
+		color: var(--light-grey);
+		width: 381px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.header-navigation-list li:not(:last-child) {
+		margin-right: 30px;
+	}
+
+	.header-navigation-item a {
+		color: var(--light-grey);
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.main-container {
+		background: url('./img/main-image-big.png');
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-color: var(--basic-deep-purple);
+	}
+
+	.copyright-container {
+		display: flex;
+		justify-content: space-around;
+	}
+	.logo-container {
+		margin-right: 5px;
+	}
+	.page-footer-container {
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		width: 1170px;
+	}
+
+	.site-navigation {
+		min-width: 462px;
+		margin-left: 125px;
+		margin-right: 140px;
+	}
+
+	.user-link-container {
+		margin-left: auto;
+	}
+
 	.header-logo {
+		position: absolute;
 		background-image: url('./img/header-logo.svg');
 		width: 108px;
 		height: 50px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		left: 50%;
 	}
 	.navigation-menu-toggler {
 		display: none;
@@ -608,28 +1358,287 @@ details[open] > summary {
 
 	.user-login-form {
 		padding: 40px 200px;
+		width: 725px;
+		margin: 0 auto;
 	}
 
-	.form-container::after {
+	.user-photo-container img,
+	.guest-photo-container img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.user-step-form {
+		padding: 40px 200px;
+		padding-right: 135px;
+		width: 725px;
+		margin: 0 auto;
+	}
+
+	.login-form-container::after {
 		content: '';
 		position: absolute;
 		background-image: url('./img/login-guy.svg');
 		background-repeat: no-repeat;
-		top: 15px;
-		left: 820px;
+		bottom: 0;
+		left: 450px;
 		width: 495px;
 		height: 420px;
 	}
 
-	.form-container::before {
+	.login-form-container::before {
 		content: '';
 		position: absolute;
-		background-image: url('./img/login-girl.svg');
+		background-image: url('./img/ligin-girl.svg');
 		background-repeat: no-repeat;
-		width: 247px;
+		width: 246px;
 		height: 484px;
 		z-index: 1;
-		right: 920px;
-		top: -50px;
+		left: -70px;
+		bottom: 0;
+	}
+
+	.form-container-step-1::before {
+		content: '';
+		position: absolute;
+		background-image: url('./img/ligin-girl.svg');
+		background-repeat: no-repeat;
+		width: 246px;
+		height: 484px;
+		z-index: 1;
+		left: -70px;
+		bottom: 0;
+	}
+
+	.main-page-header-description {
+		width: 65%;
+	}
+
+	.main-page-spider-image-container-desktop {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-spiderman.svg');
+		right: -95px;
+		bottom: 0;
+		background-repeat: no-repeat;
+		width: 505px;
+		height: 283px;
+	}
+
+	.main-page-image-container-desktop::before {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-mario-big.svg');
+		right: 40px;
+		bottom: 77px;
+		background-repeat: no-repeat;
+		width: 259px;
+		height: 329px;
+	}
+
+	.main-page-image-container-desktop::after {
+		content: '';
+		position: absolute;
+		background-image: url('./img/main_page/main-page-pubg-big.svg');
+		right: 165px;
+		bottom: -23px;
+		background-repeat: no-repeat;
+		width: 299px;
+		height: 329px;
+		z-index: 1;
+	}
+
+	.main-page-image-container-mobile {
+		display: none;
+	}
+
+	.thumbnail-container {
+		min-height: 435px;
+		max-width: 970px;
+		margin: 0 auto;
+		padding: 80px;
+	}
+
+	.main-page-header {
+		font-weight: 600;
+		font-size: 64px;
+		line-height: 75px;
+	}
+	.main-page-header-description {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.main-page-button {
+		padding: 13px 30px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 23px;
+	}
+
+	.main-page-filter label {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.user-name {
+		font-size: 18px;
+		line-height: 21px;
+	}
+	.name-game {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	.download-game {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.information-post-bar,
+	.guest-information-post-bar {
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.advertising {
+		padding: 40px;
+	}
+	.advertising-header {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.advertising-comment {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.advertising-image-container-desktop {
+		margin: auto;
+		margin-right: 0;
+		width: 306px;
+		height: 161px;
+		background-repeat: no-repeat;
+		background-image: url('./img/main_page/mouse-desktop-non-registered.svg');
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.advertising-image-container-desktop-registered::after {
+		position: absolute;
+		content: '';
+		background-image: url('./img/main_page/mouse-desktop-registered.svg');
+		background-repeat: no-repeat;
+		bottom: 0;
+		right: 50px;
+		width: 330px;
+		height: 308px;
+	}
+
+	.advertising-description-container::before {
+		font-size: 72px;
+		line-height: 84px;
+		opacity: 10%;
+		font-weight: 900;
+		bottom: 61px;
+	}
+
+	.price-description-text {
+		font-size: 12px;
+		line-height: 14px;
+	}
+
+	.product-name-header {
+		font-size: 20px;
+		line-height: 23px;
+		margin-top: 45px;
+	}
+	.product-link {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.advertising-image-container-mobile {
+		display: none;
+	}
+	.user-image-post-container {
+		height: 354px;
+	}
+
+	.main-page-user-photo {
+		width: 60px;
+		height: 60px;
+	}
+	.qr-join-clan-container-bg-image-mobile {
+		display: none;
+	}
+
+	.qr-join-clan-container {
+		height: 310px;
+		padding: 40px;
+	}
+
+	.qr-join-clan-container-bg-image-desktop {
+		position: absolute;
+		width: 436px;
+		height: 288px;
+		background-image: url('./img/main_page/invitation_container/invitation-bg-image-desktop.svg');
+		bottom: 0;
+		right: 130px;
+	}
+
+	.invitation-user-header {
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.invitation-user-comment {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.invitation-person {
+		width: 96px;
+		height: 33px;
+	}
+
+	.invitation-join-button {
+		padding: 8px 28px;
+	}
+
+	.qr-code-invitation-container img {
+		width: 170px;
+		height: 170px;
+	}
+
+	.join-clan-invitation {
+		width: 355px;
+	}
+
+	.user-add-comment-input {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 46px;
+	}
+
+	.user-add-comment-image {
+		left: 26px;
+	}
+
+	.user-post-select {
+		margin-left: auto;
+		margin-right: 16px;
+	}
+
+	.input-file-desktop-style {
+		display: block;
+		color: #fff;
+		padding-left: 13px;
+		padding-top: 1px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 }
